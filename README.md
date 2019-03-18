@@ -57,7 +57,7 @@ Contrary to the expectation (even though we must not have any expectations), the
 For example, when he writes “Lock”, he needs to specify whether it is “left lock”, “right lock”, “lock with 1 hand/2 hand”. The user wants to customize it by being able to add comments or just photos (not videos).
 Being able to copy or denote repetitions of the movements (or group of movements – aggregation) is important as well. The user just used some notations for that such as double lines, or writing “x2”.
 
-![alt text](https://keep.google.com/u/0/#NOTE/1TifAJ1dPNAu4Y73jGldT1FnyH-NYNTsWsCs8FADqCuAbvnQLFgomWWCSF8INlqY)
+![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture1.PNG)
 
 ### Giraffe
 
