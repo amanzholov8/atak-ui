@@ -1,8 +1,17 @@
 # Team A-TAK UI: DP1 Needfinding
 ---
 
-Table of contents
-
+## Table of contents
+1. [Experience](#experience)
+   1. [Target Users](#target-users)
+2. [Observation and Interviews](#observation-and-interviews)
+   1. [Elephant](#elephant)
+   2. [Giraffe](#giraffe)
+   3. [Tiger](#tiger)
+   4. [Rabbit](#rabbit)
+3. [Needs](#needs)
+4. [Insights](#insights)
+5. [Appendix](#appendix)
 ## Experience
 We are redesigning the process of keeping track of the information about choreography creation.
 
