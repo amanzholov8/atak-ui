@@ -23,6 +23,8 @@ Choreographers who want to create choreography. They are usually experienced dan
 
 ### Elephant
 
+The contextual inquiry was conducted by _Temirlan Myrzakhmetov_.
+
 #### Description of the user
 
 The user is the student of KAIST, who joined the university in the year 2014 and started his dancing career at that time. He went from the very beginner to amateur, to professional. He was the team leader of locking genre at Real Lunatic student club, but now he went up to become the head of the regular training (정기연습) for all Real Lunatic freshmen (As of Spring 2019).
@@ -56,6 +58,8 @@ Being able to copy or denote repetitions of the movements (or group of movements
 
 ### Giraffe
 
+The contextual inquiry was conducted by _Alim Amanzholov_.
+
 #### Description of the user
 
 The interviewee has 9 years of experience in dancing, but only around 3 years in creating choreographies. In these 3 years, she created around 10 choreographies. She does European and Latino-American ballroom dancing.
@@ -88,6 +92,8 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 
 ### Tiger
 
+The contextual inquiry was conducted by _Anuar Talipov_.
+
 #### Description of the user
 
 Tiger is a sophomore undergrad at KAIST who currently teaches regular ballroom dance classes. His experience in dancing 4 years of amateur dancing, 5 years of professional ballroom dancing (B class). As for his experience of choreography, he has started to compose dances 3.5 years ago and started teaching dances 1.5 years ago. 
@@ -119,6 +125,8 @@ Remark: At this stage, he prefers to have the music in the background, to have a
 
 
 ### Rabbit 
+
+The contextual inquiry was conducted by _Kunduz Baryktabasova_.
 
 #### Description of the user
 
@@ -184,20 +192,7 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 
 10. All choreographers use different ways to keep track of the choreo movements and flow: some take down the detailed notes, while others might just keep most of the choreo in their head.
 
-11. Video processing, such as recording video synced with the audio or making some drawings on the video, is an important visual help for the choreographers.
-
-## Studio Reflection
-
-### Summary:
-
- - Be specific about the target population.
- - There is a big gap between interviewees.
- - Explain some definitions such as choreography, et
-				
-### Addressing:
- - We clearly specified the target population as experienced dancers who deal with choreography creation. To be more specific, they're not freeslyle dancers.
- - We think there are no gap between interviewees, since all had some experience, one of them had 1 choreographies, so she is extreme user, while other three had created more than 10 choreographies. 
- - We add appendix which includes the definitions of all notions from the report
+11. Video processing, such as recording video synced with the audio or making some drawings on the video, is an important visual help for the choreographers. 
 
 ## Appendix
 
