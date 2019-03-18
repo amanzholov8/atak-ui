@@ -58,6 +58,7 @@ For example, when he writes “Lock”, he needs to specify whether it is “lef
 Being able to copy or denote repetitions of the movements (or group of movements – aggregation) is important as well. The user just used some notations for that such as double lines, or writing “x2”.
 
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture1.PNG)
+![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture2.PNG)
 
 ### Giraffe
 
@@ -93,6 +94,8 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 
 - To prepare one dance, she and her partner have to meet a lot of times to come up with a finished choreography.
 
+![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture3.PNG)
+
 ### Tiger
 
 The contextual inquiry was conducted by _Anuar Talipov_.
@@ -126,6 +129,7 @@ Remark: At this stage, he prefers to have the music in the background, to have a
 
 - After achieving some mastery, Tiger I starts to record a video of himself, with music. This will, in turn, helps him to recognize the errors and correct them. The errors are usually related to the timing and position. 
 
+![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture4.PNG)
 
 ### Rabbit 
 
@@ -148,6 +152,8 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 - She played the song for 20 times until she got perfection. 
 
 - It was hard for her to remember all the movements at once and keep it all just in her head since she didn’t use any notes for keeping track of movements
+
+![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture5.PNG)
 
 ## Needs
 ---
