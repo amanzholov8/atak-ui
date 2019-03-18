@@ -16,7 +16,7 @@
 We are redesigning the process of keeping track of the information about choreography creation.
 
 ### Target Users
-Expert/Beginner Dancers who want to create choreography
+Choreographers who want to create choreography. They are usually experienced dancers. 
 
 ## Observation and Interviews
 ---
