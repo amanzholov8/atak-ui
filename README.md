@@ -11,7 +11,7 @@
    4. [Rabbit](#rabbit)
 3. [Needs](#needs)
 4. [Insights](#insights)
-5. [Studio Reflection] (#studio-reflections)
+5. [Studio Reflection] (#studio-reflection)
 6. [Appendix](#appendix)
 ## Experience
 We are redesigning the process of keeping track of the information about choreography creation.
@@ -196,13 +196,13 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 11. Video processing, such as recording video synced with the audio or making some drawings on the video, is an important visual help for the choreographers. 
 ## Studio Reflection
 
-### Summary:
+### Summary
 
  - Be specific about the target population.
  - There is a big gap between interviewees.
  - Explain some definitions such as choreography, etc.
 				
-### Addressing:
+### Addressing
  - We clearly specified the target population as experienced dancers who deal with choreography creation. To be more specific, they're not freeslyle dancers.
  - We think there are no gap between interviewees, since all had some experience, one of them had 1 choreographies, so she is extreme user, while other three had created more than 10 choreographies. 
  - We add appendix which includes the definitions of all notions from the report.
