@@ -40,7 +40,7 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
  The user came with 20% movements already prepared, then added a song, then adds the rest of the movements.
  
 #### Music choice
- - Having the music sorted out by bitrate (bpm) was very important for the user.
+ - Having the music sorted out by bitrate ([bpm](#bpm)) was very important for the user.
 The process of choosing the music is not secondary but rather is very important. So we probably have to make the separate screen in the app for that.
  
 #### Choreo creation
@@ -173,7 +173,7 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 ## Insights
 ---
 
-1. The pace of the song (bpm, the subdivision into [bars](#bar)) is important for the dancers.
+1. The pace of the song ([bpm](#bpm), the subdivision into [bars](#bar)) is important for the dancers.
 
 2. Consideration of the role of beats(strong, weak) and mood transitions in the song, will determine the structure of dance. 
 
@@ -187,7 +187,7 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 
 7. Some users prefer to take down notes of choreo, while others do not write down anything.
 
-8. Usually when the dance performance consist of several songs, it is a good rule of thumb for them to have almost the same bpm. 
+8. Usually when the dance performance consist of several songs, it is a good rule of thumb for them to have almost the same [bpm](#bpm). 
 
 9. The repetitions of some movements (or groups of movements) happen in almost every dance.
 
@@ -213,7 +213,7 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 
   - In music and music theory, the **beat** is the basic unit of time, the pulse (regularly repeating event), of the mensural level (or beat level).
 
-  - **Bitrate** refers to the number of bits or the amount of data that are processed over a certain amount of time. In audio, this usually means **kilobits per second** or, shortly, **kbps**.
+  - <a id="bpm">**Bitrate**</a> refers to the number of bits or the amount of data that are processed over a certain amount of time. In audio, this usually means **kilobits per second** or, shortly, **kbps**.
 
  - <a id="choreo">**Choreography**</a> is the art or practice of **designing sequences of movements** of physical bodies (or their depictions) in which motion, form, or both are specified. Choreography may also refer to the design itself.
 
