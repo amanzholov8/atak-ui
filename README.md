@@ -194,6 +194,18 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 10. All choreographers use different ways to keep track of the choreo movements and flow: some take down the detailed notes, while others might just keep most of the choreo in their head.
 
 11. Video processing, such as recording video synced with the audio or making some drawings on the video, is an important visual help for the choreographers. 
+## Studio Reflection
+
+### Summary:
+
+ - Be specific about the target population.
+ - There is a big gap between interviewees.
+ - Explain some definitions such as choreography, etc.
+				
+### Addressing:
+ - We clearly specified the target population as experienced dancers who deal with choreography creation. To be more specific, they're not freeslyle dancers.
+ - We think there are no gap between interviewees, since all had some experience, one of them had 1 choreographies, so she is extreme user, while other three had created more than 10 choreographies. 
+ - We add appendix which includes the definitions of all notions from the report.
 
 ## Appendix
 
