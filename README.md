@@ -11,7 +11,7 @@
    4. [Rabbit](#rabbit)
 3. [Needs](#needs)
 4. [Insights](#insights)
-5. [Studio Reflection] (#studio-reflection)
+5. [Studio Reflection](#studio-reflection)
 6. [Appendix](#appendix)
 ## Experience
 We are redesigning the process of keeping track of the information about choreography creation.
