@@ -42,7 +42,7 @@ The process of choosing the music is not secondary but rather is very important.
  
 #### Choreo creation
 - He imagined the general pictures of how the group of people will move and “interact” at the beginning. Also thinking about feeling and motive of the music (powerful, funky, slow). Only after that, he started adding specific moves.
-Contrary to the expectation (even though we must not have any expectations), there was no need for having the audio-track-line synced with the recorded movements. The only thing the user needed is having the music denoted by bars/beats, as in Figure 1.
+Contrary to the expectation (even though we must not have any expectations), there was no need for having the audio-track-line synced with the recorded movements. The only thing the user needed is having the music denoted by [bars/beats](#bar), as in Figure 1.
 
 - During the drawing, the user denoted some checkpoints of the song by adding some specific words of the song. The word “yeah” was written down, when the singer says “yeah”.
 
@@ -188,7 +188,7 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 
 ## Appendix
 
- - **Bar** (or measure) is a segment of time corresponding to a specific number of beats in which each beat is represented by a particular note value and the boundaries of the bar are indicated by **vertical** bar lines. Dividing music into bars provides regular reference points to pinpoint locations within a musical composition. It also makes written music easier to follow, since each bar of staff symbols can be read and played as a batch.
+ - <a id="bar">**Bar**</a> (or measure) is a segment of time corresponding to a specific number of beats in which each beat is represented by a particular note value and the boundaries of the bar are indicated by **vertical** bar lines. Dividing music into bars provides regular reference points to pinpoint locations within a musical composition. It also makes written music easier to follow, since each bar of staff symbols can be read and played as a batch.
 
   - In music and music theory, the **beat** is the basic unit of time, the pulse (regularly repeating event), of the mensural level (or beat level).
 
