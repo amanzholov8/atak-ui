@@ -58,7 +58,12 @@ For example, when he writes “Lock”, he needs to specify whether it is “lef
 Being able to copy or denote repetitions of the movements (or group of movements – aggregation) is important as well. The user just used some notations for that such as double lines, or writing “x2”.
 
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture1.PNG)
+
+Figure 1. The notes of the Elephant, when creating a dance. (4 dot dot dot) is the rhythm of a song divided by bars.
+
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture2.PNG)
+
+Figure 2. The Elephant taking notes down about the choreography.
 
 ### Giraffe
 
@@ -96,6 +101,8 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture3.PNG)
 
+Figure 3. The Giraffe when performing the dance she was thinking about.
+
 ### Tiger
 
 The contextual inquiry was conducted by _Anuar Talipov_.
@@ -131,6 +138,8 @@ Remark: At this stage, he prefers to have the music in the background, to have a
 
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture4.PNG)
 
+Figure 4. Tiger trying to perform the movements of his dance.
+
 ### Rabbit 
 
 The contextual inquiry was conducted by _Kunduz Baryktabasova_.
@@ -154,6 +163,8 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 - It was hard for her to remember all the movements at once and keep it all just in her head since she didn’t use any notes for keeping track of movements
 
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture5.PNG)
+
+Figure 5. The rabbit looking at different choreography from Youtube to learn about the dance moves she can use in her dance.
 
 ## Needs
 ---
