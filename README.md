@@ -16,7 +16,7 @@
 We are redesigning the process of keeping track of the information about choreography creation.
 
 ### Target Users
-Choreographers who want to create [choreography](#choreo). They are usually experienced dancers. 
+Choreographers who want to create choreography. They are usually experienced dancers. 
 
 ## Observation and Interviews
 ---
@@ -50,7 +50,7 @@ Contrary to the expectation (even though we must not have any expectations), the
 
 - He makes the notes of how people are staying along the lines of his dance moves, just with A DIFFERENT COLOR (denoted with red on Figure 1).
 
-- He writes the name of the move below every [bar/beat](#bar) notation. However, there is a need for customization of each move.
+- He writes the name of the move below every bar/beat notation. However, there is a need for customization of each move.
 For example, when he writes “Lock”, he needs to specify whether it is “left lock”, “right lock”, “lock with 1 hand/2 hand”. The user wants to customize it by being able to add comments or just photos (not videos).
 Being able to copy or denote repetitions of the movements (or group of movements – aggregation) is important as well. The user just used some notations for that such as double lines, or writing “x2”.
 
@@ -146,7 +146,7 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 
 3. Customize the recording of each move by adding comments, pictures, videos. 
 
-4. Divide song into [bars] (#bar), to conveniently navigate in the song, clearly see the beats (strong beats, weak beats), and denote  the move performed in each part.
+4. Divide song into bars, to conveniently navigate in the song, clearly see the beats (strong beats, weak beats), and denote  the move performed in each part.
 
 5. Subdivide the song into several main parts.
 
@@ -164,7 +164,7 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 ## Insights
 ---
 
-1. The pace of the song (bpm, the subdivision into [bars](#bar)) is important for the dancers.
+1. The pace of the song (bpm, the subdivision into bars) is important for the dancers.
 
 2. Consideration of the role of beats(strong, weak) and mood transitions in the song, will determine the structure of dance. 
 
@@ -184,7 +184,20 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 
 10. All choreographers use different ways to keep track of the choreo movements and flow: some take down the detailed notes, while others might just keep most of the choreo in their head.
 
-11. Video processing, such as recording video synced with the audio or making some drawings on the video, is an important visual help for the choreographers. 
+11. Video processing, such as recording video synced with the audio or making some drawings on the video, is an important visual help for the choreographers.
+
+## Studio Reflection
+
+### Summary:
+
+ - Be specific about the target population.
+ - There is a big gap between interviewees.
+ - Explain some definitions such as choreography, et
+				
+### Addressing:
+ - We clearly specified the target population as experienced dancers who deal with choreography creation. To be more specific, they're not freeslyle dancers.
+ - We think there are no gap between interviewees, since all had some experience, one of them had 1 choreographies, so she is extreme user, while other three had created more than 10 choreographies. 
+ - We add appendix which includes the definitions of all notions from the report
 
 ## Appendix
 
@@ -194,7 +207,7 @@ _An excerpts and main points/insights from the Contextual Inquiry with the user:
 
   - **Bitrate** refers to the number of bits or the amount of data that are processed over a certain amount of time. In audio, this usually means **kilobits per second** or, shortly, **kbps**.
 
- - <a id="choreo">**Choreography**</a> is the art or practice of **designing sequences of movements** of physical bodies (or their depictions) in which motion, form, or both are specified. Choreography may also refer to the design itself.
+ - **Choreography** is the art or practice of **designing sequences of movements** of physical bodies (or their depictions) in which motion, form, or both are specified. Choreography may also refer to the design itself.
 
   - In the performing arts, a **performance** generally comprises an event in which a performer or group of performers present one or more works of art to an audience.  
 
