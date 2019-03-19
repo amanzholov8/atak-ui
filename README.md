@@ -168,51 +168,52 @@ Figure 5. The rabbit looking at different choreography from Youtube to learn abo
 
 ## Needs
 ---
-1. Choose the right song by some criteria such as pace, mood, and genre. 
+1. **Choose the right song** by some criteria such as *pace, mood, and genre*. 
 
-2. Find inspiration in the videos of other performances, usually sorted out by one style.
+1. Find inspiration in the **videos of other performances**, usually sorted out by one style.
 
-3. Customize the recording of each move by adding comments, pictures, videos. 
+1. **Customize** the recording of each move by *adding comments, pictures, videos*. 
 
-4. Divide song into [bars](#bar), to conveniently navigate in the song, clearly see the beats (strong beats, weak beats), and denote  the move performed in each part.
+1. **Divide song into [bars](#bar)**, to conveniently **navigate** in the song, clearly see the beats (strong beats, weak beats), and denote  the move performed in each part.
 
-5. Subdivide the song into several main parts.
+1. **Loop the track** for several purposes. Firstly, in order to learn the movement, it is convenient to repeat a certain video segment. Secondly, to analyze the dance movements and correct the mistakes. 
 
-6. Film a video with synchronized audio, i.e when the user starts recording, the app needs to simultaneously play the music. 
+1. **Duplicate the moves (or a set of moves)**, so that user can **efficiently edit** the dance sequence.
 
-7. Pause a recording and leave a comment by either drawing or texting. The user wants to, correct the mistake, by labeling it in the video, by some time mark. 
+1. Subdivide the song into several main parts.
 
-8. Loop the track for several purposes. Firstly, in order to learn the movement, it is convenient to repeat a certain video segment. Secondly, to analyze the dance movements and correct the mistakes. 
+1. Film a video with synchronized audio, i.e when the user starts recording, the app needs to simultaneously play the music. 
 
-9. Duplicate the moves (or a set of moves), so that user can efficiently edit the dance sequence. 
+1. Pause a recording and leave a comment by either drawing or texting. The user wants to, correct the mistake, by labeling it in the video, by some time mark.  
 
-10. Compare two videos, with a synchronized audio track.
+1. Compare two videos, with a synchronized audio track.
 
 
 ## Insights
 ---
 
+
+1. For every dance style, there is some **limited set of basic moves**. However, there are multiple ways to **customize** them. So noting down the details of each move is important.
+
+1. Rehearsing the dance is a **repetitive action**, so looping the track is quite a common routine. 
+
+1. Dancers **refer to other choreos** while making their own one.
+
+1. The pace of the song **([bpm](#bpm), the subdivision into [bars](#bar))** is important for the dancers.
+
+1. The **repetitions** of some movements (or groups of movements) happen in almost every dance.
+
+1. Usually when the dance performance consist of several songs, it is a good rule of thumb for them to have almost the same [bpm](#bpm). 
+
+1. Video processing, such as recording video synced with the audio or making some drawings on the video, is an important visual help for the choreographers. 
+ 
 1. Consideration of the role of beats(strong, weak) and mood transitions in the song, will determine the structure of dance. 
 
-3. For every dance style, there is some limited set of basic moves. However, there are multiple ways to customize them. So noting down the details of each move is important.
+1. The visual record of the dance is important as a tool for spotting mistakes and important details.
 
-4. Rehearsing the dance is a repetitive action, so looping the track is quite a common routine. 
+1. Some users prefer to take down notes of choreo, while others do not write down anything.
 
-5. Dancers refer to other choreos while making their own one.
-
-1. The pace of the song ([bpm](#bpm), the subdivision into [bars](#bar)) is important for the dancers.
-
-9. The repetitions of some movements (or groups of movements) happen in almost every dance.
-
-10. All choreographers use different ways to keep track of the choreo movements and flow: some take down the detailed notes, while others might just keep most of the choreo in their head.
-
-8. Usually when the dance performance consist of several songs, it is a good rule of thumb for them to have almost the same [bpm](#bpm). 
-
-11. Video processing, such as recording video synced with the audio or making some drawings on the video, is an important visual help for the choreographers. 
- 
-6. The visual record of the dance is important as a tool for spotting mistakes and important details.
-
-7. Some users prefer to take down notes of choreo, while others do not write down anything.
+1. All choreographers use different ways to keep track of the choreo movements and flow: some take down the detailed notes, while others might just keep most of the choreo in their head.
 
 ## Studio Reflection
 
@@ -220,12 +221,14 @@ Figure 5. The rabbit looking at different choreography from Youtube to learn abo
 
  - Be specific about the target population.
  - There is a big gap between interviewees.
- - Explain some definitions such as choreography, etc.
+ - Explain some definitions such as choreography, etc for people with no prior knowledge.
+ - Give more spotlight to some especially important needs or key insights.
 				
 ### Addressing
  - We clearly specified the target population as experienced dancers who deal with choreography creation. To be more specific, they're not freeslyle dancers.
  - We think there are no gap between interviewees, since all had some experience, one of them had 1 choreography, so she is extreme user, while other three had created more than 10 choreographies. 
  - We added appendix which includes the definitions of all notions from the report.
+ - We sorted out the needs and insights by the priority. Additionally, we highlighted some important keywords in those parts. 
 
 ## Appendix
 
