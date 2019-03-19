@@ -192,27 +192,28 @@ Figure 5. The rabbit looking at different choreography from Youtube to learn abo
 ## Insights
 ---
 
-1. The pace of the song ([bpm](#bpm), the subdivision into [bars](#bar)) is important for the dancers.
-
-2. Consideration of the role of beats(strong, weak) and mood transitions in the song, will determine the structure of dance. 
+1. Consideration of the role of beats(strong, weak) and mood transitions in the song, will determine the structure of dance. 
 
 3. For every dance style, there is some limited set of basic moves. However, there are multiple ways to customize them. So noting down the details of each move is important.
 
 4. Rehearsing the dance is a repetitive action, so looping the track is quite a common routine. 
 
-5. Dancers refer to other choreos while making their own one. 
+5. Dancers refer to other choreos while making their own one.
 
-6. The visual record of the dance is important as a tool for spotting mistakes and important details.
-
-7. Some users prefer to take down notes of choreo, while others do not write down anything.
-
-8. Usually when the dance performance consist of several songs, it is a good rule of thumb for them to have almost the same [bpm](#bpm). 
+1. The pace of the song ([bpm](#bpm), the subdivision into [bars](#bar)) is important for the dancers.
 
 9. The repetitions of some movements (or groups of movements) happen in almost every dance.
 
 10. All choreographers use different ways to keep track of the choreo movements and flow: some take down the detailed notes, while others might just keep most of the choreo in their head.
 
+8. Usually when the dance performance consist of several songs, it is a good rule of thumb for them to have almost the same [bpm](#bpm). 
+
 11. Video processing, such as recording video synced with the audio or making some drawings on the video, is an important visual help for the choreographers. 
+ 
+6. The visual record of the dance is important as a tool for spotting mistakes and important details.
+
+7. Some users prefer to take down notes of choreo, while others do not write down anything.
+
 ## Studio Reflection
 
 ### Summary
