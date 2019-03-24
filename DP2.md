@@ -1,4 +1,4 @@
-#Team A-TAK UI: DP2 Ideation
+# Team A-TAK UI: DP2 Ideation
 
 ## Table of contents
 1. [POV](#POV)
@@ -8,7 +8,7 @@
 1. [Storyboards](#storyboards)
 1. [Studio Reflection](#studio-reflection)
 
-##POV
+## POV
 
  - **We met** a professional street dancer with vast choreo experience.
 
@@ -16,13 +16,13 @@
 
  - **It’d be game-changing to** sort the music by bpm and allow user to customize each part of the song by adding comments, photos and videos.
 
-##Persona
+## Persona
 
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture6.PNG)
 
 **ChanSoo Jung**
 
-###Demographics:
+### Demographics:
  - Age: 22
  - Country: South Korea
  - Gender: Male
@@ -32,21 +32,21 @@
  - Choreo experience: high (experience in 20-30 choreographies)
  - Membership: University street dance crew member
 
-###Personality:
+### Personality:
  - Goal: To record a choreo, which is created for performance.
 
  - Motivation: To easily remember the choreo with all its details, while being able to create and record everything quickly.
 
  - Preferences: "For each move, there can be so many variations. So it would be cool if I could just denote the move by its general name and attach a picture for more detailed understanding."
 
-###Story (how the choreo is created)
+### Story (how the choreo is created)
  - **Music consideration**
 	Chooses music for performance by bpm (pace), mood, and style.
  - **Detailed notes**
 	Adds comments, photos, and videos when recording his dance movement sequence.
 	Divides music into bars and adds description for each bar.
 
-##HMW
+## HMW
 
 1. HMW help the user to find suitable audio track?
 	**Selection criteria**: Song selection is very important part of choreo creation.
@@ -62,9 +62,9 @@
 1. HMW combine social media and choreo creation? 
 1. HMW ease the experience of keeping track of a dance sequence? 
 
-##Solution Ideas
+## Solution Ideas
 
-###HMW help the user to find suitable audio track?
+### HMW help the user to find suitable audio track?
 
 1. Allow users to edit songs and combine components of different songs together.
 1. Have a database of songs with tags and allow users to search by tags.
@@ -79,7 +79,7 @@
 1. Show songs which other friend choreographers use (social media)
 1. Use drum loops to conveniently give generic music tracks.
 
-###HMW customize the dance movements?
+### HMW customize the dance movements?
 
 1. Allow users to capture themselves and save the picture or video as a movement.
 1. Allow users to sketch the movements and save them. 
@@ -94,7 +94,7 @@
 1. Allow adding audio-comments.
 
 
-###HMW make navigation through the track affordable and convenient?
+### HMW make navigation through the track affordable and convenient?
 
 1. Allow the user to put bookmarks on track for an easy return.
 1. Add generic player control buttons like “replay”, “go +- 5/10/15 sec”. 
@@ -107,29 +107,29 @@
 1. Allow the user to choose/select some part of choreo and provide delete/copy functions.
 1. Name each part and navigate by names from the dropdown list.
 
-##Storyboards
+## Storyboards
 Incudes storyboards for our **top 3 solution ideas**.
 
-###Storyboard 1
+### Storyboard 1
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture7.PNG)
 *Allow users to edit songs and combine components of different songs together.*
 **Selection criteria**: To get a perfect song for your dance, there is a high chance you will need to edit a song or combine several songs together.
 
-###Storyboard 2
+### Storyboard 2
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture8.PNG)
 *Allow users to capture themselves and save the picture or video as a movement.*
 **Selection criteria**: No need to know the name of the movement. Allows easy customization.
 
-###Storyboard 3
+### Storyboard 3
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture9.PNG)
 *Allow the user to put time marks and the loop between them.*
 **Selection criteria**: In the process of making choreo and rehearsing, there is a high need for repetitively rehearsing certain part of the dance.
 
 
-##Studio Reflections
+## Studio Reflections
 
-###Summary
+### Summary
  - Они сказали поменять вот так.
 
-###Addressing
+### Addressing
  - И мы сделали вот так.
