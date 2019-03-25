@@ -10,11 +10,7 @@
 
 ## POV
 
- - **We met** a professional street dancer with vast choreo experience.
-
- - **We were amazed to realize** that he chooses a song for performance by pace and records the movements by writing down some generalizing names while later attempting to customize them.
-
- - **It’d be game-changing to** sort the music by bpm and allow user to customize each part of the song by adding comments, photos and videos.
+ Our persona Chansoo Jung, a professional street dancer with vast choreo experience, **needs to have the music sorted our by pace and/or genre** because *the music selection is long and important process of performance preparation* and he **needs to be able to customize the movements by adding comments, pictures, videos** because *the customization when denoting each move is an important, but challenging part of his choreo creation process*.
 
 ## Persona
 
