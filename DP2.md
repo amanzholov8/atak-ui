@@ -111,17 +111,17 @@
 Incudes storyboards for our **top 3 solution ideas**.
 
 ### Storyboard 1
-![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture7.PNG)
+![alt text](https://github.com/AnuarTB/atak-ui/blob/master/story1.jpg)
 *Allow users to edit songs and combine components of different songs together.*
 **Selection criteria**: To get a perfect song for your dance, there is a high chance you will need to edit a song or combine several songs together.
 
 ### Storyboard 2
-![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture8.PNG)
+![alt text](https://github.com/AnuarTB/atak-ui/blob/master/story2.png)
 *Allow users to capture themselves and save the picture or video as a movement.*
 **Selection criteria**: No need to know the name of the movement. Allows easy customization.
 
 ### Storyboard 3
-![alt text](https://github.com/AnuarTB/atak-ui/blob/master/Picture9.PNG)
+![alt text](https://github.com/AnuarTB/atak-ui/blob/master/story3.jpg)
 *Allow the user to put time marks and the loop between them.*
 **Selection criteria**: In the process of making choreo and rehearsing, there is a high need for repetitively rehearsing certain part of the dance.
 
