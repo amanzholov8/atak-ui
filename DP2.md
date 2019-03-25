@@ -146,8 +146,22 @@ HMW make navigation through the track affordable and convenient?
 
 ## Studio Reflections
 
-### Summary
- - Они сказали поменять вот так.
+### Inquiries
+- [525, Seungho Choi] Storyboard to look more clearly. It is thin and not visible.
+- [525, Jeonghun Moon] Showing solution with correlated HMW questions
+- [GR, SangHyeon Park] it’s hard to know why looping has to be considered.
+- [Kabdo] have the user-need-insight structure in the POV: [user] needs to [some need] because [some surprising insight].
+- [Kabdo] make the storyboard more visible by drawing with a thicker pen.
+- [525, Jeonghun Moon] Thinking specific implementation later.. It seems a bit messy in storyboard in this step to do so.
+- [GR, Jeongjun Lee] How about add some “blank time” with certain signal sound of “blank time” when the system repeats the certain part of the song. I think it is good for dancer to practice! 
+
+
 
 ### Addressing
- - И мы сделали вот так.
+- We used thick pen originally, however, the comics couldn’t be seen on the board during the presentation.
+	- We addressed it by uploading all our cartoons to the slack channel so that the studio members could check it out from their PCs.
+- We added our HMW and solution idea to the beginning of each of the storyboards for easy reference and to show a correlation between  solution and HMW
+- One studio member said: “it’s hard to know why looping has to be considered.”
+	- It was already explained in the report, however, we couldn’t explain it to the person during studio due to time constraints. That’s why we uploaded the specific part of the report to the Slack channel, so that our friends from studio can check it out and understand.
+- We modified our POV by the structure [user] needs to [some need] because [some surprising insight], instead of We met... , We were amazed to realize... , It’d be game-changing… . 
+- In the storyboard, we have decided to include some of the features that were in our heads. We agree that it seems messy, so we might strip down some functions in our prototype. 
