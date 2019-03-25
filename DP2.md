@@ -123,7 +123,7 @@ Incudes storyboards for our **top 3 solution ideas**.
 ### Storyboard 3
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/story3.jpg)
 *Allow the user to put time marks and the loop between them.*
-**Selection criteria**: In the process of making choreo and rehearsing, there is a high need for repetitively rehearsing certain part of the dance.
+**Selection criteria**: In the process of making choreo and rehearsing, there is a high need for repetitively playing certain part of the video.
 
 
 ## Studio Reflections
