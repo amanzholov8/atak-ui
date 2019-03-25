@@ -116,7 +116,7 @@ Incudes storyboards for our **top 3 solution ideas**.
 **Selection criteria**: To get a perfect song for your dance, there is a high chance you will need to edit a song or combine several songs together.
 
 ### Storyboard 2
-![alt text](https://github.com/AnuarTB/atak-ui/blob/master/story2.png)
+![alt text](https://github.com/AnuarTB/atak-ui/blob/master/story2.jpg)
 *Allow users to capture themselves and save the picture or video as a movement.*
 **Selection criteria**: No need to know the name of the movement. Allows easy customization.
 
