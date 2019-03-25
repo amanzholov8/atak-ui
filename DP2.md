@@ -134,7 +134,7 @@ HMW customize the dance movements?
 
 **Solution**: *Allow users to capture themselves and save the picture or video as a movement.*
 
-![alt text](https://github.com/AnuarTB/atak-ui/blob/master/story2.png)
+![alt text](https://github.com/AnuarTB/atak-ui/blob/master/story2.jpg)
 
 ### Storyboard 3
 
