@@ -6,15 +6,11 @@
 1. [HMW](#hmw)
 1. [Solution Ideas](#solution-ideas)
 1. [Storyboards](#storyboards)
-1. [Studio Reflection](#studio-reflections)
+1. [Studio Reflection](#studio-reflection)
 
 ## POV
 
- - **We met** a professional street dancer with vast choreo experience.
-
- - **We were amazed to realize** that he chooses a song for performance by pace and records the movements by writing down some generalizing names while later attempting to customize them.
-
- - **It’d be game-changing to** sort the music by bpm and allow user to customize each part of the song by adding comments, photos and videos.
+ - Our persona ChanSoo Jung needs to choose a song for performance by pace, mood, and genre because the music has to fit various criteria for bein suitable for performance, and to record the movements by writing down some generalizing names while later attempting to customize them, and allowing to user to customize each part of the song by adding comments, photos and videos is important.
 
 ## Persona
 
@@ -49,13 +45,10 @@
 ## HMW
 
 1. HMW help the user to find suitable audio track?
-
 	**Selection criteria**: Song selection is very important part of choreo creation.
 1. HMW customize the dance movements?
-	
 	**Selection criteria**: Customization allows the creation of a variety of choreos and gives more detailed perspective on the moves.
 1. HMW make navigation through the track affordable and convenient?
-	
 	**Selection criteria**: Navigating through track in most systems is inconvenient.
 1. HMW suggest inspirational performances? 
 1. HMW help dancers to iteratively rehearse his dance?
@@ -66,13 +59,10 @@
 1. HMW ease the experience of keeping track of a dance sequence? 
 
 ## Solution Ideas
-(top 3 solutions are in bold)
 
 ### HMW help the user to find suitable audio track?
 
-1. **Allow users to edit songs and combine components of different songs together.**
-
-	**Selection criteria**: To get a perfect song for your dance, there is a high chance you will need to edit a song or combine several songs together.
+1. Allow users to edit songs and combine components of different songs together.
 1. Have a database of songs with tags and allow users to search by tags.
 1. Allow the user to upload the songs from the memory of the device he or she is using.
 1. Add a precise description of each song(genre, bpm).
@@ -87,9 +77,7 @@
 
 ### HMW customize the dance movements?
 
-1. **Allow users to capture themselves and save the picture or video as a movement.** 
-  
-  	**Selection criteria**: No need to know the name of the movement. Allows easy customization.
+1. Allow users to capture themselves and save the picture or video as a movement.
 1. Allow users to sketch the movements and save them. 
 1. Allow displaying all customizations of dance movements as the track proceeds. 
 1. Design workspace which combines audio and customized movements together.
@@ -104,9 +92,7 @@
 
 ### HMW make navigation through the track affordable and convenient?
 
-1. **Allow the user to put time marks and the loop between them.**
-	
-	**Selection criteria**: In the process of making choreo and rehearsing, there is a high need for repetitively playing certain part of the video.
+1. Allow the user to put time marks and the loop between them.
 1. Allow the user to put bookmarks on track for an easy return.
 1. Add generic player control buttons like “replay”, “go +- 5/10/15 sec”. 
 1. Divide the songs into bars.
@@ -118,31 +104,23 @@
 1. Name each part and navigate by names from the dropdown list.
 
 ## Storyboards
-Includes storyboards for our **top 3 solution ideas**.
+Incudes storyboards for our **top 3 solution ideas**.
 
 ### Storyboard 1
-
-HMW help the user to find suitable audio track?
-
-**Solution**: *Allow users to edit songs and combine components of different songs together.*
-
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/story1.jpg)
+*Allow users to edit songs and combine components of different songs together.*
+**Selection criteria**: To get a perfect song for your dance, there is a high chance you will need to edit a song or combine several songs together.
 
 ### Storyboard 2
-
-HMW customize the dance movements?
-
-**Solution**: *Allow users to capture themselves and save the picture or video as a movement.*
-
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/story2.jpg)
+*Allow users to capture themselves and save the picture or video as a movement.*
+**Selection criteria**: No need to know the name of the movement. Allows easy customization.
 
 ### Storyboard 3
-
-HMW make navigation through the track affordable and convenient?
-
-**Solution**: *Allow the user to put time marks and the loop between them.*
-
 ![alt text](https://github.com/AnuarTB/atak-ui/blob/master/story3.jpg)
+*Allow the user to put time marks and the loop between them.*
+**Selection criteria**: In the process of making choreo and rehearsing, there is a high need for repetitively playing certain part of the video.
+
 
 ## Studio Reflections
 
