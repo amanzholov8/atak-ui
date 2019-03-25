@@ -1,9 +1,9 @@
 # Team A-TAK UI: DP2 Ideation
 
 ## Table of contents
-1. [POV](#POV)
+1. [POV](#pov)
 1. [Persona](#persona)
-1. [HWM](#HMW)
+1. [HMW](#hmw)
 1. [Solution Ideas](#solution-ideas)
 1. [Storyboards](#storyboards)
 1. [Studio Reflection](#studio-reflection)
@@ -96,9 +96,9 @@
 
 ### HMW make navigation through the track affordable and convenient?
 
+1. Allow the user to put time marks and the loop between them.
 1. Allow the user to put bookmarks on track for an easy return.
 1. Add generic player control buttons like “replay”, “go +- 5/10/15 sec”. 
-1. Allow the user to put time marks and the loop between them.
 1. Divide the songs into bars.
 1. Allow scrolling horizontally through the track.
 1. Allow users to cut out some parts of the song and paste it somewhere else (duplication).
