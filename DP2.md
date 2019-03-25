@@ -159,5 +159,6 @@ HMW make navigation through the track affordable and convenient?
 - We added our HMW and solution idea to the beginning of each of the storyboards for easy reference and to show a correlation between  solution and HMW
 - One studio member said: “it’s hard to know why looping has to be considered.”
 	- It was already explained in the report, however, we couldn’t explain it to the person during studio due to time constraints. That’s why we uploaded the specific part of the report to the Slack channel, so that our friends from studio can check it out and understand.
-- We modified our POV by the structure [user] needs to [some need] because [some surprising insight], instead of We met... , We were amazed to realize... , It’d be game-changing… . 
-- In the storyboard, we have decided to include some of the features that were in our heads. We agree that it seems messy, so we might strip down some functions in our prototype. 
+- We modified our POV by the structure [user] needs to [some need] because [some surprising insight], instead of We met... , We were amazed to realize... , It’d be game-changing... .
+- In the storyboard, we have decided to include some of the features that were in our heads even though we didn't try to be very explicit and detailed about them. We agree that it seems messy, so we might strip down some functions in our prototype. 
+- For the suggestions of people on how we might address our HWM (e.g. "add some blank time with certain signal sound"), we will consider adding this feature. However, we will still focus more on the needs of the users (or "persona") to have problem-driven approach.
