@@ -4,47 +4,25 @@ import './App.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPause, faRecycle } from '@fortawesome/free-solid-svg-icons'
-import Navbar from 'react-bootstrap/Navbar';
+import { faPlay, faPause, faRecycle, faBars, faPlus} from '@fortawesome/free-solid-svg-icons'
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
 
-library.add(faPlay, faPause);
+import Beat from './components/Beat'
+import MyNavBar from './components/MyNavBar';
 
-class MyNavigationBar extends React.Component {
-  render(){
-    return (
-      <Navbar>
-        <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            Signed in as: <a href="#login">Mark Otto</a>
-          </Navbar.Text>
-        </Navbar.Collapse>
-      </Navbar>
-    );
-  }
-}
+library.add(faPlay, faPause, faBars, faPlus);
 
 function App() {
   return (
     <div>
-    <MyNavigationBar />
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MyNavBar />
+    <Container fluid>
+      <Row>
+        <Beat bar={1} beat={1}/>
+        <Beat bar={1} beat={2}/>
+      </Row>
+    </Container>
     </div>
   );
 }

@@ -1,0 +1,10 @@
+.Beat {
+    width: 18rem;
+    text-align: center;
+    margin: 0.1rem;
+}
+
+.Beat-header {
+    font-size: 2rem;
+    font-weight: bold;
+}
