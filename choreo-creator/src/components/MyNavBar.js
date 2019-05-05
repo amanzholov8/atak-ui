@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 class MyNavBar extends React.Component {
     render(){
         return (
-        <Navbar>
+        <Navbar className="MyNavBar">
             <Navbar.Toggle children={<h1>WTF</h1>} />
             <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
