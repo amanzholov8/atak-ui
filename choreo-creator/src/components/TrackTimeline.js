@@ -12,11 +12,11 @@ class TrackTimeline extends React.Component {
         <div className="TrackTimeline">
             <Beat bar={1} beat={1}/>
             <Beat bar={1} beat={2}/>
-            {/*<Beat bar={1} beat={3}/>
+            <Beat bar={1} beat={3}/>
             <Beat bar={1} beat={4}/>
             <Beat bar={2} beat={1}/>
             <Beat bar={2} beat={2}/>
-            <Beat bar={2} beat={3}/>*/}
+            <Beat bar={2} beat={3}/>
         </div>
         );
     }
