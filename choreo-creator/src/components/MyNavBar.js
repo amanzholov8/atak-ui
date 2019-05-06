@@ -3,15 +3,10 @@ import React from 'react';
 import './MyNavBar.css'
 
 import Navbar from 'react-bootstrap/Navbar';
-<<<<<<< HEAD
-import Nav from 'react-bootstrap/Nav';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Button from 'react-bootstrap/Button';
-=======
+
 import Button from 'react-bootstrap/Button'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
->>>>>>> e7c7d19a42a6a057c978837debd7d1e2a834f8c1
 
 import { Link } from 'react-router-dom'
 
