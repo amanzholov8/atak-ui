@@ -25,15 +25,17 @@ class MyNavBar extends React.Component {
     render(){
         return (
             <Navbar className="MyNavBar">
+            <Navbar.Collapse className="justify-content-left pull-left">
                 <Navbar.Toggle/>
                 <Nav.Item id="back">
                 <Button variant="outline-primary">
                     <Link to={this.state.back}>{this.state.back_label}</Link>
                 </Button>
                 </Nav.Item>
+            </Navbar.Collapse>
 
             <Navbar.Collapse className="justify-content-center">
-            <Nav className="justify-content-between">
+            
                
                 <Nav.Item>
                     <Button variant='outline-primary'>
@@ -46,17 +48,19 @@ class MyNavBar extends React.Component {
                         <FontAwesomeIcon icon='pause' size='2x'/>
                     </Button>
                 </Nav.Item>
-                
+
                 <Nav.Item>
                     <Button variant='outline-primary'>
                         LOOP
                     </Button>
                 </Nav.Item>
 
-                <Nav.Item>
+            </Navbar.Collapse>
+            <Navbar.Collapse >
+                <Nav.Item id='helpBtn'>
                     <Button variant='outline-primary'> HELP </Button>
                 </Nav.Item>
-            </Nav>
+
             </Navbar.Collapse>
             </Navbar>
         );
