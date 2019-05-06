@@ -20,6 +20,8 @@ class MyNavBar extends React.Component {
             back: props.back || 'Back',
             back_label: props.back_label || '/'
         }
+        this.playBtn = React.createRef();
+        this.pauseBtn = React.createRef();
     }
 
     render(){
@@ -35,16 +37,16 @@ class MyNavBar extends React.Component {
             </Navbar.Collapse>
 
             <Navbar.Collapse className="justify-content-center">
-            
-               
+
+
                 <Nav.Item>
-                    <Button variant='outline-primary'>
+                    <Button variant='outline-primary' ref={this.playBtn}>
                         <FontAwesomeIcon icon='play' size='2x'/>
                     </Button>
                 </Nav.Item>
-                
+
                 <Nav.Item>
-                  <Button variant='outline-primary'>
+                  <Button variant='outline-primary' ref={this.pauseBtn}>
                         <FontAwesomeIcon icon='pause' size='2x'/>
                     </Button>
                 </Nav.Item>
