@@ -20,7 +20,7 @@ class Beat extends React.Component {
                 <DragScrollProvider>
                     {({ onMouseDown, ref }) => (
                             <Card.Body className='Beat-body' ref={ref} onMouseDown={onMouseDown}>
-                                <Button variant='primary'>
+                                <Button variant='outline-primary'>
                                     <FontAwesomeIcon icon='plus' size='7x'/>
                                 </Button>
                             </Card.Body>
