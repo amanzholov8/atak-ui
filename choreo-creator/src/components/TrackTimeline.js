@@ -1,7 +1,8 @@
 import React from 'react';
 
-import './TrackTimeline.css'
+import DragScrollProvider from 'drag-scroll-provider'
 
+import './TrackTimeline.css'
 import Beat from "./Beat";
 
 class TrackTimeline extends React.Component {
