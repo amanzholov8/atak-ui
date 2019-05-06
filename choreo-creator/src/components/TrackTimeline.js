@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './TrackTimeline.css'
+
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import DragScrollProvider from 'drag-scroll-provider'
@@ -22,7 +24,7 @@ class TrackTimeline extends React.Component {
                     <Beat bar={2} beat={3}/>
                 </div>
             )}
-        </DragScrollProvider>            
+        </DragScrollProvider>
         );
     }
 }

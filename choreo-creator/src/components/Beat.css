@@ -1,0 +1,20 @@
+.Beat {
+    flex: 0.3 0 auto;
+    width: 18rem;
+    text-align: center;
+    /*text-align: center is for centering elements within each beat*/
+    margin: 0.1rem;
+}
+
+.Beat-body {
+    overflow-y: scroll;
+}
+
+.Beat-body::-webkit-scrollbar {
+    display: none;
+}
+
+.Beat-header {
+    font-size: 2rem;
+    font-weight: bold;
+}

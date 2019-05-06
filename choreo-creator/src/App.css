@@ -29,44 +29,6 @@
   flex-direction: column;
 }
 
-.MyNavBar {
-  flex: 1 1 10%;
-  border: 1px solid #4395FF;
-  border-bottom: 0px;
-}
-
-.TrackTimeline {
-  flex: 1 1 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: flex-start;
-  overflow-x: scroll;
-  border: 1px solid #4395FF;
-}
-
-
-.Beat {
-  flex: 0.3 0 auto;
-  width: 18rem;
-  text-align: center;
-  /*text-align: center is for centering elements within each beat*/
-  margin: 0.1rem;
-}
-
-.Beat-body {
-  overflow-y: scroll;
-}
-
-.Beat-body::-webkit-scrollbar {
-    display: none;
-} 
-
-.Beat-header {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
