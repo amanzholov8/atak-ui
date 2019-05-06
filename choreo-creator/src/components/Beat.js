@@ -2,6 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import DragScrollProvider from 'drag-scroll-provider'
 import './Beat.css';
 
 class Beat extends React.Component {
@@ -15,12 +16,16 @@ class Beat extends React.Component {
     render() {
         return (
             <Card className='Beat'>
-                <Card.Header className='Beat-header'>{this.state.bar}:{this.state.beat}</Card.Header>
-                <Card.Body>
-                    <Button variant='primary'>
-                        <FontAwesomeIcon icon='plus' size='7x'/>
-                    </Button>
-                </Card.Body>
+                <Card.Header className='Beat-header'>{this.state.bar}:{this.state.beat}</Card.Header>            
+                <DragScrollProvider>
+                    {({ onMouseDown, ref }) => (
+                            <Card.Body className='Beat-body' ref={ref} onMouseDown={onMouseDown}>
+                                <Button variant='primary'>
+                                    <FontAwesomeIcon icon='plus' size='7x'/>
+                                </Button>
+                            </Card.Body>
+                    )}
+                </DragScrollProvider>
             </Card>
         );
     }

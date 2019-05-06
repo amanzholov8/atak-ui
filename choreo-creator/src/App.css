@@ -54,6 +54,14 @@
   margin: 0.1rem;
 }
 
+.Beat-body {
+  overflow-y: scroll;
+}
+
+.Beat-body::-webkit-scrollbar {
+    display: none;
+} 
+
 .Beat-header {
   font-size: 2rem;
   font-weight: bold;
