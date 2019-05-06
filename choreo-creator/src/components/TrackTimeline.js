@@ -2,29 +2,44 @@ import React from 'react';
 
 import './TrackTimeline.css'
 
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import DragScrollProvider from 'drag-scroll-provider'
 import Beat from "./Beat";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 class TrackTimeline extends React.Component {
+
+    constructor(props){
+        super(props);
+
+        this.scrollBar = React.createRef();
+        this.playTrack = this.playTrack.bind(this);
+        this.pauseTrack = this.pauseTrack.bind(this);
+        this.player = null;
+        this.scrollSpeed = 10;
+    }
+
+    playTrack(){
+        this.player = setInterval(this.moveForward, 1000 / this.scrollSpeed);
+    }
+
+    pauseTrack(){
+        if(this.player)
+            clearInterval(this.player);
+    }
+
+    moveForward(){
+        this.scrollBar.current.scrollBy(this.scrollSpeed, 0);
+    }
+
     render(){
         return (
-        <DragScrollProvider>
-            {({ onMouseDown, ref }) => (
-                <div className="TrackTimeline" ref={ref} onMouseDown={onMouseDown}>
-                    <Beat bar={1} beat={1}/>
-                    <Beat bar={1} beat={2}/>
-                    <Beat bar={1} beat={3}/>
-                    <Beat bar={1} beat={4}/>
-                    <Beat bar={2} beat={1}/>
-                    <Beat bar={2} beat={2}/>
-                    <Beat bar={2} beat={3}/>
-                </div>
-            )}
-        </DragScrollProvider>
+            <div className="TrackTimeline" ref={this.scrollBar}>
+                <Beat bar={1} beat={1}/>
+                <Beat bar={1} beat={2}/>
+                <Beat bar={1} beat={3}/>
+                <Beat bar={1} beat={4}/>
+                <Beat bar={2} beat={1}/>
+                <Beat bar={2} beat={2}/>
+                <Beat bar={2} beat={3}/>
+            </div>
         );
     }
 }

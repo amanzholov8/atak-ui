@@ -16,6 +16,8 @@ class MyNavBar extends React.Component {
             back: props.back || 'Back',
             back_label: props.back_label || '/'
         }
+        this.playBtn = React.createRef();
+        this.pauseBtn = React.createRef();
     }
 
     render(){
@@ -26,10 +28,10 @@ class MyNavBar extends React.Component {
                     <Link to={this.state.back}>{this.state.back_label}</Link>
                 </Button>
                 <Navbar.Collapse>
-                    <Button variant='outline-primary'>
+                    <Button variant='outline-primary' ref={this.playBtn}>
                         <FontAwesomeIcon icon='pause' size='2x'/>
                     </Button>
-                    <Button variant='outline-primary'>
+                    <Button variant='outline-primary' ref={this.pauseBtn}>
                         <FontAwesomeIcon icon='play' size='2x'/>
                     </Button>
                 </Navbar.Collapse>
