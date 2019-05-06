@@ -1,3 +1,8 @@
 .MyNavBar {
     flex: 1 1 10%;
 }
+
+a:hover {
+   color: #FFF;
+   text-decoration: none;
+}

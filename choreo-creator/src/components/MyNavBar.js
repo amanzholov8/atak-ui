@@ -26,10 +26,11 @@ class MyNavBar extends React.Component {
         return (
             <Navbar className="MyNavBar">
                 <Navbar.Toggle/>
+                <Nav.Item id="back">
                 <Button variant="outline-primary">
                     <Link to={this.state.back}>{this.state.back_label}</Link>
                 </Button>
-                
+                </Nav.Item>
 
             <Navbar.Collapse className="justify-content-center">
             <Nav className="justify-content-between">
