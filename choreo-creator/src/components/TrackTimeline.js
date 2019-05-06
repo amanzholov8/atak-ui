@@ -10,18 +10,24 @@ import Beat from "./Beat";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class TrackTimeline extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            openModal: props.openModal
+        };
+    }    
     render(){
         return (
         <DragScrollProvider>
             {({ onMouseDown, ref }) => (
                 <div className="TrackTimeline" ref={ref} onMouseDown={onMouseDown}>
-                    <Beat bar={1} beat={1}/>
-                    <Beat bar={1} beat={2}/>
-                    <Beat bar={1} beat={3}/>
-                    <Beat bar={1} beat={4}/>
-                    <Beat bar={2} beat={1}/>
-                    <Beat bar={2} beat={2}/>
-                    <Beat bar={2} beat={3}/>
+                    <Beat bar={1} beat={1} openModal = {this.state.openModal}/>
+                    <Beat bar={1} beat={2} openModal = {this.state.openModal}/>
+                    <Beat bar={1} beat={3} openModal = {this.state.openModal}/>
+                    <Beat bar={1} beat={4} openModal = {this.state.openModal}/>
+                    <Beat bar={2} beat={1} openModal = {this.state.openModal}/>
+                    <Beat bar={2} beat={2} openModal = {this.state.openModal}/>
+                    <Beat bar={2} beat={3} openModal = {this.state.openModal}/>
                 </div>
             )}
         </DragScrollProvider>
