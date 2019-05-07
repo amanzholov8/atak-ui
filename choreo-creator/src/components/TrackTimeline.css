@@ -7,3 +7,12 @@
     overflow-x: scroll;
     border: 1px solid #4395FF;
 }
+
+.playHead {
+    width:2px;
+    background-color:red;
+    position:absolute;
+    top:8%;
+    bottom:24%;
+    left:52%;
+}

@@ -42,9 +42,11 @@ class TrackTimeline extends React.Component {
                     <Beat bar={2} beat={1} openModal = {this.state.openModal}/>
                     <Beat bar={2} beat={2} openModal = {this.state.openModal}/>
                     <Beat bar={2} beat={3} openModal = {this.state.openModal}/>
+                    <div class="playHead">&nbsp;</div>
                 </div>
             )}
         </DragScrollProvider>
+            
         );
     }
 }
