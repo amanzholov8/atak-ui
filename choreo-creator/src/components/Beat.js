@@ -11,9 +11,16 @@ class Beat extends React.Component {
         this.state = {
             bar: props.bar,
             beat: props.beat,
-            openModal: props.openModal
+            openModal: props.openModal,
+            setBitSelected: props.setBitSelected
         }
     }
+
+    /*onPlusClick = () => {
+        this.state.openModal();
+        this.state.setBitSelected();
+    }*/
+
     render() {
         return (
             <Card className='Beat'>
