@@ -8,6 +8,8 @@
 
 .Beat-body {
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
 }
 
 .Beat-body::-webkit-scrollbar {
@@ -17,4 +19,9 @@
 .Beat-header {
     font-size: 2rem;
     font-weight: bold;
+}
+
+.BeatImage {
+	width: 80%;
+	margin: 2rem;
 }
