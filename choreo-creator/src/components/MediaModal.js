@@ -23,7 +23,9 @@ class MediaModal extends React.Component {
     }
     
     onClose = () => {
-
+      this.setState({
+        galleryModal: false
+      });
     }
 
     render() {
@@ -69,13 +71,12 @@ class MediaModal extends React.Component {
                   <Button onClick={this.props.onHide}>Close</Button>
                 </Modal.Footer>             
             </Modal>
-            <Modal show={this.state.galleryModal} onHide={this.onClose}>
-            
+            <Modal show={this.state.galleryModal} onHide={this.onClose}> 
               <Modal.Body>
-                <Button variant="primary">
+                <Button variant="primary" onClick={this.onClose}>
                   <img src="https://i.ibb.co/SXW4htY/img1.jpg" width="180rem"/>
                 </Button>
-                <Button variant="primary">
+                <Button variant="primary" onClick={this.onClose}>
                   <img src="https://i.ibb.co/vYJdvBg/img2.jpg" width="180rem"/>
                 </Button>                
               </Modal.Body>
