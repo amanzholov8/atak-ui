@@ -1,5 +1,5 @@
 .MainBox {
-  height: 600px;
+  height: 36em;
   display: flex;
   flex-direction: column;
 }
