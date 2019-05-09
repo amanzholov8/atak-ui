@@ -12,7 +12,8 @@ class Beat extends React.Component {
             bar: props.bar,
             beat: props.beat,
             openModal: props.openModal,
-            media: ["https://i.ibb.co/SXW4htY/img1.jpg", "https://i.ibb.co/vYJdvBg/img2.jpg"]
+            media: [props.addedImage],
+            median: ["https://i.ibb.co/SXW4htY/img1.jpg", "https://i.ibb.co/vYJdvBg/img2.jpg"]
         }
     }
 
@@ -32,7 +33,8 @@ class Beat extends React.Component {
                                         function(src) {
                                             return <img className="BeatImage" src={src} />
                                         }.bind(this))
-                                }                                                        
+                                }
+                                {this.props.addedImage ? <img className="BeatImage" src={this.props.addedImage} /> : <p>sorry</p>}                                                        
                                 <Button variant='outline-primary' onClick={this.onPlusClick}>
                                     <FontAwesomeIcon icon='plus' size='7x'/>
                                 </Button>
