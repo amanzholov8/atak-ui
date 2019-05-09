@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { rootReducer } from './reducers';
 import './index.css';
 import App from './App';
 import Editor from './Editor'
@@ -13,13 +16,17 @@ import { faPlay, faPause, faBars, faPlus, faImage, faVideo, faPaintBrush, faComm
 
 library.add(faPlay, faPause, faBars, faPlus, faImage, faVideo, faPaintBrush, faComment);
 
+const store = createStore(rootReducer);
+
 ReactDOM.render(
-    <Router>
-        <div>
-            <Route exact path='/' component={App} />
-            <Route path='/edit' component={Editor} />
-        </div>
-    </Router>,
+    <Provider store={store}>
+        <Router>
+            <div>
+                <Route exact path='/' component={App} />
+                <Route path='/edit' component={Editor} />
+            </div>
+        </Router>
+    </Provider>,
     document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
