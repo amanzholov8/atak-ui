@@ -3,6 +3,7 @@
 	height: 120px;
 	border-radius: 17px;
 	position: absolute;
+	top: 30%;
 	left: 5%;
 }
 
@@ -23,3 +24,12 @@
 	left: 1%;
 	top: 50%;
 }
+
+.part1 {
+      width: 120px;
+      height: 120px;
+      background: #9370DB;
+      float:left;
+      margin-right: -1px;
+  	  margin-top: -1px;
+    }

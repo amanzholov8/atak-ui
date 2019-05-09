@@ -1,7 +1,16 @@
+.MediaModal {
+
+}
+
 .MediaModal-line {
 	border-bottom: 1px solid #2EADE8;
+	width: 100%;
 }
 
 .MediaModal-button {
 	text-align: center;
+}
+
+.Footer {
+	height: auto;
 }

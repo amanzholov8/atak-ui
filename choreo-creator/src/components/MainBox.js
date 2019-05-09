@@ -5,17 +5,25 @@ import TrackTimeline from './TrackTimeline';
 import MediaModal from './MediaModal';
 import './MainBox.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Button from 'react-bootstrap/Button';
+
 class MainBox extends React.Component {
     constructor(props){
         super(props);
-        this.state = { modalShow: false };
-        this.openModal = this.openModal.bind(this)
+        this.state = { 
+            modalShow: false,
+            beatselected: {bar: 0,
+                beat: 0} 
+        };
     }
 
-    openModal() {
+    openModal = (bar, beat) => {
         this.setState({
-            modalShow: true
-        })
+            modalShow: true,
+            beatselected: {bar: bar,
+                beat: beat}
+        });
     }
 
     render() {
@@ -24,9 +32,14 @@ class MainBox extends React.Component {
         return (
             <div className="MainBox" ref={this.MainBox}>
               <MyNavBar className="MyNavBarFlex" back='/edit' back_label='Edit Audio'/>
-              <TrackTimeline className="TrackTimelineFlex" openModal={this.openModal}/>
+              <TrackTimeline 
+                className="TrackTimelineFlex" 
+                openModal={this.openModal} 
+                setBeatSelected={this.setBeatSelected}
+                />
               <MediaModal
                 show={this.state.modalShow}
+                beatselected={this.state.beatselected}
                 onHide={modalClose}
               />
             </div>

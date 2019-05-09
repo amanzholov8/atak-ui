@@ -14,6 +14,11 @@ class Beat extends React.Component {
             openModal: props.openModal
         }
     }
+
+    onPlusClick = () => {
+        this.state.openModal(this.state.bar, this.state.beat);
+    }
+
     render() {
         return (
             <Card className='Beat'>
@@ -21,7 +26,7 @@ class Beat extends React.Component {
                 <DragScrollProvider>
                     {({ onMouseDown, ref }) => (
                             <Card.Body className='Beat-body' ref={ref} onMouseDown={onMouseDown}>
-                                <Button variant='outline-primary' onClick={this.state.openModal}>
+                                <Button variant='outline-primary' onClick={this.onPlusClick}>
                                     <FontAwesomeIcon icon='plus' size='7x'/>
                                 </Button>
                             </Card.Body>
