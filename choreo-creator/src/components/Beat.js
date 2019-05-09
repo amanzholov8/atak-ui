@@ -12,7 +12,7 @@ class Beat extends React.Component {
             bar: props.bar,
             beat: props.beat,
             openModal: props.openModal,
-            media: ["../images/img1.jpg"]
+            media: ["http://localhost:3000/images/img1.jpg", "https://random.dog/d4287fd5-ec3f-4816-a8e1-962ee8e86643.jpg"]
         }
     }
 
@@ -26,7 +26,13 @@ class Beat extends React.Component {
                 <Card.Header className='Beat-header'>{this.state.bar}:{this.state.beat}</Card.Header>            
                 <DragScrollProvider>
                     {({ onMouseDown, ref }) => (
-                            <Card.Body className='Beat-body' ref={ref} onMouseDown={onMouseDown}>                                                        
+                            <Card.Body className='Beat-body' ref={ref} onMouseDown={onMouseDown}>
+                                {
+                                    this.state.media.map(
+                                        function(src) {
+                                            return <img className="BeatImage" src={src} />
+                                        }.bind(this))
+                                }                                                        
                                 <Button variant='outline-primary' onClick={this.onPlusClick}>
                                     <FontAwesomeIcon icon='plus' size='7x'/>
                                 </Button>
@@ -40,14 +46,3 @@ class Beat extends React.Component {
 
 //export default connect()(Beat);
 export default Beat;
-
-
-/*
-                                {
-                                    this.state.media.map(
-                                        function(src) {
-                                            return <img src={src} />
-                                        }.bind(this))
-                                }
-
-*/
