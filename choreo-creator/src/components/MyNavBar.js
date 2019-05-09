@@ -17,8 +17,8 @@ class MyNavBar extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            back: props.back || 'Back',
-            back_label: props.back_label || '/'
+            back: props.back || '/',
+            back_label: props.back_label || 'Back'
         }
         this.playBtn = React.createRef();
         this.pauseBtn = React.createRef();

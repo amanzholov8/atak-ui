@@ -28,7 +28,7 @@ class MainBox extends React.Component {
               <MediaModal
                 show={this.state.modalShow}
                 onHide={modalClose}
-              />              
+              />
             </div>
         );
     }
