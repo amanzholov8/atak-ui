@@ -14,7 +14,8 @@ class MainBox extends React.Component {
         this.state = { 
             modalShow: false,
             beatselected: {bar: 0,
-                beat: 0} 
+                beat: 0},
+            src: ""    
         };
     }
 
@@ -24,6 +25,13 @@ class MainBox extends React.Component {
             beatselected: {bar: bar,
                 beat: beat}
         });
+    }
+
+    setimage = image => {
+        this.setState({
+            src: image
+        })
+        console.log(`src is set to ${image}`);
     }
 
     render() {
@@ -37,11 +45,13 @@ class MainBox extends React.Component {
                 openModal={this.openModal} 
                 openGalery ={this.openGalery}
                 setBeatSelected={this.setBeatSelected}
+                addedImage={this.state.src}
                 />
               <MediaModal
                 show={this.state.modalShow}
                 beatselected={this.state.beatselected}
                 onHide={modalClose}
+                setimage={this.setimage}
               />
             </div>
         );

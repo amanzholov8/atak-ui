@@ -10,7 +10,8 @@ class MediaModal extends React.Component {
         super(props);
         this.state = {
           beatselected: props.beatselected,
-          galleryModal: false
+          galleryModal: false,
+          setimage: props.setimage
         }
         this.openGalleryOnClick = this.openGalleryOnClick.bind(this);
     }
@@ -24,6 +25,11 @@ class MediaModal extends React.Component {
     
     onClose = () => {
 
+    }
+
+    sendimage = () => {
+      this.state.setimage("https://i.ibb.co/SXW4htY/img1.jpg");
+      console.log("gogo");
     }
 
     render() {
@@ -72,7 +78,7 @@ class MediaModal extends React.Component {
             <Modal show={this.state.galleryModal} onHide={this.onClose}>
             
               <Modal.Body>
-                <Button variant="primary">
+                <Button variant="primary" onClick={this.sendimage}>
                   <img src="https://i.ibb.co/SXW4htY/img1.jpg" width="180rem"/>
                 </Button>
                 <Button variant="primary">
