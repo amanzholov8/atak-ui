@@ -12,7 +12,7 @@ class Beat extends React.Component {
             bar: props.bar,
             beat: props.beat,
             openModal: props.openModal,
-            media: ["http://localhost:3000/images/img1.jpg", "https://random.dog/d4287fd5-ec3f-4816-a8e1-962ee8e86643.jpg"]
+            media: ["https://i.ibb.co/SXW4htY/img1.jpg", "https://i.ibb.co/vYJdvBg/img2.jpg"]
         }
     }
 

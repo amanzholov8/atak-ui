@@ -72,7 +72,12 @@ class MediaModal extends React.Component {
             <Modal show={this.state.galleryModal} onHide={this.onClose}>
             
               <Modal.Body>
-                Kartinka
+                <Button variant="primary">
+                  <img src="https://i.ibb.co/SXW4htY/img1.jpg" width="180rem"/>
+                </Button>
+                <Button variant="primary">
+                  <img src="https://i.ibb.co/vYJdvBg/img2.jpg" width="180rem"/>
+                </Button>                
               </Modal.Body>
             </Modal>
           </div>
