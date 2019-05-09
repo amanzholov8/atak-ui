@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './MediaModal.css';
-import Galery from "./Galery"
 
 class MediaModal extends React.Component {
     constructor(props){
