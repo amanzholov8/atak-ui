@@ -35,6 +35,7 @@ class MainBox extends React.Component {
               <TrackTimeline 
                 className="TrackTimelineFlex" 
                 openModal={this.openModal} 
+                openGalery ={this.openGalery}
                 setBeatSelected={this.setBeatSelected}
                 />
               <MediaModal

@@ -4,16 +4,32 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './MediaModal.css';
+import Galery from "./Galery"
 
 class MediaModal extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-          beatselected: props.beatselected
+          beatselected: props.beatselected,
+          galleryModal: false
         }
+        this.openGalleryOnClick = this.openGalleryOnClick.bind(this);
     }
+    
+    openGalleryOnClick = () => {
+      this.setState({
+        galleryModal: true
+      });
+      this.props.onHide();
+    }
+    
+    onClose = () => {
+
+    }
+
     render() {
         return (
+          <div>
             <Modal 
                 {...this.props}
                 className="MediaModal"
@@ -26,7 +42,7 @@ class MediaModal extends React.Component {
                   <span className="BeatIndicator">{`${this.props.beatselected.bar}-${this.props.beatselected.beat}`}</span>
                 </Modal.Body>
 
-                <Button variant='outline-primary' className="MediaModal-line">
+                <Button variant='outline-primary' className="MediaModal-line" onClick={this.openGalleryOnClick}>
                   <Modal.Body>
                     <FontAwesomeIcon icon='image' size='2x'/> Photo
                   </Modal.Body>
@@ -52,8 +68,15 @@ class MediaModal extends React.Component {
                                         
                 <Modal.Footer className="MediaModal-line Footer">
                   <Button onClick={this.props.onHide}>Close</Button>
-                </Modal.Footer>            
+                </Modal.Footer>             
             </Modal>
+            <Modal show={this.state.galleryModal} onHide={this.onClose}>
+            
+              <Modal.Body>
+                Kartinka
+              </Modal.Body>
+            </Modal>
+          </div>
         );
     }
 }
