@@ -16,10 +16,9 @@ class Beat extends React.Component {
         }
     }
 
-    /*onPlusClick = () => {
-        this.state.openModal();
-        this.state.setBitSelected();
-    }*/
+    onPlusClick = () => {
+        this.state.openModal(this.state.bar, this.state.beat);
+    }
 
     render() {
         return (
@@ -28,7 +27,7 @@ class Beat extends React.Component {
                 <DragScrollProvider>
                     {({ onMouseDown, ref }) => (
                             <Card.Body className='Beat-body' ref={ref} onMouseDown={onMouseDown}>
-                                <Button variant='outline-primary' onClick={this.state.openModal}>
+                                <Button variant='outline-primary' onClick={this.onPlusClick}>
                                     <FontAwesomeIcon icon='plus' size='7x'/>
                                 </Button>
                             </Card.Body>

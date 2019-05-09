@@ -5,28 +5,27 @@ import TrackTimeline from './TrackTimeline';
 import MediaModal from './MediaModal';
 import './MainBox.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Button from 'react-bootstrap/Button';
+
 class MainBox extends React.Component {
     constructor(props){
         super(props);
         this.state = { 
             modalShow: false,
-            bitSelected: "0-0" 
+            bitselected: "0-0" 
         };
-        this.openModal = this.openModal.bind(this);
-        this.setBitSelected = this.setBitSelected.bind(this);
+        //this.openModal = this.openModal.bind(this);
+        //this.setBitSelected = this.setBitSelected.bind(this);
     }
 
-    openModal = () => {
+    openModal = (bar, beat) => {
         this.setState({
-            modalShow: true
-        })
-    }
-
-    setBitSelected = () => {
-        this.setState({
-            bitSelected: `1-1`
+            modalShow: true,
+            bitselected: `${bar}-${beat}`
         });
-        console.log("disn");
+        console.log(`${bar}-${beat}`);
+        console.log(this.state.bitselected);
     }
 
     render() {
@@ -42,7 +41,7 @@ class MainBox extends React.Component {
                 />
               <MediaModal
                 show={this.state.modalShow}
-                bitSelected={this.state.bitSelected}
+                bitselected={this.state.bitselected}
                 onHide={modalClose}
               />              
             </div>

@@ -36,14 +36,14 @@ class TrackTimeline extends React.Component {
         <DragScrollProvider>
             {({ onMouseDown, ref }) => (
                 <div className="TrackTimeline" ref={ref} onMouseDown={onMouseDown}>
-                    <Beat bar={1} beat={1} openModal = {this.state.openModal} setBitSelected={this.setBitSelected}/>
-                    <Beat bar={1} beat={2} openModal = {this.state.openModal} setBitSelected={this.setBitSelected}/>
-                    <Beat bar={1} beat={3} openModal = {this.state.openModal} setBitSelected={this.setBitSelected}/>
-                    <Beat bar={1} beat={4} openModal = {this.state.openModal} setBitSelected={this.setBitSelected}/>
-                    <Beat bar={2} beat={1} openModal = {this.state.openModal} setBitSelected={this.setBitSelected}/>
-                    <Beat bar={2} beat={2} openModal = {this.state.openModal} setBitSelected={this.setBitSelected}/>
-                    <Beat bar={2} beat={3} openModal = {this.state.openModal} setBitSelected={this.setBitSelected}/>
-                    <div class="playHead">&nbsp;</div>
+                    <Beat bar={1} beat={1} openModal = {this.state.openModal}/>
+                    <Beat bar={1} beat={2} openModal = {this.state.openModal}/>
+                    <Beat bar={1} beat={3} openModal = {this.state.openModal}/>
+                    <Beat bar={1} beat={4} openModal = {this.state.openModal}/>
+                    <Beat bar={2} beat={1} openModal = {this.state.openModal}/>
+                    <Beat bar={2} beat={2} openModal = {this.state.openModal}/>
+                    <Beat bar={2} beat={3} openModal = {this.state.openModal}/>
+                    <div className="playHead">&nbsp;</div>
                 </div>
             )}
         </DragScrollProvider>
