@@ -9,8 +9,7 @@ class TrackTimeline extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            openModal: props.openModal,
-            setBitSelected: props.setBitSelected
+            openModal: props.openModal
         };
         this.scrollBar = React.createRef();
         this.playTrack = this.playTrack.bind(this);

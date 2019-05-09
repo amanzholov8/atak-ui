@@ -13,19 +13,17 @@ class MainBox extends React.Component {
         super(props);
         this.state = { 
             modalShow: false,
-            bitselected: "0-0" 
+            beatselected: {bar: 0,
+                beat: 0} 
         };
-        //this.openModal = this.openModal.bind(this);
-        //this.setBitSelected = this.setBitSelected.bind(this);
     }
 
     openModal = (bar, beat) => {
         this.setState({
             modalShow: true,
-            bitselected: `${bar}-${beat}`
+            beatselected: {bar: bar,
+                beat: beat}
         });
-        console.log(`${bar}-${beat}`);
-        console.log(this.state.bitselected);
     }
 
     render() {
@@ -37,11 +35,11 @@ class MainBox extends React.Component {
               <TrackTimeline 
                 className="TrackTimelineFlex" 
                 openModal={this.openModal} 
-                setBitSelected={this.setBitSelected}
+                setBeatSelected={this.setBeatSelected}
                 />
               <MediaModal
                 show={this.state.modalShow}
-                bitselected={this.state.bitselected}
+                beatselected={this.state.beatselected}
                 onHide={modalClose}
               />              
             </div>

@@ -9,7 +9,7 @@ class MediaModal extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-          bitselected: props.bitselected
+          beatselected: props.beatselected
         }
     }
     render() {
@@ -22,7 +22,7 @@ class MediaModal extends React.Component {
                 centered
             >
                 <Modal.Body>
-                  Selected Bar-Beat: {this.state.bitselected}
+                  Selected Bar-Beat: {`${this.props.beatselected.bar}-${this.props.beatselected.beat}`}
                 </Modal.Body>
 
                 <Button variant='outline-primary' className="MediaModal-line">

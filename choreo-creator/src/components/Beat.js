@@ -11,8 +11,7 @@ class Beat extends React.Component {
         this.state = {
             bar: props.bar,
             beat: props.beat,
-            openModal: props.openModal,
-            setBitSelected: props.setBitSelected
+            openModal: props.openModal
         }
     }
 
