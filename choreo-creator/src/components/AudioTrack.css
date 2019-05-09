@@ -1,35 +1,38 @@
-#track1 {
-	width: 900px;
-	height: 120px;
-	border-radius: 17px;
+#AudioTrack1 {
 	position: absolute;
-	top: 30%;
-	left: 5%;
+	top: 8em;
+	left: 9.5em;
 }
 
-#track2 {
-	width: 600px;
-	height: 120px;
-	border-radius: 17px;
+#AudioTrack2 {
 	position: absolute;
-	left: 35%;
-	top: 32%;
+	left: 35em;
+	top: 18em;
 }
 
-#track3 {
-	width: 1000px;
-	height: 120px;
-	border-radius: 17px;
+#AudioTrack3 {
 	position: absolute;
-	left: 1%;
-	top: 50%;
+	left: 1em;
+	top: 28em;
 }
 
-.part1 {
-      width: 120px;
-      height: 120px;
-      background: #9370DB;
-      float:left;
-      margin-right: -1px;
-  	  margin-top: -1px;
-    }
+#name1 {
+	position: absolute;
+	left: 1em;
+	top: 4.6em;
+	font-size: 1.3em;
+}
+
+#name2 {
+	position: absolute;
+	left: 1em;
+	top: 12.4em;
+	font-size: 1.3em;
+}
+
+#name3 {
+	position: absolute;
+	left: 1em;
+	top: 19.9em;
+	font-size: 1.3em;
+}

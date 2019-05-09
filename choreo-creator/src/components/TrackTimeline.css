@@ -9,10 +9,10 @@
 }
 
 .playHead {
-    width:2px;
+    width: 0.15em;
     background-color:red;
     position:absolute;
-    top:8%;
-    bottom:24%;
+    top:4em;
+    bottom:11.8em;
     left:52%;
 }

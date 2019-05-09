@@ -12,16 +12,16 @@ class AudioTrack extends React.Component {
     };
   }
 
-  selects(event){
+  selects(event, darkColor){
     if (event.target.id != 'clicked' && event.buttons == 1) {
-      event.target.style.background = '#4B0082';
+      event.target.style.background = darkColor;
       event.target.id = 'clicked';
     }
     
   }
 
-  removes(event) {
-    var parts = document.getElementsByClassName('part1');
+  removes(event, k) {
+    var parts = document.getElementsByClassName(`part${k}`);
     for ( var i = 0; i < parts.length; i++ ){
       if (parts[i].id=="clicked") {
         parts[i].style.visibility = 'hidden';
@@ -30,12 +30,15 @@ class AudioTrack extends React.Component {
     }
   }
 
-  renderPart(style) {
+  renderPart(i, color, darkColor) {
             return (
-                <button className="part1" 
-                        onMouseEnter = {(event)=> this.selects(event)}
-                        onMouseDown = {(event)=> this.selects(event)}
-                        onDoubleClick = {(event) => this.removes(event)}>
+                <button className= {`part${i}`}
+                        style = {{background: `${color}`, 
+                                  width: '8.5em', height: '7em',
+                                  marginRight: '-1px', marginTop: '-1px'}}
+                        onMouseEnter = {(event)=> this.selects(event, darkColor)}
+                        onMouseDown = {(event)=> this.selects(event, darkColor)}
+                        onDoubleClick = {(event) => this.removes(event, i)}>
                 </button>
               );
           }
@@ -43,15 +46,35 @@ class AudioTrack extends React.Component {
   render() {
 		return (
 			<div>
-				<br/>
-				<br/>
-
+          <div id='name1'>Do you wanna know.mp3</div>
           <div id = 'AudioTrack1'>
-				    {this.renderPart()}
-            {this.renderPart()}
-            {this.renderPart()}
-            {this.renderPart()}
-            {this.renderPart()}
+				    {this.renderPart(1, '#9370DB', '#4B0082')}
+            {this.renderPart(1, '#9370DB', '#4B0082')}
+            {this.renderPart(1, '#9370DB', '#4B0082')}
+            {this.renderPart(1, '#9370DB', '#4B0082')}
+            {this.renderPart(1, '#9370DB', '#4B0082')}
+            {this.renderPart(1, '#9370DB', '#4B0082')}
+            {this.renderPart(1, '#9370DB', '#4B0082')}
+          </div>
+
+          <div id='name2'>Payphone.mp3</div>
+          <div id = 'AudioTrack2'>
+            {this.renderPart(2, '#32CD32', '#006400')}
+            {this.renderPart(2, '#32CD32', '#006400')}
+            {this.renderPart(2, '#32CD32', '#006400')}
+            {this.renderPart(2, '#32CD32', '#006400')}
+            {this.renderPart(2, '#32CD32', '#006400')}
+          </div>
+
+          <div id='name3'>Mind in awe.mp3</div>
+          <div id = 'AudioTrack3'>
+            {this.renderPart(3, '#FFD700', '#8B4513')}
+            {this.renderPart(3, '#FFD700', '#8B4513')}
+            {this.renderPart(3, '#FFD700', '#8B4513')}
+            {this.renderPart(3, '#FFD700', '#8B4513')}
+            {this.renderPart(3, '#FFD700', '#8B4513')}
+            {this.renderPart(3, '#FFD700', '#8B4513')}
+            {this.renderPart(3, '#FFD700', '#8B4513')}
           </div>
           
 
