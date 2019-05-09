@@ -1,7 +1,5 @@
 import React from 'react';
 
-import DragScrollProvider from 'drag-scroll-provider'
-
 import './TrackTimeline.css'
 import Beat from "./Beat";
 
@@ -14,6 +12,7 @@ class TrackTimeline extends React.Component {
         this.scrollBar = React.createRef();
         this.playTrack = this.playTrack.bind(this);
         this.pauseTrack = this.pauseTrack.bind(this);
+        this.moveForward = this.moveForward.bind(this);
         this.player = null;
         this.scrollSpeed = 10;
     }
@@ -32,21 +31,16 @@ class TrackTimeline extends React.Component {
     }
     render(){
         return (
-        <DragScrollProvider>
-            {({ onMouseDown, ref }) => (
-                <div className="TrackTimeline" ref={ref} onMouseDown={onMouseDown}>
-                    <Beat bar={1} beat={1} openModal = {this.state.openModal}/>
-                    <Beat bar={1} beat={2} openModal = {this.state.openModal}/>
-                    <Beat bar={1} beat={3} openModal = {this.state.openModal}/>
-                    <Beat bar={1} beat={4} openModal = {this.state.openModal}/>
-                    <Beat bar={2} beat={1} openModal = {this.state.openModal}/>
-                    <Beat bar={2} beat={2} openModal = {this.state.openModal}/>
-                    <Beat bar={2} beat={3} openModal = {this.state.openModal}/>
-                    <div className="playHead">&nbsp;</div>
-                </div>
-            )}
-        </DragScrollProvider>
-            
+            <div className="TrackTimeline" ref={this.scrollBar}>
+                <Beat bar={1} beat={1} openModal = {this.state.openModal}/>
+                <Beat bar={1} beat={2} openModal = {this.state.openModal}/>
+                <Beat bar={1} beat={3} openModal = {this.state.openModal}/>
+                <Beat bar={1} beat={4} openModal = {this.state.openModal}/>
+                <Beat bar={2} beat={1} openModal = {this.state.openModal}/>
+                <Beat bar={2} beat={2} openModal = {this.state.openModal}/>
+                <Beat bar={2} beat={3} openModal = {this.state.openModal}/>
+                <div class="playHead">&nbsp;</div>
+            </div>
         );
     }
 }

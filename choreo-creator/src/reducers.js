@@ -1,4 +1,4 @@
-import {ACTION_ADD_PHOTO} from "SDKLJSDLKFJSDLKFJ";
+import {ACTION_ADD_PHOTO} from "./index";
 
 const initialState = {
 	beats: [Array(7).fill({})] //7 is the total number of beats

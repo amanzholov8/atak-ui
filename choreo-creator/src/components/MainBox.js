@@ -41,7 +41,7 @@ class MainBox extends React.Component {
                 show={this.state.modalShow}
                 beatselected={this.state.beatselected}
                 onHide={modalClose}
-              />              
+              />
             </div>
         );
     }

@@ -19,8 +19,8 @@ class MyNavBar extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            back: props.back || 'Back',
-            back_label: props.back_label || '/',
+            back: props.back || '/',
+            back_label: props.back_label || 'Back',
             show: false
         }
         this.playBtn = React.createRef();
@@ -41,7 +41,7 @@ class MyNavBar extends React.Component {
                     <Link to={this.state.back}>{this.state.back_label}</Link>
                 </Button>
                 </Nav.Item>
-                <Overlay target={this.editBtn.current} show={show} placement="right">          
+                <Overlay target={this.editBtn.current} show={show} placement="right">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
                      Edit music for choreo, after finishing edit, press Done to return to this page.
@@ -69,22 +69,22 @@ class MyNavBar extends React.Component {
                     <Button variant='outline-primary' ref ={this.loopBtn}>
                         LOOP
                     </Button>
-                </Nav.Item>       
-                <Overlay target={this.playBtn.current} show={show} placement="left">          
+                </Nav.Item>
+                <Overlay target={this.playBtn.current} show={show} placement="left">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
                     Play the track.
                     </Tooltip>
                 )}
                 </Overlay>
-                <Overlay target={this.pauseBtn.current} show={show} placement="bottom">          
+                <Overlay target={this.pauseBtn.current} show={show} placement="bottom">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
                     Pause the track.
                     </Tooltip>
                 )}
                 </Overlay>
-                <Overlay target={this.loopBtn.current} show={show} placement="right">          
+                <Overlay target={this.loopBtn.current} show={show} placement="right">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
                     Loop any part of the track.
@@ -95,7 +95,7 @@ class MyNavBar extends React.Component {
             </Navbar.Collapse>
             <Navbar.Collapse >
                 <Nav.Item id='helpBtn'>
-                    <Button variant='outline-primary'onClick={() => this.setState({ show: !show })} 
+                    <Button variant='outline-primary'onClick={() => this.setState({ show: !show })}
                         ref ={this.helpBtn}> HELP </Button>
                 </Nav.Item>
 
