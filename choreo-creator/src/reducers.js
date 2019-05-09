@@ -5,7 +5,7 @@ const initialState = {
 }
 
 function getBeatIndex(beatSelected) {
-	return (((beatselected.bar - 1) * 4) + (beatselected.beat - 1)) //4 is the number of beats in each bar
+	return (((beatselected.bar - 1) * 4) + (beatselected.beat - 1)); //4 is the number of beats in each bar
 }
 
 export const rootReducer = (state = InitialState, action) => {
@@ -13,5 +13,5 @@ export const rootReducer = (state = InitialState, action) => {
 		case ACTION_ADD_PHOTO:
 			return { ...state, beats[getBeatIndex(action.beatselected)].media: [...beats[getBeatIndex(action.beatselected)].media, action.src]};
 	}
-	return state
+	return state;
 }
