@@ -12,9 +12,9 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPause, faBars, faPlus, faImage, faVideo, faPaintBrush, faComment} from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faPause, faBars, faPlus, faImage, faVideo, faPaintBrush, faComment, faBackward, faForward} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faPlay, faPause, faBars, faPlus, faImage, faVideo, faPaintBrush, faComment);
+library.add(faPlay, faPause, faBars, faPlus, faImage, faVideo, faPaintBrush, faComment, faBackward, faForward);
 
 //export const ACTION_ADD_PHOTO = 'ACTION_ADD_PHOTO';
 

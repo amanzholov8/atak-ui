@@ -20,7 +20,7 @@ class MyNavBar extends React.Component {
         super(props);
         this.state = {
             back: props.back || '/',
-            back_label: props.back_label || 'Back',
+            back_label: props.back_label || 'BACK',
             show: false
         }
         this.playBtn = React.createRef();
@@ -38,7 +38,7 @@ class MyNavBar extends React.Component {
                 <Navbar.Toggle/>
                 <Nav.Item id="back">
                 <Button variant="outline-primary" ref = {this.editBtn}>
-                    <Link to={this.state.back}>{this.state.back_label}</Link>
+                    <Link to={this.state.back}><span className="NavBarButton">{this.state.back_label}</span></Link>
                 </Button>
                 </Nav.Item>
                 <Overlay target={this.editBtn.current} show={show} placement="right">
@@ -52,6 +52,11 @@ class MyNavBar extends React.Component {
 
             <Navbar.Collapse className="justify-content-center">
 
+                <Nav.Item>
+                    <Button variant='outline-primary' className="NavBarVertical" ref={this.playBtn}>
+                        <FontAwesomeIcon icon='backward' size='2x'/>
+                    </Button>
+                </Nav.Item>
 
                 <Nav.Item>
                     <Button variant='outline-primary' ref={this.playBtn}>
@@ -66,8 +71,14 @@ class MyNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item>
+                    <Button variant='outline-primary' className="NavBarVertical" ref={this.playBtn}>
+                        <FontAwesomeIcon icon='forward' size='2x'/>
+                    </Button>
+                </Nav.Item>                
+
+                <Nav.Item>
                     <Button variant='outline-primary' ref ={this.loopBtn}>
-                        LOOP
+                        <span className="NavBarButton">LOOP</span>
                     </Button>
                 </Nav.Item>
                 <Overlay target={this.playBtn.current} show={show} placement="left">
@@ -96,7 +107,9 @@ class MyNavBar extends React.Component {
             <Navbar.Collapse >
                 <Nav.Item id='helpBtn'>
                     <Button variant='outline-primary'onClick={() => this.setState({ show: !show })}
-                        ref ={this.helpBtn}> HELP </Button>
+                        ref ={this.helpBtn}>
+                        <span className="NavBarButton">HELP</span> 
+                    </Button>
                 </Nav.Item>
 
             </Navbar.Collapse>

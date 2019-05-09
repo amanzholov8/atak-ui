@@ -22,7 +22,8 @@ class MediaModal extends React.Component {
                 centered
             >
                 <Modal.Body>
-                  Selected Bar-Beat: {`${this.props.beatselected.bar}-${this.props.beatselected.beat}`}
+                  Selected Bar-Beat: 
+                  <span className="BeatIndicator">{`${this.props.beatselected.bar}-${this.props.beatselected.beat}`}</span>
                 </Modal.Body>
 
                 <Button variant='outline-primary' className="MediaModal-line">

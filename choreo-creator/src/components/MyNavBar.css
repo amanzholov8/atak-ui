@@ -2,6 +2,16 @@
     flex: 1 1 10%;
 }
 
+.NavBarButton {
+	font-family: Roboto, sans-serif;
+	font-size: 1em;
+}
+
+.NavBarVertical {
+	display: flex;
+	flex-direction: column;
+}
+
 a:hover {
    color: #FFF;
    text-decoration: none;

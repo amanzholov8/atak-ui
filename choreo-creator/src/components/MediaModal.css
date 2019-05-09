@@ -1,5 +1,11 @@
 .MediaModal {
+	font-family: Roboto, sans-serif;
+	font-size: 1.2em;
+}
 
+.BeatIndicator {
+	font-weight: bold;
+	margin: auto;
 }
 
 .MediaModal-line {

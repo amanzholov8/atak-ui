@@ -31,7 +31,7 @@ class MainBox extends React.Component {
 
         return (
             <div className="MainBox" ref={this.MainBox}>
-              <MyNavBar className="MyNavBarFlex" back='/edit' back_label='Edit Audio'/>
+              <MyNavBar className="MyNavBarFlex" back='/EDIT' back_label='EDIT AUDIO'/>
               <TrackTimeline 
                 className="TrackTimelineFlex" 
                 openModal={this.openModal} 
