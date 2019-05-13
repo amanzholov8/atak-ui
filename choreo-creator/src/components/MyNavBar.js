@@ -83,7 +83,7 @@ class MyNavBar extends React.Component {
                         <span className="NavBarButton">LOOP</span>
                     </Button>
                 </Nav.Item>
-                <Overlay target={this.playBtn.current} show={show} placement="left">
+                <Overlay target={this.playBtn.current} show={show} placement="bottom">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
                     Play the track.
