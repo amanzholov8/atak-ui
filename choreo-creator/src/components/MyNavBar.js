@@ -53,7 +53,7 @@ class MyNavBar extends React.Component {
             <Navbar.Collapse className="justify-content-center">
 
                 <Nav.Item>
-                    <Button variant='outline-primary' className="NavBarVertical" ref={this.playBtn}>
+                    <Button variant='outline-primary' className="NavBarVertical">
                         <FontAwesomeIcon icon='backward' size='2x'/>
                     </Button>
                 </Nav.Item>
@@ -71,7 +71,7 @@ class MyNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item>
-                    <Button variant='outline-primary' className="NavBarVertical" ref={this.playBtn}>
+                    <Button variant='outline-primary' className="NavBarVertical">
                         <FontAwesomeIcon icon='forward' size='2x'/>
                     </Button>
                 </Nav.Item>                
@@ -81,7 +81,7 @@ class MyNavBar extends React.Component {
                         <span className="NavBarButton">LOOP</span>
                     </Button>
                 </Nav.Item>
-                <Overlay target={this.playBtn.current} show={show} placement="left">
+                <Overlay target={this.playBtn.current} show={show} placement="bottom">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
                     Play the track.
