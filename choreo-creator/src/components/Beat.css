@@ -1,0 +1,27 @@
+.Beat {
+    flex: 0.3 0 auto;
+    width: 18rem;
+    text-align: center;
+    /*text-align: center is for centering elements within each beat*/
+    margin: 0.1rem;
+}
+
+.Beat-body {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.Beat-body::-webkit-scrollbar {
+    display: none;
+}
+
+.Beat-header {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.BeatImage {
+	width: 80%;
+	margin: 2rem;
+}

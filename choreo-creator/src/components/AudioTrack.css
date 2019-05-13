@@ -1,0 +1,38 @@
+#AudioTrack1 {
+	position: absolute;
+	top: 8em;
+	left: 9.5em;
+}
+
+#AudioTrack2 {
+	position: absolute;
+	left: 35em;
+	top: 18em;
+}
+
+#AudioTrack3 {
+	position: absolute;
+	left: 1em;
+	top: 28em;
+}
+
+#name1 {
+	position: absolute;
+	left: 1em;
+	top: 4.6em;
+	font-size: 1.3em;
+}
+
+#name2 {
+	position: absolute;
+	left: 1em;
+	top: 12.4em;
+	font-size: 1.3em;
+}
+
+#name3 {
+	position: absolute;
+	left: 1em;
+	top: 19.9em;
+	font-size: 1.3em;
+}

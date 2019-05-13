@@ -1,0 +1,19 @@
+.TrackTimeline {
+    flex: 1 1 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    overflow-x: scroll;
+    border: 1px solid #4395FF;
+}
+
+.playHead {
+    width: 0.15em;
+    background-color:red;
+    position:absolute;
+    top:4em;
+    height:31em;
+    /*bottom:36em;*/
+    left:52%;
+}
