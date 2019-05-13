@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/atak-ui/static/css/main.e1fd5c9e.chunk.css",
+    "main.js": "/atak-ui/static/js/main.588f83d6.chunk.js",
+    "main.js.map": "/atak-ui/static/js/main.588f83d6.chunk.js.map",
+    "runtime~main.js": "/atak-ui/static/js/runtime~main.d933a830.js",
+    "runtime~main.js.map": "/atak-ui/static/js/runtime~main.d933a830.js.map",
+    "static/js/2.1ffabe1c.chunk.js": "/atak-ui/static/js/2.1ffabe1c.chunk.js",
+    "static/js/2.1ffabe1c.chunk.js.map": "/atak-ui/static/js/2.1ffabe1c.chunk.js.map",
+    "index.html": "/atak-ui/index.html",
+    "precache-manifest.685cde4898de8c9779ac5132b2effdf7.js": "/atak-ui/precache-manifest.685cde4898de8c9779ac5132b2effdf7.js",
+    "service-worker.js": "/atak-ui/service-worker.js",
+    "static/css/main.e1fd5c9e.chunk.css.map": "/atak-ui/static/css/main.e1fd5c9e.chunk.css.map",
+    "static/media/logo.svg": "/atak-ui/static/media/logo.5d5d9eef.svg"
+  }
+}
