@@ -28,6 +28,8 @@ class MyNavBar extends React.Component {
         this.helpBtn = React.createRef();
         this.editBtn = React.createRef();
         this.loopBtn = React.createRef();
+        this.backwardBtn = React.createRef();
+        this.forwardBtn = React.createRef();
     }
 
     render(){
@@ -53,7 +55,7 @@ class MyNavBar extends React.Component {
             <Navbar.Collapse className="justify-content-center">
 
                 <Nav.Item>
-                    <Button variant='outline-primary' className="NavBarVertical" ref={this.playBtn}>
+                    <Button variant='outline-primary' className="NavBarVertical" ref={this.backwardBtn}>
                         <FontAwesomeIcon icon='backward' size='2x'/>
                     </Button>
                 </Nav.Item>
@@ -71,7 +73,7 @@ class MyNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item>
-                    <Button variant='outline-primary' className="NavBarVertical" ref={this.playBtn}>
+                    <Button variant='outline-primary' className="NavBarVertical" ref={this.forwardBtn}>
                         <FontAwesomeIcon icon='forward' size='2x'/>
                     </Button>
                 </Nav.Item>                

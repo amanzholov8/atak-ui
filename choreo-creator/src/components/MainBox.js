@@ -15,7 +15,7 @@ class MainBox extends React.Component {
             modalShow: false,
             beatselected: {bar: 0,
                 beat: 0},
-            src: ""    
+            addedImages: []    
         };
     }
 
@@ -27,11 +27,12 @@ class MainBox extends React.Component {
         });
     }
 
-    setimage = image => {
+    setimage = (image, bar, beat) => {
         this.setState({
-            src: image
-        })
-        console.log(`src is set to ${image}`);
+            addedImages: [...this.state.addedImages, {src: image, bar: bar, beat: beat}]
+        });
+        console.log(`${image} is added to addedImages`);
+        console.log(`addedImages now is ${this.state.addedImages.map(obj => obj.src)}`)
     }
 
     render() {
@@ -45,7 +46,7 @@ class MainBox extends React.Component {
                 openModal={this.openModal} 
                 openGalery ={this.openGalery}
                 setBeatSelected={this.setBeatSelected}
-                addedImage={this.state.src}
+                addedImages={this.state.addedImages}
                 />
               <MediaModal
                 show={this.state.modalShow}

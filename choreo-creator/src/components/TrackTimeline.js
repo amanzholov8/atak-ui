@@ -33,13 +33,13 @@ class TrackTimeline extends React.Component {
     render(){
         return (
             <div className="TrackTimeline" ref={this.scrollBar}>
-                <Beat bar={1} beat={1} openModal = {this.state.openModal} addedImage={this.props.addedImage}/>
-                <Beat bar={1} beat={2} openModal = {this.state.openModal} addedImage={this.props.addedImage}/>
-                <Beat bar={1} beat={3} openModal = {this.state.openModal} addedImage={this.props.addedImage}/>
-                <Beat bar={1} beat={4} openModal = {this.state.openModal} addedImage={this.props.addedImage}/>
-                <Beat bar={2} beat={1} openModal = {this.state.openModal} addedImage={this.props.addedImage}/>
-                <Beat bar={2} beat={2} openModal = {this.state.openModal} addedImage={this.props.addedImage}/>
-                <Beat bar={2} beat={3} openModal = {this.state.openModal} addedImage={this.props.addedImage}/>
+                <Beat bar={1} beat={1} openModal = {this.state.openModal} addedImages={this.props.addedImages}/>
+                <Beat bar={1} beat={2} openModal = {this.state.openModal} addedImages={this.props.addedImages}/>
+                <Beat bar={1} beat={3} openModal = {this.state.openModal} addedImages={this.props.addedImages}/>
+                <Beat bar={1} beat={4} openModal = {this.state.openModal} addedImages={this.props.addedImages}/>
+                <Beat bar={2} beat={1} openModal = {this.state.openModal} addedImages={this.props.addedImages}/>
+                <Beat bar={2} beat={2} openModal = {this.state.openModal} addedImages={this.props.addedImages}/>
+                <Beat bar={2} beat={3} openModal = {this.state.openModal} addedImages={this.props.addedImages}/>
                 <div class="playHead">&nbsp;</div>
             </div>
         );

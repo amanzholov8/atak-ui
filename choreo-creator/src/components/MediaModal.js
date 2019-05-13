@@ -11,6 +11,7 @@ class MediaModal extends React.Component {
         this.state = {
           beatselected: props.beatselected,
           galleryModal: false,
+          images: ["https://i.ibb.co/SXW4htY/img1.jpg", "https://i.ibb.co/vYJdvBg/img2.jpg"],
           setimage: props.setimage
         }
         this.openGalleryOnClick = this.openGalleryOnClick.bind(this);
@@ -29,11 +30,15 @@ class MediaModal extends React.Component {
       });
     }
 
-    sendimage = () => {
+    sendimage0 = () => {
       this.onClose();
-      this.state.setimage("https://i.ibb.co/SXW4htY/img1.jpg");
-      console.log("gogo");
+      this.state.setimage(this.state.images[0], this.props.beatselected.bar, this.props.beatselected.beat);
     }
+
+    sendimage1 = () => {
+      this.onClose();
+      this.state.setimage(this.state.images[1], this.props.beatselected.bar, this.props.beatselected.beat);
+    }    
 
     render() {
         return (
@@ -81,10 +86,10 @@ class MediaModal extends React.Component {
             <Modal show={this.state.galleryModal} onHide={this.onClose}> 
               <Modal.Body>
 
-                <Button variant="primary" onClick={this.sendimage}>
+                <Button variant="primary" onClick={this.sendimage0}>
                   <img src="https://i.ibb.co/SXW4htY/img1.jpg" width="180rem"/>
                 </Button>
-                <Button variant="primary" onClick={this.onClose}>
+                <Button variant="primary" onClick={this.sendimage1}>
                   <img src="https://i.ibb.co/vYJdvBg/img2.jpg" width="180rem"/>
                 </Button>                
               </Modal.Body>
