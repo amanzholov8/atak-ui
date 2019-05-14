@@ -52,6 +52,12 @@ class MyNavBar extends React.Component {
                     <Link to={this.state.back}><span className="NavBarButton">{this.state.back_label}</span></Link>
                 </Button>
                 </Nav.Item>
+                <Nav.Item id='undoBtn'>
+                    <Button variant='outline-primary'
+                        ref ={this.undoBtn}>
+                        <span className="NavBarButton">UNDO</span>
+                    </Button>
+                </Nav.Item>
                 <Overlay target={this.editBtn.current} show={this.props.show} placement="right">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
@@ -61,13 +67,8 @@ class MyNavBar extends React.Component {
                 </Overlay>
             </Navbar.Collapse>
 
-            <Navbar.Collapse className="justify-content-center">
-                <Nav.Item id='undoBtn'>
-                    <Button variant='outline-primary'
-                        ref ={this.undoBtn}>
-                        <span className="NavBarButton">UNDO</span>
-                    </Button>
-                </Nav.Item>
+            <Navbar.Collapse className="justify-content-center Center">
+                
 
                 <Nav.Item>
                     <Button variant='outline-primary' className="NavBarVertical" ref={this.backwardBtn}>
