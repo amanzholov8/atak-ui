@@ -19,6 +19,8 @@ class Beat extends React.Component {
             show: props.show
         }
         this.plusBtn = React.createRef();
+        this.beatHeader = React.createRef();
+        this.beatBody = React.createRef();
     }
 
     onPlusClick = () => {
@@ -28,29 +30,25 @@ class Beat extends React.Component {
     render() {
         return (
             <Card className='Beat'>
-                <Card.Header className='Beat-header'>{this.state.bar}:{this.state.beat}</Card.Header>            
-                <DragScrollProvider>
-                    {({ onMouseDown, ref }) => (
-                            <Card.Body className='Beat-body' ref={ref} onMouseDown={onMouseDown}>
-                                {
-                                    this.props.addedImages.map(
-                                        function(obj) {
-                                            console.log(obj);
-                                            if ((obj.bar === this.state.bar) && (obj.beat === this.state.beat)) {
-                                                return <img className="BeatItem" src={obj.src} height="180rem" width="180rem"/>;
-                                            }
-                                            else {
-                                                return "";
-                                            }
-                                        }.bind(this))
-                                }                                                      
-                                <Button className="BeatPlus" variant='outline-primary' onClick={this.onPlusClick} ref={this.plusBtn}>
-                                    <FontAwesomeIcon icon='plus' size='7x'/>
-                                </Button>
-                            </Card.Body>
-                    )}
-                </DragScrollProvider>
-                {((this.state.bar === 1) && (this.state.beat === 2)) ?
+                <Card.Header ref={this.beatHeader} className='Beat-header'>{this.state.bar}:{this.state.beat}</Card.Header>
+                <Card.Body ref={this.beatBody} className='Beat-body'>
+                    {
+                        this.props.addedImages.map(
+                            function(obj) {
+                                console.log(obj);
+                                if ((obj.bar === this.state.bar) && (obj.beat === this.state.beat)) {
+                                    return <img className="BeatItem" src={obj.src} height="180rem" width="180rem"/>;
+                                }
+                                else {
+                                    return "";
+                                }
+                            }.bind(this))
+                    }                                                      
+                    <Button className="BeatPlus" variant='outline-primary' onClick={this.onPlusClick} ref={this.plusBtn}>
+                        <FontAwesomeIcon icon='plus' size='7x'/>
+                    </Button>
+                </Card.Body>
+                {((this.state.bar === 1) && (this.state.beat === 3)) ?
                     <Overlay target={this.plusBtn.current} show={this.props.show} placement="bottom">
                         {props => (
                         <Tooltip id="overlay-example" {...props}>
@@ -59,7 +57,27 @@ class Beat extends React.Component {
                     )}
                     </Overlay> :
                     <p></p>
-                }              
+                } 
+                {((this.state.bar === 1) && (this.state.beat === 2)) ?
+                    <Overlay target={this.beatHeader.current} show={this.props.show} placement="bottom">
+                        {props => (
+                        <Tooltip id="overlay-example" {...props}>
+                        You can see each beat's number in the format BAR:BEAT
+                        </Tooltip>
+                    )}
+                    </Overlay> :
+                    <p></p>
+                }
+                {((this.state.bar === 1) && (this.state.beat === 1)) ?
+                    <Overlay target={this.beatBody.current} show={this.props.show} placement="right">
+                        {props => (
+                        <Tooltip id="overlay-example" {...props}>
+                        One box represents one beat of the audio track
+                        </Tooltip>
+                    )}
+                    </Overlay> :
+                    <p></p>
+                }                                                
             </Card>
         );
     }
