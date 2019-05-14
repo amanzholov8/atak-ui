@@ -21,7 +21,13 @@
     font-weight: bold;
 }
 
-.BeatImage {
-	width: 80%;
-	margin: 2rem;
+.BeatItem {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.BeatPlus {
+    margin-left: auto;
+    margin-right: auto;
 }

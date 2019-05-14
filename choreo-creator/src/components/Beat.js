@@ -37,15 +37,14 @@ class Beat extends React.Component {
                                         function(obj) {
                                             console.log(obj);
                                             if ((obj.bar === this.state.bar) && (obj.beat === this.state.beat)) {
-                                                return <img className="BeatImage" src={obj.src} />;
+                                                return <img className="BeatItem" src={obj.src} height="180rem" width="180rem"/>;
                                             }
                                             else {
                                                 return "";
                                             }
                                         }.bind(this))
-                                }
-                                {/*(this.props.addedImages && this.props.addedImages[0] && (2 === this.state.bar) && (1 === this.state.beat)) ? <img className="BeatImage" src={this.props.addedImages[0].src}></img> : <p>.</p>*/}                                                        
-                                <Button variant='outline-primary' onClick={this.onPlusClick} ref={this.plusBtn}>
+                                }                                                      
+                                <Button className="BeatPlus" variant='outline-primary' onClick={this.onPlusClick} ref={this.plusBtn}>
                                     <FontAwesomeIcon icon='plus' size='7x'/>
                                 </Button>
                             </Card.Body>
