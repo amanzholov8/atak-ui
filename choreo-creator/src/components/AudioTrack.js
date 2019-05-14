@@ -2,6 +2,8 @@ import React from 'react';
 
 import Figure from 'react-bootstrap/Figure';
 import FigureImage from 'react-bootstrap/FigureImage';
+import Overlay from 'react-bootstrap/Overlay'
+import Tooltip from 'react-bootstrap/Tooltip'
 import './AudioTrack.css';
 
 
@@ -9,7 +11,9 @@ class AudioTrack extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      prompt: false
     };
+    this.buttonRef = React.createRef();
   }
 
   selects(event, darkColor){

@@ -11,7 +11,7 @@ class MediaModal extends React.Component {
         this.state = {
           beatselected: props.beatselected,
           galleryModal: false,
-          images: ["https://i.ibb.co/SXW4htY/img1.jpg", "https://i.ibb.co/vYJdvBg/img2.jpg"],
+          images: ["https://i.ibb.co/SXW4htY/img1.jpg", "https://i.ibb.co/vYJdvBg/img2.jpg", "https://i.ibb.co/qdtwMXh/img3.jpg", "https://i.ibb.co/qkfr06Q/img4.jpg"],
           setimage: props.setimage
         }
         this.openGalleryOnClick = this.openGalleryOnClick.bind(this);
@@ -39,6 +39,16 @@ class MediaModal extends React.Component {
       this.onClose();
       this.state.setimage(this.state.images[1], this.props.beatselected.bar, this.props.beatselected.beat);
     }    
+
+    sendimage2 = () => {
+      this.onClose();
+      this.state.setimage(this.state.images[2], this.props.beatselected.bar, this.props.beatselected.beat);
+    } 
+
+    sendimage3 = () => {
+      this.onClose();
+      this.state.setimage(this.state.images[3], this.props.beatselected.bar, this.props.beatselected.beat);
+    }     
 
     render() {
         return (
@@ -87,11 +97,17 @@ class MediaModal extends React.Component {
               <Modal.Body>
 
                 <Button variant="primary" onClick={this.sendimage0}>
-                  <img src="https://i.ibb.co/SXW4htY/img1.jpg" width="180rem"/>
+                  <img src="https://i.ibb.co/SXW4htY/img1.jpg" width="180" height="180"/>
                 </Button>
                 <Button variant="primary" onClick={this.sendimage1}>
-                  <img src="https://i.ibb.co/vYJdvBg/img2.jpg" width="180rem"/>
-                </Button>                
+                  <img src="https://i.ibb.co/vYJdvBg/img2.jpg" width="180rem" height="180rem"/>
+                </Button>  
+                <Button variant="primary" onClick={this.sendimage2}>
+                  <img src="https://i.ibb.co/qdtwMXh/img3.jpg" width="180rem" height="180rem"/>
+                </Button>
+                <Button variant="primary" onClick={this.sendimage3}>
+                  <img src="https://i.ibb.co/qkfr06Q/img4.jpg" width="180rem" height="180rem"/>
+                </Button>                                                  
               </Modal.Body>
             </Modal>
           </div>
