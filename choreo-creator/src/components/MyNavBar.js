@@ -33,10 +33,15 @@ class MyNavBar extends React.Component {
         this.forwardBtn = React.createRef();
     }
 
-
-
     render(){
         const { show } = this.state;
+        let btn;
+        if(!this.props.active){
+            btn = <FontAwesomeIcon icon='play' size='2x'/>;
+        }
+        else {
+            btn = <FontAwesomeIcon icon='pause' size='2x'/>;
+        }
         return (
             <Navbar className="MyNavBar">
             <Navbar.Collapse className="justify-content-left pull-left">
@@ -64,14 +69,8 @@ class MyNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item>
-                    <Button variant='outline-primary' ref={this.playBtn}>
-                        <FontAwesomeIcon icon='play' size='2x'/>
-                    </Button>
-                </Nav.Item>
-
-                <Nav.Item>
-                  <Button variant='outline-primary' ref={this.pauseBtn}>
-                        <FontAwesomeIcon icon='pause' size='2x'/>
+                    <Button variant='outline-primary' ref={this.playBtn} onClick={this.props.togglePlay}>
+                        {btn}
                     </Button>
                 </Nav.Item>
 
@@ -79,7 +78,7 @@ class MyNavBar extends React.Component {
                     <Button variant='outline-primary' className="NavBarVertical" ref={this.forwardBtn}>
                         <FontAwesomeIcon icon='forward' size='2x'/>
                     </Button>
-                </Nav.Item>                
+                </Nav.Item>
 
                 <Nav.Item>
                     <Button variant='outline-primary' ref ={this.loopBtn}>
@@ -92,7 +91,7 @@ class MyNavBar extends React.Component {
                     Go 10 seconds back
                     </Tooltip>
                 )}
-                </Overlay>                
+                </Overlay>
                 <Overlay target={this.playBtn.current} show={this.props.show} placement="bottom">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
@@ -113,7 +112,7 @@ class MyNavBar extends React.Component {
                     Go 10 seconds forward
                     </Tooltip>
                 )}
-                </Overlay>                
+                </Overlay>
                 <Overlay target={this.loopBtn.current} show={this.props.show} placement="bottom">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
@@ -127,7 +126,7 @@ class MyNavBar extends React.Component {
                 <Nav.Item id='helpBtn'>
                     <Button variant='outline-primary'onClick={this.state.toggleShow}
                         ref ={this.helpBtn}>
-                        <span className="NavBarButton">HELP</span> 
+                        <span className="NavBarButton">HELP</span>
                     </Button>
                 </Nav.Item>
 

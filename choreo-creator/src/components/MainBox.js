@@ -11,13 +11,15 @@ import Button from 'react-bootstrap/Button';
 class MainBox extends React.Component {
     constructor(props){
         super(props);
-        this.state = { 
+        this.state = {
             modalShow: false,
             beatselected: {bar: 0,
                 beat: 0},
             addedImages: [],
-            show: false 
+            show: false,
+            active: false
         };
+        this.trackPlayer = React.createRef();
     }
 
     openModal = (bar, beat) => {
@@ -42,24 +44,39 @@ class MainBox extends React.Component {
         });
     }
 
+    togglePlay = () => {
+        this.setState({
+            active: !this.state.active
+        });
+        if(this.state.active){
+            this.trackPlayer.current.playTrack();
+        }
+        else {
+            this.trackPlayer.current.pauseTrack();
+        }
+    }
+
     render() {
         let modalClose = () => this.setState({ modalShow: false });
 
         return (
             <div className="MainBox" ref={this.MainBox}>
               <MyNavBar
-                className="MyNavBarFlex" 
-                back='/EDIT' back_label='EDIT AUDIO' 
+                className="MyNavBarFlex"
+                back='/EDIT' back_label='EDIT AUDIO'
                 toggleShow={this.toggleShow}
                 show={this.state.show}
+                togglePlay={this.togglePlay}
+                active={this.active}
             />
-              <TrackTimeline 
-                className="TrackTimelineFlex" 
-                openModal={this.openModal} 
+              <TrackTimeline
+                className="TrackTimelineFlex"
+                openModal={this.openModal}
                 openGalery ={this.openGalery}
                 setBeatSelected={this.setBeatSelected}
                 addedImages={this.state.addedImages}
                 show={this.state.show}
+                ref={this.trackPlayer}
             />
               <MediaModal
                 show={this.state.modalShow}
