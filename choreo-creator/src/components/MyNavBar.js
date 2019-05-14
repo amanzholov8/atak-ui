@@ -95,7 +95,7 @@ class MyNavBar extends React.Component {
                 <Overlay target={this.playBtn.current} show={this.props.show} placement="bottom">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
-                    Play track
+                    Play/pause track
                     </Tooltip>
                 )}
                 </Overlay>
