@@ -31,6 +31,7 @@ class MyNavBar extends React.Component {
         this.loopBtn = React.createRef();
         this.backwardBtn = React.createRef();
         this.forwardBtn = React.createRef();
+        this.undoBtn = React.createRef();
     }
 
     render(){
@@ -61,6 +62,12 @@ class MyNavBar extends React.Component {
             </Navbar.Collapse>
 
             <Navbar.Collapse className="justify-content-center">
+                <Nav.Item id='undoBtn'>
+                    <Button variant='outline-primary'
+                        ref ={this.undoBtn}>
+                        <span className="NavBarButton">UNDO</span>
+                    </Button>
+                </Nav.Item>
 
                 <Nav.Item>
                     <Button variant='outline-primary' className="NavBarVertical" ref={this.backwardBtn}>
@@ -117,6 +124,13 @@ class MyNavBar extends React.Component {
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
                     Loop any part of the track
+                    </Tooltip>
+                )}
+                </Overlay>
+                <Overlay target={this.undoBtn.current} show={this.props.show} placement="bottom">
+                    {props => (
+                    <Tooltip id="overlay-example" {...props}>
+                    Goes one step back
                     </Tooltip>
                 )}
                 </Overlay>
