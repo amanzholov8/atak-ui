@@ -1,38 +1,48 @@
+#popover-basic {
+	text-align: center;
+}
+
+#beatBar {
+	position: absolute;
+	left: 2em;
+	top: 5em;
+}
+
 #AudioTrack1 {
 	position: absolute;
-	top: 8em;
-	left: 9.5em;
+	top: 12em;
+	left: 10.5em;
 }
 
 #AudioTrack2 {
 	position: absolute;
-	left: 35em;
-	top: 18em;
+	left: 36em;
+	top: 22em;
 }
 
 #AudioTrack3 {
 	position: absolute;
-	left: 1em;
-	top: 28em;
+	left: 2em;
+	top: 32em;
 }
 
 #name1 {
 	position: absolute;
-	left: 1em;
-	top: 4.6em;
+	left: 2em;
+	top: 7.6em;
 	font-size: 1.3em;
 }
 
 #name2 {
 	position: absolute;
-	left: 1em;
-	top: 12.4em;
+	left: 2em;
+	top: 15.4em;
 	font-size: 1.3em;
 }
 
 #name3 {
 	position: absolute;
-	left: 1em;
-	top: 19.9em;
+	left: 2em;
+	top: 22.9em;
 	font-size: 1.3em;
 }
