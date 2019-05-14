@@ -15,7 +15,8 @@ class MainBox extends React.Component {
             modalShow: false,
             beatselected: {bar: 0,
                 beat: 0},
-            addedImages: []    
+            addedImages: [],
+            show: false 
         };
     }
 
@@ -35,25 +36,37 @@ class MainBox extends React.Component {
         console.log(`addedImages now is ${this.state.addedImages.map(obj => obj.src)}`)
     }
 
+    toggleShow = () => {
+        this.setState({
+            show: !this.state.show
+        });
+    }
+
     render() {
         let modalClose = () => this.setState({ modalShow: false });
 
         return (
             <div className="MainBox" ref={this.MainBox}>
-              <MyNavBar className="MyNavBarFlex" back='/EDIT' back_label='EDIT AUDIO'/>
+              <MyNavBar
+                className="MyNavBarFlex" 
+                back='/EDIT' back_label='EDIT AUDIO' 
+                toggleShow={this.toggleShow}
+                show={this.state.show}
+            />
               <TrackTimeline 
                 className="TrackTimelineFlex" 
                 openModal={this.openModal} 
                 openGalery ={this.openGalery}
                 setBeatSelected={this.setBeatSelected}
                 addedImages={this.state.addedImages}
-                />
+                show={this.state.show}
+            />
               <MediaModal
                 show={this.state.modalShow}
                 beatselected={this.state.beatselected}
                 onHide={modalClose}
                 setimage={this.setimage}
-              />
+            />
             </div>
         );
     }
