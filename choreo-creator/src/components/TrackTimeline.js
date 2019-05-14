@@ -9,7 +9,8 @@ class TrackTimeline extends React.Component {
         this.state = {
             openModal: props.openModal,
             addedImage: props.addedImage,
-            show: props.show
+            show: props.show,
+            active: props.active
         };
         this.scrollBar = React.createRef();
         this.playTrack = this.playTrack.bind(this);
@@ -31,6 +32,7 @@ class TrackTimeline extends React.Component {
     moveForward(){
         this.scrollBar.current.scrollBy(this.scrollSpeed, 0);
     }
+
     render(){
         return (
             <div className="TrackTimeline" ref={this.scrollBar}>
@@ -41,7 +43,7 @@ class TrackTimeline extends React.Component {
                 <Beat bar={2} beat={1} openModal = {this.state.openModal} addedImages={this.props.addedImages} show={this.props.show}/>
                 <Beat bar={2} beat={2} openModal = {this.state.openModal} addedImages={this.props.addedImages} show={this.props.show}/>
                 <Beat bar={2} beat={3} openModal = {this.state.openModal} addedImages={this.props.addedImages} show={this.props.show}/>
-                <div class="playHead">&nbsp;</div>
+                <div className="playHead">&nbsp;</div>
             </div>
         );
     }
