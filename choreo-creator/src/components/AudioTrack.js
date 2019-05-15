@@ -67,7 +67,7 @@ class AudioTrack extends React.Component {
 
   render() {
 		return (
-			<div>
+			<div className="AudioTrack">
           <div id='beatBar'>
             {this.renderBeat(1, 1)}
             {this.renderBeat(1, 2)}
@@ -78,7 +78,6 @@ class AudioTrack extends React.Component {
             {this.renderBeat(2, 3)}
             {this.renderBeat(2, 4)}
             {this.renderBeat(3, 1)}
-            {this.renderBeat(3, 2)}
           </div>
           <div id='name1'>Do you wanna know.mp3</div>
           <div id = 'AudioTrack1'>

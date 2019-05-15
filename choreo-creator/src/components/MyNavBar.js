@@ -58,7 +58,7 @@ class MyNavBar extends React.Component {
                         <span className="NavBarButton">UNDO</span>
                     </Button>
                 </Nav.Item>
-                <Overlay target={this.editBtn.current} show={this.props.show} placement="right">
+                <Overlay target={this.editBtn.current} show={this.props.show} placement="bottom">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
                      Edit music for choreo, after finishing edit, press Done to return to this page.
@@ -128,7 +128,7 @@ class MyNavBar extends React.Component {
                     </Tooltip>
                 )}
                 </Overlay>
-                <Overlay target={this.undoBtn.current} show={this.props.show} placement="bottom">
+                <Overlay target={this.undoBtn.current} show={this.props.show} placement="right">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
                     Goes one step back

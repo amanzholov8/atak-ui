@@ -45,7 +45,6 @@ class TrackTimeline extends React.Component {
                 <Beat bar={2} beat={3} openModal = {this.state.openModal} addedImages={this.props.addedImages} show={this.props.show}/>
                 <Beat bar={2} beat={4} openModal = {this.state.openModal} addedImages={this.props.addedImages} show={this.props.show}/>
                 <Beat bar={3} beat={1} openModal = {this.state.openModal} addedImages={this.props.addedImages} show={this.props.show}/>
-                <Beat bar={3} beat={2} openModal = {this.state.openModal} addedImages={this.props.addedImages} show={this.props.show}/>
                 <div className="playHead">&nbsp;</div>
             </div>
         );
