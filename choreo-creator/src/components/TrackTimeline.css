@@ -15,5 +15,10 @@
     top:4em;
     height:31em;
     /*bottom:36em;*/
-    left:52%;
+    left:50%;
+}
+
+.empty {
+    flex: 0.3 0 auto;
+    width:45em;
 }
