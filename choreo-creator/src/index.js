@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import { createStore } from 'redux';
-//import { Provider } from 'react-redux';
 import { rootReducer } from './reducers';
 import './index.css';
 import App from './App';
@@ -9,6 +7,7 @@ import Editor from './Editor'
 import * as serviceWorker from './serviceWorker';
 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import * as firebase from 'firebase';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -16,9 +15,17 @@ import { faPlay, faPause, faBars, faPlus, faImage, faVideo, faPaintBrush, faComm
 
 library.add(faPlay, faPause, faBars, faPlus, faImage, faVideo, faPaintBrush, faComment, faBackward, faForward);
 
-//export const ACTION_ADD_PHOTO = 'ACTION_ADD_PHOTO';
-
-//const store = createStore(rootReducer);
+let firebaseConfig = {
+    apiKey: "AIzaSyDvgrRF1f4_8G1i28WsKCBbHOtFoYgrdcY",
+    authDomain: "cs374-kaist-project.firebaseapp.com",
+    databaseURL: "https://cs374-kaist-project.firebaseio.com",
+    projectId: "cs374-kaist-project",
+    storageBucket: "cs374-kaist-project.appspot.com",
+    messagingSenderId: "291409505102",
+    appId: "1:291409505102:web:f929c7c6573dcfde"
+  };
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
     //<Provider store={store}>

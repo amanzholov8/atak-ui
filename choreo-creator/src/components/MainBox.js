@@ -8,6 +8,8 @@ import './MainBox.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from 'react-bootstrap/Button';
 
+import * as firebase from 'firebase';
+
 class MainBox extends React.Component {
     constructor(props){
         super(props);
@@ -17,9 +19,19 @@ class MainBox extends React.Component {
                 beat: 0},
             addedImages: [],
             show: false,
-            active: false
+            active: false,
+            expNadpis: "gogoDauiiDauii"
         };
         this.trackPlayer = React.createRef();
+    }
+
+    componentDidMount() {
+        const rootRef = firebase.database().ref().child('expNadpis');
+        rootRef.on('value', snapshot => {
+            this.setState({
+                expNadpis: snapshot.val()
+            });
+        })
     }
 
     openModal = (bar, beat) => {

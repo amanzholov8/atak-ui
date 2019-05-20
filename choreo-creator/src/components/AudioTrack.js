@@ -4,6 +4,7 @@ import Popover from 'react-bootstrap/Popover';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import './AudioTrack.css';
 
+import * as firebase from 'firebase';
 
 class AudioTrack extends React.Component {
   constructor(props){
