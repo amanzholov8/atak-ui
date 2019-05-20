@@ -116,7 +116,7 @@ class MediaModal extends React.Component {
               <Modal.Body>
 
                 <Button variant="primary" onClick={this.sendimage0}>
-                  <img src="https://i.ibb.co/SXW4htY/img1.jpg" width="180" height="180"/>
+                  <img src="https://i.ibb.co/SXW4htY/img1.jpg" width="180rem" height="180rem"/>
                 </Button>
                 <Button variant="primary" onClick={this.sendimage1}>
                   <img src="https://i.ibb.co/vYJdvBg/img2.jpg" width="180rem" height="180rem"/>
