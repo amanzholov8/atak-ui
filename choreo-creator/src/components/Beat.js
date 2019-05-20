@@ -6,6 +6,7 @@ import Tooltip from 'react-bootstrap/Tooltip'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import DragScrollProvider from 'drag-scroll-provider'
 import './Beat.css';
+import * as firebase from 'firebase';
 
 class Beat extends React.Component {
     constructor(props){
@@ -23,6 +24,18 @@ class Beat extends React.Component {
         this.beatBody = React.createRef();
     }
 
+    componentDidMount() {
+        let beatRef = firebase.database().ref(`/beats/${this.props.bar}-${this.props.beat}/`);
+        beatRef.on('value', snapshot => {
+            let allMedia = snapshot.val();
+            if (allMedia) {
+                this.setState({
+                    media: Object.values(allMedia)
+                });
+            };
+        });
+    }
+
     onPlusClick = () => {
         this.state.openModal(this.state.bar, this.state.beat);
     }
@@ -33,8 +46,15 @@ class Beat extends React.Component {
                 <Card.Header ref={this.beatHeader} className='Beat-header'>{this.state.bar}:{this.state.beat}</Card.Header>
                 <Card.Body ref={this.beatBody} className='Beat-body'>
                     {
-                        this.props.addedImages.map(
+                        this.state.media.map(
                             function(obj) {
+                                if (obj.type === 'image') {
+                                    return <img className="BeatItem" src={obj.src} height="180rem" width="180rem" alt="Custom move"/>;
+                                } else {
+                                    return "";
+                                }
+                            }
+                            /*function(obj) {
                                 console.log(obj);
                                 if ((obj.bar === this.state.bar) && (obj.beat === this.state.beat)) {
                                     return <img className="BeatItem" src={obj.src} height="180rem" width="180rem"/>;
@@ -42,7 +62,8 @@ class Beat extends React.Component {
                                 else {
                                     return "";
                                 }
-                            }.bind(this))
+                            }.bind(this)*/
+                        )
                     }                                                      
                     <Button className="BeatPlus" variant='outline-primary' onClick={this.onPlusClick} ref={this.plusBtn}>
                         <FontAwesomeIcon icon='plus' size='7x'/>

@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './MediaModal.css';
+import * as firebase from 'firebase';
 
 class MediaModal extends React.Component {
     constructor(props){
@@ -12,7 +13,9 @@ class MediaModal extends React.Component {
           beatselected: props.beatselected,
           galleryModal: false,
           images: ["https://i.ibb.co/SXW4htY/img1.jpg", "https://i.ibb.co/vYJdvBg/img2.jpg", "https://i.ibb.co/qdtwMXh/img3.jpg", "https://i.ibb.co/qkfr06Q/img4.jpg"],
-          setimage: props.setimage
+          setimage: props.setimage,
+          beatsRef: firebase.database().ref(),
+          DB: firebase.database()
         }
         this.openGalleryOnClick = this.openGalleryOnClick.bind(this);
     }
@@ -32,22 +35,38 @@ class MediaModal extends React.Component {
 
     sendimage0 = () => {
       this.onClose();
-      this.state.setimage(this.state.images[0], this.props.beatselected.bar, this.props.beatselected.beat);
+      const newKey = firebase.database().ref(`/beats/${this.props.beatselected.bar}-${this.props.beatselected.beat}/`).push();
+      newKey.set({
+        type: 'image',
+        src: this.state.images[0]
+      });
     }
 
     sendimage1 = () => {
       this.onClose();
-      this.state.setimage(this.state.images[1], this.props.beatselected.bar, this.props.beatselected.beat);
+      const newKey = firebase.database().ref(`/beats/${this.props.beatselected.bar}-${this.props.beatselected.beat}/`).push();
+      newKey.set({
+        type: 'image',
+        src: this.state.images[1]
+      });
     }    
 
     sendimage2 = () => {
       this.onClose();
-      this.state.setimage(this.state.images[2], this.props.beatselected.bar, this.props.beatselected.beat);
+      const newKey = firebase.database().ref(`/beats/${this.props.beatselected.bar}-${this.props.beatselected.beat}/`).push();
+      newKey.set({
+        type: 'image',
+        src: this.state.images[2]
+      });
     } 
 
     sendimage3 = () => {
       this.onClose();
-      this.state.setimage(this.state.images[3], this.props.beatselected.bar, this.props.beatselected.beat);
+      const newKey = firebase.database().ref(`/beats/${this.props.beatselected.bar}-${this.props.beatselected.beat}/`).push();
+      newKey.set({
+        type: 'image',
+        src: this.state.images[3]
+      });
     }     
 
     render() {
