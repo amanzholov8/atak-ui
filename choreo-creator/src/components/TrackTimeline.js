@@ -36,6 +36,7 @@ class TrackTimeline extends React.Component {
     render(){
         return (
             <div className="TrackTimeline" ref={this.scrollBar}>
+                <div className = "empty">&nbsp;</div>
                 <Beat bar={1} beat={1} openModal = {this.state.openModal} addedImages={this.props.addedImages} show={this.props.show}/>
                 <Beat bar={1} beat={2} openModal = {this.state.openModal} addedImages={this.props.addedImages} show={this.props.show}/>
                 <Beat bar={1} beat={3} openModal = {this.state.openModal} addedImages={this.props.addedImages} show={this.props.show}/>
@@ -46,6 +47,7 @@ class TrackTimeline extends React.Component {
                 <Beat bar={2} beat={4} openModal = {this.state.openModal} addedImages={this.props.addedImages} show={this.props.show}/>
                 <Beat bar={3} beat={1} openModal = {this.state.openModal} addedImages={this.props.addedImages} show={this.props.show}/>
                 <div className="playHead">&nbsp;</div>
+                <div className = "empty">&nbsp;</div>
             </div>
         );
     }
