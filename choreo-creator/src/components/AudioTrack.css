@@ -1,11 +1,14 @@
 .AudioTrack {
+	width: 100%;
+	height: 80%;
+	overflow-x: scroll;
 }
 
 #popover-basic {
 	text-align: center;
 }
 
-#beatBar {
+/*#beatBar {
 	position: absolute;
 	left: 2em;
 	top: 5em;
@@ -48,4 +51,4 @@
 	left: 2em;
 	top: 22.9em;
 	font-size: 1.3em;
-}
+}*/

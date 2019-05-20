@@ -34,14 +34,14 @@ class AudioTrack extends React.Component {
   renderBeat(a, b) {
     return (
       <button className = {`bar${a} beat${b}`}
-            style = {{background: '#F5F5F5', width: '8.5em', height: '4em', 
+            style = {{background: '#F5F5F5', width: '9em', height: '4em', 
                     marginRight: '-1px', marginTop: '-1px'}}>
         {a}:{b}            
       </button>
     )
   }
 
-  renderPart(i, color, darkColor) {
+  renderPart(i, color, darkColor, ind) {
             const popover = (
               <Popover id="popover-basic">
                 Press and drag to select SEVERAL parts to remove 
@@ -55,7 +55,7 @@ class AudioTrack extends React.Component {
                 <OverlayTrigger trigger="hover" placement="top" overlay={popover}>
                   <button className= {`part${i}`}
                         style = {{background: `${color}`, 
-                                  width: '8.5em', height: '7em',
+                                  width: '9em', height: '7em',
                                   marginRight: '-1px', marginTop: '-1px'}}
                         onMouseEnter = {(event)=> this.selects(event, color, darkColor, i)}
                         onMouseDown = {(event)=> this.selects(event, color, darkColor, i)}
@@ -77,41 +77,32 @@ class AudioTrack extends React.Component {
             {this.renderBeat(2, 2)}
             {this.renderBeat(2, 3)}
             {this.renderBeat(2, 4)}
-            {this.renderBeat(3, 1)}
           </div>
           <div id='name1'>Do you wanna know.mp3</div>
-          <div id = 'AudioTrack1'>
-				    {this.renderPart(1, '#9370DB', '#4B0082')}
-            {this.renderPart(1, '#9370DB', '#4B0082')}
-            {this.renderPart(1, '#9370DB', '#4B0082')}
-            {this.renderPart(1, '#9370DB', '#4B0082')}
-            {this.renderPart(1, '#9370DB', '#4B0082')}
-            {this.renderPart(1, '#9370DB', '#4B0082')}
-            {this.renderPart(1, '#9370DB', '#4B0082')}
-          </div>
+				    <span style={{marginLeft: 0+'em'}}>{this.renderPart(1, '#9370DB', '#4B0082', 1)}</span>
+            {this.renderPart(1, '#9370DB', '#4B0082', 2)}
+            {this.renderPart(1, '#9370DB', '#4B0082', 3)}
+            {this.renderPart(1, '#9370DB', '#4B0082', 4)}
+            {this.renderPart(1, '#9370DB', '#4B0082', 5)}
+            {this.renderPart(1, '#9370DB', '#4B0082', 6)}
 
           <div id='name2'>Payphone.mp3</div>
-          <div id = 'AudioTrack2'>
-            {this.renderPart(2, '#32CD32', '#006400')}
-            {this.renderPart(2, '#32CD32', '#006400')}
-            {this.renderPart(2, '#32CD32', '#006400')}
-            {this.renderPart(2, '#32CD32', '#006400')}
-            {this.renderPart(2, '#32CD32', '#006400')}
-          </div>
+            <span style={{marginLeft: 18+'em'}}>{this.renderPart(2, '#32CD32', '#006400', 3)}</span>
+            {this.renderPart(2, '#32CD32', '#006400', 4)}
+            {this.renderPart(2, '#32CD32', '#006400', 5)}
+            {this.renderPart(2, '#32CD32', '#006400', 6)}
 
           <div id='name3'>Mind in awe.mp3</div>
-          <div id = 'AudioTrack3'>
-            {this.renderPart(3, '#FFD700', '#8B4513')}
-            {this.renderPart(3, '#FFD700', '#8B4513')}
-            {this.renderPart(3, '#FFD700', '#8B4513')}
-            {this.renderPart(3, '#FFD700', '#8B4513')}
-            {this.renderPart(3, '#FFD700', '#8B4513')}
-            {this.renderPart(3, '#FFD700', '#8B4513')}
-            {this.renderPart(3, '#FFD700', '#8B4513')}
-          </div>
-          
-
-
+            <span style={{marginLeft: 18+'em'}}>{this.renderPart(3, '#FFD700', '#8B4513', 2)}</span>
+            {this.renderPart(3, '#FFD700', '#8B4513', 3)}
+            {this.renderPart(3, '#FFD700', '#8B4513', 4)}
+            {this.renderPart(3, '#FFD700', '#8B4513', 5)}
+            {this.renderPart(3, '#FFD700', '#8B4513', 6)}
+            {this.renderPart(3, '#FFD700', '#8B4513', 7)}
+            {this.renderPart(3, '#FFD700', '#8B4513', 4)}
+            {this.renderPart(3, '#FFD700', '#8B4513', 5)}
+            {this.renderPart(3, '#FFD700', '#8B4513', 6)}
+            {this.renderPart(3, '#FFD700', '#8B4513', 7)}
 			</div>);
 	}
 }
