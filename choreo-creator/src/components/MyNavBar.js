@@ -68,7 +68,7 @@ class MyNavBar extends React.Component {
             </Navbar.Collapse>
 
             <Navbar.Collapse className="justify-content-center Center">
-                
+
 
                 <Nav.Item>
                     <Button variant='outline-primary' className="NavBarVertical" ref={this.backwardBtn}>
@@ -89,7 +89,7 @@ class MyNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item>
-                    <Button variant='outline-primary' ref ={this.loopBtn}>
+                    <Button variant='outline-primary' ref ={this.loopBtn} onClick={this.props.loopRegionControl}>
                         <span className="NavBarButton">LOOP</span>
                     </Button>
                 </Nav.Item>

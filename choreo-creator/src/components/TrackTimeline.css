@@ -8,12 +8,12 @@
     border: 1px solid #4395FF;
 }
 
-.playHead {
+#playHead {
     width: 0.15em;
     background-color:red;
     position:absolute;
-    top:4em;
-    height:31em;
+    top:3.6em;
+    height:32.4em;
     /*bottom:36em;*/
     left:50%;
 }
