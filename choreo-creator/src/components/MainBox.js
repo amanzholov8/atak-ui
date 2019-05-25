@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import MyNavBar from './MyNavBar';
 import TrackTimeline from './TrackTimeline';
@@ -68,6 +69,15 @@ class MainBox extends React.Component {
         }
     }
 
+    loopRegionControl = () => {
+        if(this.trackPlayer.current.leftBound && this.trackPlayer.current.rightBound){
+            let l = ReactDOM.findDOMNode(this.trackPlayer.current.leftBound.current);
+            let r = ReactDOM.findDOMNode(this.trackPlayer.current.rightBound.current);
+            let tmp = ReactDOM.findDOMNode(this.trackPlayer.current.playHead.current);
+            this.trackPlayer.current.loopRegion(l.offsetLeft, r.getBoundingClientRect().right, tmp.offsetLeft);
+        }
+    }
+
     render() {
         let modalClose = () => this.setState({ modalShow: false });
 
@@ -80,6 +90,7 @@ class MainBox extends React.Component {
                 show={this.state.show}
                 togglePlay={this.togglePlay}
                 active={this.active}
+                loopRegionControl={this.loopRegionControl}
             />
               <TrackTimeline
                 className="TrackTimelineFlex"
