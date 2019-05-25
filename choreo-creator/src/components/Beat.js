@@ -37,7 +37,7 @@ class Beat extends React.Component {
         });
     }
 
-    onPlusClick() {
+    onPlusClick = () => {
         this.state.openModal(this.state.bar, this.state.beat);
     }
 
