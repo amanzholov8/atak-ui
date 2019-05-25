@@ -41,7 +41,8 @@ class AudioTrack extends React.Component {
       ind: ind
     });
   }
-  componentDidMount() {
+
+  componentWillMount() {
     let beatRef = firebase.database().ref(`/audio/`);
     beatRef.once('value', snapshot => {
         let st = snapshot.val();
@@ -74,26 +75,26 @@ class AudioTrack extends React.Component {
       </Popover>
     );
     let isDeleted = false;
-    // let deleted = this.state.deleted;
-    // let j = 0;
-    // for (j in deleted){
-    //   console.log(deleted[j].i +" "+deleted[j].ind)
-    //   if(deleted[j].i == i && deleted[j].ind == ind-1){
-    //     console.log("here");
-    //     isDeleted = true
-    //   }
+    let deleted = this.state.deleted;
+    let j = 0;
+    for (j in deleted){
+      console.log(deleted[j].i +" "+deleted[j].ind)
+      if(deleted[j].i == i && deleted[j].ind == ind){
+        console.log("here");
+        isDeleted = true
+      }
 
-    // }
+    }
     return (
         <OverlayTrigger trigger="hover" placement="top" overlay={popover}>
           <button className= {`part${i}`}
                 style = {{background: `${color}`, 
                           width: '9em', height: '7em',
-                          marginRight: '-1px', marginTop: '-1px'}}
+                          marginRight: '-1px', marginTop: '-1px', 
+                          visibility: isDeleted ? 'hidden' : 'visible'}}
                 onMouseEnter = {(event)=> this.selects(event, color, darkColor, i)}
                 onMouseDown = {(event)=> this.selects(event, color, darkColor, i)}
-                onDoubleClick = {(event) => this.removes(event, i)}
-                visibility = {isDeleted ? 'hidden' : 'visible'}>
+                onDoubleClick = {(event) => this.removes(event, i)}>
           </button>
         </OverlayTrigger>
       );
@@ -101,6 +102,7 @@ class AudioTrack extends React.Component {
   }
 
   render() {
+    console.log(this.state.deleted);
 		return (
 			<div className="AudioTrack">
           <div id='beatBar'>
@@ -115,28 +117,28 @@ class AudioTrack extends React.Component {
             {this.renderBeat(3, 1)}
           </div>
           <div id='name1'>Do you wanna know.mp3</div>
-				    <span style={{marginLeft: 9+'em'}}>{this.renderPart(1, '#9370DB', '#4B0082', 1)}</span>
+				    <span style={{marginLeft: 9+'em'}}>{this.renderPart(1, '#9370DB', '#4B0082', 0)}</span>
+            {this.renderPart(1, '#9370DB', '#4B0082', 1)}
             {this.renderPart(1, '#9370DB', '#4B0082', 2)}
             {this.renderPart(1, '#9370DB', '#4B0082', 3)}
             {this.renderPart(1, '#9370DB', '#4B0082', 4)}
             {this.renderPart(1, '#9370DB', '#4B0082', 5)}
             {this.renderPart(1, '#9370DB', '#4B0082', 6)}
-            {this.renderPart(1, '#9370DB', '#4B0082', 6)}
 
           <div id='name2'>Payphone.mp3</div>
-            <span style={{marginLeft: 18+'em'}}>{this.renderPart(2, '#32CD32', '#006400', 3)}</span>
-            {this.renderPart(2, '#32CD32', '#006400', 4)}
-            {this.renderPart(2, '#32CD32', '#006400', 5)}
-            {this.renderPart(2, '#32CD32', '#006400', 6)}
+            <span style={{marginLeft: 18+'em'}}>{this.renderPart(2, '#32CD32', '#006400', 0)}</span>
+            {this.renderPart(2, '#32CD32', '#006400', 1)}
+            {this.renderPart(2, '#32CD32', '#006400', 2)}
+            {this.renderPart(2, '#32CD32', '#006400', 3)}
 
           <div id='name3'>Mind in awe.mp3</div>
-            <span style={{marginLeft: 0+'em'}}>{this.renderPart(3, '#FFD700', '#8B4513', 2)}</span>
+            <span style={{marginLeft: 0+'em'}}>{this.renderPart(3, '#FFD700', '#8B4513', 0)}</span>
+            {this.renderPart(3, '#FFD700', '#8B4513', 1)}
+            {this.renderPart(3, '#FFD700', '#8B4513', 2)}
             {this.renderPart(3, '#FFD700', '#8B4513', 3)}
             {this.renderPart(3, '#FFD700', '#8B4513', 4)}
             {this.renderPart(3, '#FFD700', '#8B4513', 5)}
             {this.renderPart(3, '#FFD700', '#8B4513', 6)}
-            {this.renderPart(3, '#FFD700', '#8B4513', 7)}
-            {this.renderPart(3, '#FFD700', '#8B4513', 4)}
 			</div>);
 	}
 }
