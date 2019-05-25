@@ -14,6 +14,8 @@ import Nav from 'react-bootstrap/Nav';
 import Overlay from 'react-bootstrap/Overlay'
 import Tooltip from 'react-bootstrap/Tooltip'
 
+import * as firebase from 'firebase';
+
 
 class MyNavBar extends React.Component {
     constructor(props){
@@ -34,7 +36,13 @@ class MyNavBar extends React.Component {
         this.forwardBtn = React.createRef();
         this.undoBtn = React.createRef();
     }
+    deleteDatabase(){
+        const newKey = firebase.database().ref(`/audio/`);
+        newKey.remove();
+        window.location.reload();
+    }
 
+    
     render(){
         const { show } = this.state;
         return (
@@ -43,12 +51,17 @@ class MyNavBar extends React.Component {
                 <Navbar.Toggle/>
                 <Nav.Item id="back">
                 <Button variant="outline-primary" ref = {this.editBtn}>
-                    <Link to={this.state.back}><span className="NavBarButton">{this.state.back_label}</span></Link>
+                    <Link to={this.state.back}
+                    onClick={()=>{document.getElementsById('undoBtn1').visibility = 'hidden';}}>
+                    <span className="NavBarButton">{this.state.back_label}</span></Link>
                 </Button>
                 </Nav.Item>
                 <Nav.Item id='undoBtn'>
                     <Button variant='outline-primary'
-                        ref ={this.undoBtn}>
+                        ref ={this.undoBtn}
+                        style={{visibility: 'visible'}}
+                        id='undoBtn1'
+                        onClick={()=>this.deleteDatabase()}>
                         <span className="NavBarButton">UNDO</span>
                     </Button>
                 </Nav.Item>
