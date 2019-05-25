@@ -16,14 +16,14 @@ class AudioTrack extends React.Component {
 
 
 
-  selects(event, color, darkColor, k){
+  selects(event, darkColor){
     if (event.target.id != 'clicked' && event.buttons == 1) {
       event.target.style.background = darkColor;
       event.target.id = 'clicked';
     } 
   }
 
-  removes(event, k) {
+  removes(k) {
     var parts = document.getElementsByClassName(`part${k}`);
     for ( var i = 0; i < parts.length; i++ ){
       if (parts[i].id=="clicked") {
@@ -92,9 +92,9 @@ class AudioTrack extends React.Component {
                           width: '9em', height: '7em',
                           marginRight: '-1px', marginTop: '-1px', 
                           visibility: isDeleted ? 'hidden' : 'visible'}}
-                onMouseEnter = {(event)=> this.selects(event, color, darkColor, i)}
-                onMouseDown = {(event)=> this.selects(event, color, darkColor, i)}
-                onDoubleClick = {(event) => this.removes(event, i)}>
+                onMouseEnter = {(event)=> this.selects(event, darkColor)}
+                onMouseDown = {(event)=> this.selects(event, darkColor)}
+                onDoubleClick = {() => this.removes(i)}>
           </button>
         </OverlayTrigger>
       );
