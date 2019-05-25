@@ -31,7 +31,8 @@ class Beat extends React.Component {
             let allMedia = snapshot.val();
             if (allMedia) {
                 this.setState({
-                    media: Object.values(allMedia)
+                    //media: Object.values(allMedia)
+                    media: allMedia
                 });
             };
         });
@@ -53,6 +54,17 @@ class Beat extends React.Component {
         });
     }
 
+    deleteImage = imageId => {
+        const removeRef = firebase.database().ref(`/beats/${this.props.bar}-${this.props.beat}/${imageId}`);
+        removeRef.remove();
+        if (Object.keys(this.state.media).length === 1) {
+            window.location.reload();
+        }
+        /*firebase.database().ref("/history/").limitToLast(1).once('child_added', function(childSnapshot) {
+        lastActionKey = childSnapshot.getKey(); //key
+        lastAction = childSnapshot.val();*/
+    }
+
     render() {
         let beatLabel = "";
         if(this.state.left){
@@ -72,24 +84,18 @@ class Beat extends React.Component {
                 </Card.Header>
                 <Card.Body ref={this.beatBody} className='Beat-body'>
                     {
-                        this.state.media.map(
-                            function(obj) {
-                                if (obj.type === 'image') {
-                                    return <img className="BeatItem" src={obj.src} height="180rem" width="180rem" alt="Custom move"/>;
-                                } else {
-                                    return "";
-                                }
+                        Object.keys(this.state.media).map((key) => {
+                            let obj = this.state.media[key]
+                            if (obj.type === 'image') {
+                                return (
+                                    <div className="ImageContainer" id={key}>
+                                        <img className="BeatItem" id={key} src={obj.src} height="180rem" width="180rem" alt="Custom move"/>
+                                        <button className="BeatItemDelete" onClick={() => {this.deleteImage(key)}}>&times;</button>
+                                    </div>);
+                            } else {
+                                return "";
                             }
-                            /*function(obj) {
-                                console.log(obj);
-                                if ((obj.bar === this.state.bar) && (obj.beat === this.state.beat)) {
-                                    return <img className="BeatItem" src={obj.src} height="180rem" width="180rem"/>;
-                                }
-                                else {
-                                    return "";
-                                }
-                            }.bind(this)*/
-                        )
+                        })
                     }
                     <Button className="BeatPlus" variant='outline-primary' onClick={this.onPlusClick} ref={this.plusBtn}>
                         <FontAwesomeIcon icon='plus' size='7x'/>
