@@ -10,6 +10,7 @@ class AudioTrack extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      deleted: []
     };
   }
 
@@ -28,8 +29,28 @@ class AudioTrack extends React.Component {
       if (parts[i].id=="clicked") {
         parts[i].style.visibility = 'hidden';
         parts[i].id = 'dblclicked';
+        this.sendBeat(k, i);
       }
     }
+  }
+  sendBeat(i, ind){
+    const newKey = firebase.database().ref(`/audio/${i}-${ind}/`);
+    newKey.set({
+      type: 'hidden',
+      i: i,
+      ind: ind
+    });
+  }
+  componentDidMount() {
+    let beatRef = firebase.database().ref(`/audio/`);
+    beatRef.once('value', snapshot => {
+        let st = snapshot.val();
+        if (st) {
+            this.setState({
+                deleted: Object.values(st)
+            });
+        };
+    });
   }
 
   renderBeat(a, b) {
@@ -43,28 +64,41 @@ class AudioTrack extends React.Component {
   }
 
   renderPart(i, color, darkColor, ind) {
-            const popover = (
-              <Popover id="popover-basic">
-                Press and drag to select SEVERAL parts to remove 
-                <br/>
-                OR
-                <br/>
-                Double click to remove 
-              </Popover>
-            );
-            return (
-                <OverlayTrigger trigger="hover" placement="top" overlay={popover}>
-                  <button className= {`part${i}`}
-                        style = {{background: `${color}`, 
-                                  width: '9em', height: '7em',
-                                  marginRight: '-1px', marginTop: '-1px'}}
-                        onMouseEnter = {(event)=> this.selects(event, color, darkColor, i)}
-                        onMouseDown = {(event)=> this.selects(event, color, darkColor, i)}
-                        onDoubleClick = {(event) => this.removes(event, i)}>
-                  </button>
-                </OverlayTrigger>
-              );
-          }
+    const popover = (
+      <Popover id="popover-basic">
+        Press and drag to select SEVERAL parts to remove 
+        <br/>
+        OR
+        <br/>
+        Double click to remove 
+      </Popover>
+    );
+    let isDeleted = false;
+    // let deleted = this.state.deleted;
+    // let j = 0;
+    // for (j in deleted){
+    //   console.log(deleted[j].i +" "+deleted[j].ind)
+    //   if(deleted[j].i == i && deleted[j].ind == ind-1){
+    //     console.log("here");
+    //     isDeleted = true
+    //   }
+
+    // }
+    return (
+        <OverlayTrigger trigger="hover" placement="top" overlay={popover}>
+          <button className= {`part${i}`}
+                style = {{background: `${color}`, 
+                          width: '9em', height: '7em',
+                          marginRight: '-1px', marginTop: '-1px'}}
+                onMouseEnter = {(event)=> this.selects(event, color, darkColor, i)}
+                onMouseDown = {(event)=> this.selects(event, color, darkColor, i)}
+                onDoubleClick = {(event) => this.removes(event, i)}
+                visibility = {isDeleted ? 'hidden' : 'visible'}>
+          </button>
+        </OverlayTrigger>
+      );
+
+  }
 
   render() {
 		return (
