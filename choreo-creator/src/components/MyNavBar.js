@@ -22,7 +22,8 @@ class MyNavBar extends React.Component {
             back: props.back || '/',
             back_label: props.back_label || 'BACK',
             show: props.show,
-            toggleShow: props.toggleShow
+            toggleShow: props.toggleShow,
+            active: false
         }
         this.playBtn = React.createRef();
         this.pauseBtn = React.createRef();
@@ -36,13 +37,6 @@ class MyNavBar extends React.Component {
 
     render(){
         const { show } = this.state;
-        let btn;
-        if(!this.props.active){
-            btn = <FontAwesomeIcon icon='play' size='2x'/>;
-        }
-        else {
-            btn = <FontAwesomeIcon icon='pause' size='2x'/>;
-        }
         return (
             <Navbar className="MyNavBar">
             <Navbar.Collapse className="justify-content-left pull-left">
@@ -68,7 +62,7 @@ class MyNavBar extends React.Component {
             </Navbar.Collapse>
 
             <Navbar.Collapse className="justify-content-center Center">
-                
+
 
                 <Nav.Item>
                     <Button variant='outline-primary' className="NavBarVertical" ref={this.backwardBtn}>
@@ -77,8 +71,13 @@ class MyNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item>
-                    <Button variant='outline-primary' ref={this.playBtn} onClick={this.props.togglePlay}>
-                        {btn}
+                    <Button variant='outline-primary' ref={this.playBtn} onClick={() => {
+                        this.setState({
+                            active: !this.state.active
+                        });
+                        this.props.togglePlay();
+                    }}>
+                        <FontAwesomeIcon icon={!this.state.active ? 'pause' : 'play'} size='2x'/>
                     </Button>
                 </Nav.Item>
 
@@ -89,7 +88,7 @@ class MyNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item>
-                    <Button variant='outline-primary' ref ={this.loopBtn}>
+                    <Button variant='outline-primary' ref ={this.loopBtn} onClick={this.props.loopRegionControl}>
                         <span className="NavBarButton">LOOP</span>
                     </Button>
                 </Nav.Item>

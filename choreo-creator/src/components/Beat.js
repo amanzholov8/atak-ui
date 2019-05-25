@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Overlay from 'react-bootstrap/Overlay'
 import Tooltip from 'react-bootstrap/Tooltip'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import DragScrollProvider from 'drag-scroll-provider'
 import './Beat.css';
 import * as firebase from 'firebase';
 
@@ -17,7 +16,9 @@ class Beat extends React.Component {
             openModal: props.openModal,
             media: props.addedImages,
             median: ["https://i.ibb.co/SXW4htY/img1.jpg", "https://i.ibb.co/vYJdvBg/img2.jpg"],
-            show: props.show
+            show: props.show,
+            left: false,
+            right: false
         }
         this.plusBtn = React.createRef();
         this.beatHeader = React.createRef();
@@ -36,14 +37,39 @@ class Beat extends React.Component {
         });
     }
 
-    onPlusClick = () => {
+    onPlusClick() {
         this.state.openModal(this.state.bar, this.state.beat);
     }
 
+    toggleLeft() {
+        this.setState({
+            left: !this.state.left
+        });
+    }
+
+    toggleRight() {
+        this.setState({
+            right: !this.state.right
+        });
+    }
+
     render() {
+        let beatLabel = "";
+        if(this.state.left){
+            beatLabel += "Start";
+        }
+        beatLabel += ` ${this.state.bar}:${this.state.beat} `;
+        if(this.state.right){
+            beatLabel += "End";
+        }
         return (
             <Card className='Beat'>
-                <Card.Header ref={this.beatHeader} className='Beat-header'>{this.state.bar}:{this.state.beat}</Card.Header>
+                <Card.Header ref={this.beatHeader}
+                             className='Beat-header'
+                             onClick={() => {this.props.selectLeftBound(this.state.bar, this.state.beat)}}
+                             onContextMenu={(e) => {e.preventDefault(); this.props.selectRightBound(this.state.bar, this.state.beat)}}>
+                                {beatLabel}
+                </Card.Header>
                 <Card.Body ref={this.beatBody} className='Beat-body'>
                     {
                         this.state.media.map(
@@ -64,7 +90,7 @@ class Beat extends React.Component {
                                 }
                             }.bind(this)*/
                         )
-                    }                                                      
+                    }
                     <Button className="BeatPlus" variant='outline-primary' onClick={this.onPlusClick} ref={this.plusBtn}>
                         <FontAwesomeIcon icon='plus' size='7x'/>
                     </Button>
@@ -78,7 +104,7 @@ class Beat extends React.Component {
                     )}
                     </Overlay> :
                     <p></p>
-                } 
+                }
                 {((this.state.bar === 1) && (this.state.beat === 2)) ?
                     <Overlay target={this.beatHeader.current} show={this.props.show} placement="bottom">
                         {props => (
@@ -98,7 +124,7 @@ class Beat extends React.Component {
                     )}
                     </Overlay> :
                     <p></p>
-                }                                                
+                }
             </Card>
         );
     }
