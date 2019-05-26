@@ -27,7 +27,6 @@ class Editor extends React.Component {
             <div>
                 <MyNavBar
                     className="MyNavBarFlex"
-                    isUndo={true}
                     togglePlay={this.playAudio}/>
                 <AudioTrack />
             </div>

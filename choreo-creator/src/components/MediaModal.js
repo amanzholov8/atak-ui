@@ -33,41 +33,19 @@ class MediaModal extends React.Component {
       });
     }
 
-    sendimage0 = () => {
+    sendimage = (index) => {
       this.onClose();
       const newKey = firebase.database().ref(`/beats/${this.props.beatselected.bar}-${this.props.beatselected.beat}/`).push();
-      newKey.set({
-        type: 'image',
-        src: this.state.images[0]
-      });
+      const beatsRef = firebase.database().ref('/beats/');
+      beatsRef.once('value', snapshot => {
+          firebase.database().ref('/history/').push(snapshot.val(), () => {
+            newKey.set({
+              type: 'image',
+              src: this.state.images[index]
+            });
+          });
+      });      
     }
-
-    sendimage1 = () => {
-      this.onClose();
-      const newKey = firebase.database().ref(`/beats/${this.props.beatselected.bar}-${this.props.beatselected.beat}/`).push();
-      newKey.set({
-        type: 'image',
-        src: this.state.images[1]
-      });
-    }    
-
-    sendimage2 = () => {
-      this.onClose();
-      const newKey = firebase.database().ref(`/beats/${this.props.beatselected.bar}-${this.props.beatselected.beat}/`).push();
-      newKey.set({
-        type: 'image',
-        src: this.state.images[2]
-      });
-    } 
-
-    sendimage3 = () => {
-      this.onClose();
-      const newKey = firebase.database().ref(`/beats/${this.props.beatselected.bar}-${this.props.beatselected.beat}/`).push();
-      newKey.set({
-        type: 'image',
-        src: this.state.images[3]
-      });
-    }     
 
     render() {
         return (
@@ -115,16 +93,16 @@ class MediaModal extends React.Component {
             <Modal show={this.state.galleryModal} onHide={this.onClose}> 
               <Modal.Body>
 
-                <Button variant="primary" onClick={this.sendimage0}>
+                <Button variant="primary" onClick={() => {this.sendimage(0)}}>
                   <img src="https://i.ibb.co/SXW4htY/img1.jpg" width="180rem" height="180rem"/>
                 </Button>
-                <Button variant="primary" onClick={this.sendimage1}>
+                <Button variant="primary" onClick={() => {this.sendimage(1)}}>
                   <img src="https://i.ibb.co/vYJdvBg/img2.jpg" width="180rem" height="180rem"/>
                 </Button>  
-                <Button variant="primary" onClick={this.sendimage2}>
+                <Button variant="primary" onClick={() => {this.sendimage(2)}}>
                   <img src="https://i.ibb.co/qdtwMXh/img3.jpg" width="180rem" height="180rem"/>
                 </Button>
-                <Button variant="primary" onClick={this.sendimage3}>
+                <Button variant="primary" onClick={() => {this.sendimage(3)}}>
                   <img src="https://i.ibb.co/qkfr06Q/img4.jpg" width="180rem" height="180rem"/>
                 </Button>                                                  
               </Modal.Body>
