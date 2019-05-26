@@ -36,6 +36,8 @@ class TrackTimeline extends React.Component {
         this.selectRightBound = this.selectRightBound.bind(this);
         this.loopRegion = this.loopRegion.bind(this);
         this.loopForward = this.loopForward.bind(this);
+        this.goBackward = this.goBackward.bind(this);
+        this.goForward = this.goForward.bind(this);
     }
 
     playTrack(){
@@ -137,6 +139,14 @@ class TrackTimeline extends React.Component {
         this.rightBound = this.beatRefs[idx];
         this.rightBound.current.toggleRight();
         this.rightBoundNum = idx;
+    }
+
+    goForward() {
+        this.scrollBar.current.scrollBy(50 * this.scrollSpeed, 0);
+    }
+
+    goBackward() {
+        this.scrollBar.current.scrollBy(-50 * this.scrollSpeed, 0);
     }
 
     render(){

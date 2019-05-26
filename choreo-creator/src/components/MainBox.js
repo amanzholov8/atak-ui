@@ -80,6 +80,14 @@ class MainBox extends React.Component {
         this.trackPlayer.current.loopRegion();
     }
 
+    goForward = () => {
+        this.trackPlayer.current.goForward();
+    }
+
+    goBackward = () => {
+        this.trackPlayer.current.goBackward();
+    }
+
     render() {
         let modalClose = () => this.setState({ modalShow: false });
 
@@ -93,6 +101,8 @@ class MainBox extends React.Component {
                 togglePlay={this.togglePlay}
                 active={this.active}
                 loopRegionControl={this.loopRegionControl}
+                goForward={this.goForward}
+                goBackward={this.goBackward}
             />
               <TrackTimeline
                 className="TrackTimelineFlex"

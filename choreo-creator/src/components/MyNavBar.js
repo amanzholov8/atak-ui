@@ -76,7 +76,7 @@ class MyNavBar extends React.Component {
 
 
                 <Nav.Item>
-                    <Button variant='outline-primary' className="NavBarVertical" ref={this.backwardBtn}>
+                    <Button variant='outline-primary' className="NavBarVertical" ref={this.backwardBtn} onClick={this.props.goBackward}>
                         <FontAwesomeIcon icon='backward' size='2x'/>
                     </Button>
                 </Nav.Item>
@@ -93,7 +93,7 @@ class MyNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item>
-                    <Button variant='outline-primary' className="NavBarVertical" ref={this.forwardBtn}>
+                    <Button variant='outline-primary' className="NavBarVertical" ref={this.forwardBtn} onClick={this.props.goForward}>
                         <FontAwesomeIcon icon='forward' size='2x'/>
                     </Button>
                 </Nav.Item>
