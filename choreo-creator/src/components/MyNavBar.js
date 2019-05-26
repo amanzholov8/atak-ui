@@ -24,8 +24,7 @@ class MyNavBar extends React.Component {
             show: props.show,
             toggleShow: props.toggleShow,
             active: false,
-            looping: false,
-            editAudio: true
+            looping: false
         }
         this.playBtn = React.createRef();
         this.pauseBtn = React.createRef();
@@ -36,21 +35,12 @@ class MyNavBar extends React.Component {
         this.forwardBtn = React.createRef();
         this.undoBtn = React.createRef();
     }
+
     deleteDatabase(){
         const newKey = firebase.database().ref(`/audio/`);
         newKey.remove();
         window.location.reload();
     }
-
-    undoHidden() {
-        console.log('1');
-        this.setState({
-            editAudio: !this.state.editAudio
-        }, function () {
-            console.log(this.state.editAudio);
-        });
-    }
-
 
     render(){
         const { show } = this.state;
@@ -60,11 +50,12 @@ class MyNavBar extends React.Component {
                 <Navbar.Toggle/>
                 <Nav.Item id="back">
                 <Button variant="outline-primary" ref = {this.editBtn}>
-                    <Link to={this.state.back} onClick = {()=> this.undoHidden()}>
-                    <span className="NavBarButton">{this.state.back_label}</span></Link>
+                    <Link to={this.state.back}>
+                        <span className="NavBarButton">{this.state.back_label}</span>
+                    </Link>
                 </Button>
                 </Nav.Item>
-                {this.state.editAudio &&
+                {this.props.isUndo &&
                 <Nav.Item id='undoBtn'>
                     <Button variant='outline-primary'
                         ref ={this.undoBtn}
@@ -82,7 +73,6 @@ class MyNavBar extends React.Component {
             </Navbar.Collapse>
 
             <Navbar.Collapse className="justify-content-center Center">
-
 
                 <Nav.Item>
                     <Button variant='outline-primary' className="NavBarVertical" ref={this.backwardBtn} onClick={this.props.goBackward}>
