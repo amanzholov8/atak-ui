@@ -36,10 +36,14 @@ class TrackTimeline extends React.Component {
         this.selectRightBound = this.selectRightBound.bind(this);
         this.loopRegion = this.loopRegion.bind(this);
         this.loopForward = this.loopForward.bind(this);
+        this.goBackward = this.goBackward.bind(this);
+        this.goForward = this.goForward.bind(this);
     }
 
     playTrack(){
-        this.player = setInterval(this.moveForward, 1000 / this.scrollSpeed);
+        let playFunc = this.isLooping ? this.loopForward : this.moveForward;
+
+        this.player = setInterval(playFunc, 1000 / this.scrollSpeed);
     }
 
     pauseTrack(){
@@ -48,7 +52,10 @@ class TrackTimeline extends React.Component {
     }
 
     moveForward(){
-        if(false) {
+        let pos = ReactDOM.findDOMNode(this.scrollBar.current).scrollLeft;
+        let final = ReactDOM.findDOMNode(this.beatRefs[this.numBeats - 1].current).getBoundingClientRect().right;
+        let offset = ReactDOM.findDOMNode(this.playHead.current).offsetLeft;
+        if(pos > final - offset) {
             // If it passes the last beat stop
             this.pauseTrack();
         }
@@ -57,11 +64,13 @@ class TrackTimeline extends React.Component {
         }
     }
 
-    loopForward(leftBound, rightBound, offset){
+    loopForward(){
+        let leftBound = ReactDOM.findDOMNode(this.leftBound.current).offsetLeft;
+        let tmp = ReactDOM.findDOMNode(this.rightBound.current);
+        let rightBound = tmp.offsetLeft + tmp.offsetWidth;
+        let offset = ReactDOM.findDOMNode(this.playHead.current).offsetLeft;
         let pos = ReactDOM.findDOMNode(this.scrollBar.current).scrollLeft;
-        //debugger;
-        if(pos + this.scrollSpeed > rightBound - offset){
-            this.scrollBar.current.scrollBy(rightBound - offset - pos, 0);
+        if(pos > rightBound - offset){
             this.scrollBar.current.scrollTo({left: (leftBound - offset)})
         }
         else {
@@ -69,8 +78,25 @@ class TrackTimeline extends React.Component {
         }
     }
 
-    loopRegion(leftBound, rightBound, offset){
+    loopRegion(){
+        this.isLooping = !this.isLooping;
         if(this.isLooping){
+            this.leftBound = this.beatRefs[0];
+            this.rightBound = this.beatRefs[2];
+            this.leftBoundNum = 0;
+            this.rightBoundNum = 2;
+            this.leftBound.current.toggleLeft();
+            this.rightBound.current.toggleRight();
+        }
+        else {
+            this.leftBound.current.toggleLeft();
+            this.rightBound.current.toggleRight();
+            this.leftBound = null;
+            this.rightBound = null;
+            this.leftBoundNum = 0;
+            this.rightBoundNum = this.numBeats - 1;
+        }
+        /*if(this.isLooping){
             this.pauseTrack();
             this.isLooping = false;
         }
@@ -80,21 +106,19 @@ class TrackTimeline extends React.Component {
             this.scrollBar.current.scrollTo({left: leftBound - offset});
             this.isLooping = true;
             this.player = setInterval(() => this.loopForward(leftBound, rightBound, offset), 1000 / this.scrollSpeed);
-        }
+        }*/
     }
 
     selectLeftBound(bar, beat) {
         let idx = (bar - 1) * 4 + beat - 1;
-        if(this.leftBound === this.beatRefs[idx]){
-            this.leftBound.current.toggleLeft();
-            this.leftBound = null;
-            this.leftBoundNum = 0;
-        }
-        if(idx > this.rightBoundNum){
+        if(idx > this.rightBoundNum || this.leftBound === this.beatRefs[idx]){
             return;
         }
         if(this.leftBound){
             this.leftBound.current.toggleLeft();
+        }
+        else {
+            console.log('Something went wrong');
         }
         this.leftBound = this.beatRefs[idx];
         this.leftBound.current.toggleLeft();
@@ -103,20 +127,26 @@ class TrackTimeline extends React.Component {
 
     selectRightBound(bar, beat) {
         let idx = (bar - 1) * 4 + beat - 1;
-        if(this.rightBound === this.beatRefs[idx]){
-            this.rightBound.current.toggleRight();
-            this.rightBound = null;
-            this.rightBoundNum = this.numBeats - 1;
-        }
-        if(idx < this.leftBoundNum){
+        if(idx < this.leftBoundNum || this.rightBound === this.beatRefs[idx]){
             return;
         }
         if(this.rightBound){
             this.rightBound.current.toggleRight();
         }
+        else {
+            console.log('Something went wrong');
+        }
         this.rightBound = this.beatRefs[idx];
         this.rightBound.current.toggleRight();
         this.rightBoundNum = idx;
+    }
+
+    goForward() {
+        this.scrollBar.current.scrollBy(50 * this.scrollSpeed, 0);
+    }
+
+    goBackward() {
+        this.scrollBar.current.scrollBy(-50 * this.scrollSpeed, 0);
     }
 
     render(){

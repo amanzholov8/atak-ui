@@ -24,6 +24,8 @@ class MainBox extends React.Component {
             expNadpis: "gogoDauiiDauii"
         };
         this.trackPlayer = React.createRef();
+        this.url = "http://streaming.tdiradio.com:8000/house.mp3";
+        this.audio = new Audio(this.url);
     }
 
     componentDidMount() {
@@ -62,25 +64,32 @@ class MainBox extends React.Component {
             active: !this.state.active
         }, () => {
             if(this.state.active){
-                console.log('1');
+                this.audio.play();
                 this.trackPlayer.current.playTrack();
-                console.log('2');
             }
             else {
-                console.log('3');
+                this.audio.pause();
                 this.trackPlayer.current.pauseTrack();
             }
         });
-        
     }
 
     loopRegionControl = () => {
-        if(this.trackPlayer.current.leftBound && this.trackPlayer.current.rightBound){
-            let l = ReactDOM.findDOMNode(this.trackPlayer.current.leftBound.current);
-            let r = ReactDOM.findDOMNode(this.trackPlayer.current.rightBound.current);
-            let tmp = ReactDOM.findDOMNode(this.trackPlayer.current.playHead.current);
-            this.trackPlayer.current.loopRegion(l.offsetLeft, r.getBoundingClientRect().right, tmp.offsetLeft);
-        }
+        /*
+        let l = ReactDOM.findDOMNode(this.trackPlayer.current.leftBound.current);
+        let r = ReactDOM.findDOMNode(this.trackPlayer.current.rightBound.current);
+        let tmp = ReactDOM.findDOMNode(this.trackPlayer.current.playHead.current);
+        */
+        //this.trackPlayer.current.loopRegion(l.offsetLeft, r.getBoundingClientRect().right, tmp.offsetLeft);
+        this.trackPlayer.current.loopRegion();
+    }
+
+    goForward = () => {
+        this.trackPlayer.current.goForward();
+    }
+
+    goBackward = () => {
+        this.trackPlayer.current.goBackward();
     }
 
     render() {
@@ -96,6 +105,8 @@ class MainBox extends React.Component {
                 togglePlay={this.togglePlay}
                 active={this.active}
                 loopRegionControl={this.loopRegionControl}
+                goForward={this.goForward}
+                goBackward={this.goBackward}
             />
               <TrackTimeline
                 className="TrackTimelineFlex"

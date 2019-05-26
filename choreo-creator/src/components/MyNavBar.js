@@ -1,18 +1,16 @@
 import React from 'react';
 
-import './MyNavBar.css'
+import './MyNavBar.css';
 
-import Navbar from 'react-bootstrap/Navbar';
-
-import Button from 'react-bootstrap/Button'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import { Link } from 'react-router-dom'
-
+import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
-import Overlay from 'react-bootstrap/Overlay'
-import Tooltip from 'react-bootstrap/Tooltip'
+import Navbar from 'react-bootstrap/Navbar';
+import Overlay from 'react-bootstrap/Overlay';
+import Tooltip from 'react-bootstrap/Tooltip';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { Link } from 'react-router-dom';
 
 import * as firebase from 'firebase';
 
@@ -25,7 +23,9 @@ class MyNavBar extends React.Component {
             back_label: props.back_label || 'BACK',
             show: props.show,
             toggleShow: props.toggleShow,
-            active: false
+            active: false,
+            looping: false,
+            editAudio: true
         }
         this.playBtn = React.createRef();
         this.pauseBtn = React.createRef();
@@ -58,6 +58,15 @@ class MyNavBar extends React.Component {
         });
     }
 
+    undoHidden() {
+        console.log('1');
+        this.setState({
+            editAudio: !this.state.editAudio
+        }, function () {
+            console.log(this.state.editAudio);
+        });
+    }
+
 
     render(){
         const { show } = this.state;
@@ -67,23 +76,22 @@ class MyNavBar extends React.Component {
                 <Navbar.Toggle/>
                 <Nav.Item id="back">
                 <Button variant="outline-primary" ref = {this.editBtn}>
-                    <Link to={this.state.back}>
+                    <Link to={this.state.back} onClick = {()=> this.undoHidden()}>
                     <span className="NavBarButton">{this.state.back_label}</span></Link>
                 </Button>
                 </Nav.Item>
+                {this.state.editAudio &&
                 <Nav.Item id='undoBtn'>
                     <Button variant='outline-primary'
                         ref ={this.undoBtn}
-                        style={{visibility: 'visible'}}
-                        id='undoBtn1'
                         onClick={()=>this.commonUndo()}>
                         <span className="NavBarButton">UNDO</span>
                     </Button>
-                </Nav.Item>
+                </Nav.Item>}
                 <Overlay target={this.editBtn.current} show={this.props.show} placement="bottom">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
-                     Edit music for choreo, after finishing edit, press Done to return to this page.
+                     Edit music for choreo.
                     </Tooltip>
                 )}
                 </Overlay>
@@ -93,7 +101,7 @@ class MyNavBar extends React.Component {
 
 
                 <Nav.Item>
-                    <Button variant='outline-primary' className="NavBarVertical" ref={this.backwardBtn}>
+                    <Button variant='outline-primary' className="NavBarVertical" ref={this.backwardBtn} onClick={this.props.goBackward}>
                         <FontAwesomeIcon icon='backward' size='2x'/>
                     </Button>
                 </Nav.Item>
@@ -110,13 +118,18 @@ class MyNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item>
-                    <Button variant='outline-primary' className="NavBarVertical" ref={this.forwardBtn}>
+                    <Button variant='outline-primary' className="NavBarVertical" ref={this.forwardBtn} onClick={this.props.goForward}>
                         <FontAwesomeIcon icon='forward' size='2x'/>
                     </Button>
                 </Nav.Item>
 
                 <Nav.Item>
-                    <Button variant='outline-primary' ref ={this.loopBtn} onClick={this.props.loopRegionControl}>
+                    <Button variant='outline-primary' ref ={this.loopBtn} className={this.state.looping ? 'activeLoop' : 'inactiveLoop'} onClick={() => {
+                        this.setState({
+                            looping: !this.state.looping
+                        });
+                        this.props.loopRegionControl();
+                    }}>
                         <span className="NavBarButton">LOOP</span>
                     </Button>
                 </Nav.Item>
