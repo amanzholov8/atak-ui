@@ -36,11 +36,17 @@ class MediaModal extends React.Component {
     sendimage = (index) => {
       this.onClose();
       const newKey = firebase.database().ref(`/beats/${this.props.beatselected.bar}-${this.props.beatselected.beat}/`).push();
-      newKey.set({
-        type: 'image',
-        src: this.state.images[index]
-      });
+      const beatsRef = firebase.database().ref('/beats/');
+      beatsRef.once('value', snapshot => {
+          firebase.database().ref('/history/').push(snapshot.val(), () => {
+            newKey.set({
+              type: 'image',
+              src: this.state.images[index]
+            });
+          });
+      });      
     }
+
     render() {
         return (
           <div>

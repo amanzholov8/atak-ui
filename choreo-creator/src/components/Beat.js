@@ -59,14 +59,6 @@ class Beat extends React.Component {
         const removeRef = firebase.database().ref(`/beats/${this.props.bar}-${this.props.beat}/${imageId}`);
         const beatsRef = firebase.database().ref('/beats/');
 
-        /*beatsRef.once('value', snapshot => {
-            historyKey.set(snapshot.val());
-        });
-        removeRef.remove();
-        if (Object.keys(this.state.media).length === 1) {
-            window.location.reload();
-        }*/
-
         beatsRef.once('value', snapshot => {
             firebase.database().ref('/history/').push(snapshot.val(), () => {
                 removeRef.remove();
