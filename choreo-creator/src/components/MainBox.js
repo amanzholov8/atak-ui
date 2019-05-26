@@ -60,13 +60,18 @@ class MainBox extends React.Component {
     togglePlay = () => {
         this.setState({
             active: !this.state.active
+        }, () => {
+            if(this.state.active){
+                console.log('1');
+                this.trackPlayer.current.playTrack();
+                console.log('2');
+            }
+            else {
+                console.log('3');
+                this.trackPlayer.current.pauseTrack();
+            }
         });
-        if(this.state.active){
-            this.trackPlayer.current.playTrack();
-        }
-        else {
-            this.trackPlayer.current.pauseTrack();
-        }
+        
     }
 
     loopRegionControl = () => {

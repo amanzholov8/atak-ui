@@ -42,7 +42,7 @@ class MyNavBar extends React.Component {
         window.location.reload();
     }
 
-    
+
     render(){
         const { show } = this.state;
         return (
@@ -51,8 +51,7 @@ class MyNavBar extends React.Component {
                 <Navbar.Toggle/>
                 <Nav.Item id="back">
                 <Button variant="outline-primary" ref = {this.editBtn}>
-                    <Link to={this.state.back}
-                    onClick={()=>{document.getElementsById('undoBtn1').visibility = 'hidden';}}>
+                    <Link to={this.state.back}>
                     <span className="NavBarButton">{this.state.back_label}</span></Link>
                 </Button>
                 </Nav.Item>
@@ -90,7 +89,7 @@ class MyNavBar extends React.Component {
                         });
                         this.props.togglePlay();
                     }}>
-                        <FontAwesomeIcon icon={!this.state.active ? 'pause' : 'play'} size='2x'/>
+                        <FontAwesomeIcon icon={this.state.active ? 'pause' : 'play'} size='2x'/>
                     </Button>
                 </Nav.Item>
 
