@@ -36,10 +36,26 @@ class MyNavBar extends React.Component {
         this.forwardBtn = React.createRef();
         this.undoBtn = React.createRef();
     }
-    deleteDatabase(){
-        const newKey = firebase.database().ref(`/audio/`);
+    commonUndo(){
+        //UNDO FOR AUDIOTRACK
+        /*const newKey = firebase.database().ref(`/audio/`);
         newKey.remove();
-        window.location.reload();
+        window.location.reload();*/
+
+        //UNDO FOR TRACKTIMELINE
+        const beatsRef = firebase.database().ref('/beats/');
+        const historyItemRef = firebase.database().ref("/history/").limitToLast(1);
+        historyItemRef.once('value', function(childSnapshot) {
+            const obj = childSnapshot.val();
+            if (obj) {
+                const key = Object.keys(obj)[0];
+                beatsRef.set(obj[key], () => {
+                    const removeRef = firebase.database().ref(`/history/${key}/`);
+                    removeRef.remove();
+                    window.location.reload();
+                });
+            };
+        });
     }
 
 
@@ -60,7 +76,7 @@ class MyNavBar extends React.Component {
                         ref ={this.undoBtn}
                         style={{visibility: 'visible'}}
                         id='undoBtn1'
-                        onClick={()=>this.deleteDatabase()}>
+                        onClick={()=>this.commonUndo()}>
                         <span className="NavBarButton">UNDO</span>
                     </Button>
                 </Nav.Item>

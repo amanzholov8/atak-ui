@@ -55,14 +55,26 @@ class Beat extends React.Component {
     }
 
     deleteImage = imageId => {
+        //const historyKey = firebase.database().ref('/history/').push();
         const removeRef = firebase.database().ref(`/beats/${this.props.bar}-${this.props.beat}/${imageId}`);
+        const beatsRef = firebase.database().ref('/beats/');
+
+        /*beatsRef.once('value', snapshot => {
+            historyKey.set(snapshot.val());
+        });
         removeRef.remove();
         if (Object.keys(this.state.media).length === 1) {
             window.location.reload();
-        }
-        /*firebase.database().ref("/history/").limitToLast(1).once('child_added', function(childSnapshot) {
-        lastActionKey = childSnapshot.getKey(); //key
-        lastAction = childSnapshot.val();*/
+        }*/
+
+        beatsRef.once('value', snapshot => {
+            firebase.database().ref('/history/').push(snapshot.val(), () => {
+                removeRef.remove();
+                if (Object.keys(this.state.media).length === 1) {
+                    window.location.reload();
+                };
+            });
+        });
     }
 
     render() {
