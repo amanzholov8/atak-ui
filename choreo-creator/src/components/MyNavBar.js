@@ -23,6 +23,7 @@ class MyNavBar extends React.Component {
             back_label: props.back_label || 'BACK',
             show: props.show,
             toggleShow: props.toggleShow,
+            toggleLoopingPrompt: props.toggleLoopingPrompt,
             active: false,
             looping: false,
             atTrackTimeline: props.trackTimeline
@@ -92,7 +93,10 @@ class MyNavBar extends React.Component {
             <Navbar.Collapse className="justify-content-center Center">
 
                 <Nav.Item>
-                    <Button variant='outline-primary' className="NavBarVertical" ref={this.backwardBtn} onClick={this.props.goBackward}>
+                    <Button variant='outline-primary' className="NavBarVertical" ref={this.backwardBtn} onClick={() => {
+                        this.props.goBackward();
+                        this.state.toggleLoopingPrompt(false);
+                    }}>
                         <FontAwesomeIcon icon='backward' size='2x'/>
                     </Button>
                 </Nav.Item>
@@ -103,13 +107,17 @@ class MyNavBar extends React.Component {
                             active: !this.state.active
                         });
                         this.props.togglePlay();
+                        this.state.toggleLoopingPrompt(false);
                     }}>
                         <FontAwesomeIcon icon={this.state.active ? 'pause' : 'play'} size='2x'/>
                     </Button>
                 </Nav.Item>
 
                 <Nav.Item>
-                    <Button variant='outline-primary' className="NavBarVertical" ref={this.forwardBtn} onClick={this.props.goForward}>
+                    <Button variant='outline-primary' className="NavBarVertical" ref={this.forwardBtn} onClick={() => {
+                        this.props.goForward();
+                        this.state.toggleLoopingPrompt(false);
+                    }}>
                         <FontAwesomeIcon icon='forward' size='2x'/>
                     </Button>
                 </Nav.Item>
@@ -118,6 +126,8 @@ class MyNavBar extends React.Component {
                     <Button variant='outline-primary' ref ={this.loopBtn} className={this.state.looping ? 'activeLoop' : 'inactiveLoop'} onClick={() => {
                         this.setState({
                             looping: !this.state.looping
+                        }, () => {
+                            this.state.toggleLoopingPrompt(this.state.looping);
                         });
                         this.props.loopRegionControl();
                     }}>
@@ -131,28 +141,14 @@ class MyNavBar extends React.Component {
                     </Tooltip>
                 )}
                 </Overlay>
-                <Overlay target={this.playBtn.current} show={this.props.show} placement="bottom">
-                    {props => (
-                    <Tooltip id="overlay-example" {...props}>
-                    Play/pause track
-                    </Tooltip>
-                )}
-                </Overlay>
-                <Overlay target={this.pauseBtn.current} show={this.props.show} placement="bottom">
-                    {props => (
-                    <Tooltip id="overlay-example" {...props}>
-                    Pause track
-                    </Tooltip>
-                )}
-                </Overlay>
-                <Overlay target={this.forwardBtn.current} show={this.props.show} placement="right">
+                <Overlay target={this.forwardBtn.current} show={this.props.show} placement="bottom">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
                     Go 10 seconds forward
                     </Tooltip>
                 )}
                 </Overlay>
-                <Overlay target={this.loopBtn.current} show={this.props.show} placement="bottom">
+                <Overlay target={this.loopBtn.current} show={this.props.show} placement="right">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
                     Loop any part of the track

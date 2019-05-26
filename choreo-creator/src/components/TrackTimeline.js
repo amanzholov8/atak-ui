@@ -11,6 +11,7 @@ class TrackTimeline extends React.Component {
             openModal: props.openModal,
             addedImage: props.addedImage,
             show: props.show,
+            loopingPrompt: props.loopingPrompt,
             active: props.active
         };
         this.scrollBar = React.createRef();
@@ -158,6 +159,7 @@ class TrackTimeline extends React.Component {
                        openModal={this.state.openModal}
                        addedImages={this.props.addedImages}
                        show={this.props.show}
+                       loopingPrompt={this.props.loopingPrompt}
                        selectLeftBound={this.selectLeftBound}
                        selectRightBound={this.selectRightBound}
                        ref={this.beatRefs[i]}/>)

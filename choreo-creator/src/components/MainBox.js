@@ -20,6 +20,7 @@ class MainBox extends React.Component {
                 beat: 0},
             addedImages: [],
             show: false,
+            loopingPrompt: false,
             active: false,
             expNadpis: "gogoDauiiDauii"
         };
@@ -56,6 +57,12 @@ class MainBox extends React.Component {
     toggleShow = () => {
         this.setState({
             show: !this.state.show
+        });
+    }
+
+    toggleLoopingPrompt = bool => {
+        this.setState({
+            loopingPrompt: bool
         });
     }
 
@@ -101,6 +108,7 @@ class MainBox extends React.Component {
                 className="MyNavBarFlex"
                 back='/EDIT' back_label='EDIT AUDIO'
                 toggleShow={this.toggleShow}
+                toggleLoopingPrompt={this.toggleLoopingPrompt}
                 show={this.state.show}
                 togglePlay={this.togglePlay}
                 active={this.active}
@@ -116,6 +124,7 @@ class MainBox extends React.Component {
                 setBeatSelected={this.setBeatSelected}
                 addedImages={this.state.addedImages}
                 show={this.state.show}
+                loopingPrompt={this.state.loopingPrompt}
                 ref={this.trackPlayer}
             />
               <MediaModal

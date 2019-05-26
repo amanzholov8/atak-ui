@@ -136,7 +136,7 @@ class Beat extends React.Component {
                     <p></p>
                 }
                 {((this.state.bar === 1) && (this.state.beat === 1)) ?
-                    <Overlay target={this.beatHeader.current} show={this.props.show} placement="bottom">
+                    <Overlay target={this.beatHeader.current} show={this.props.loopingPrompt} placement="bottom">
                         {props => (
                         <Tooltip id="overlay-example" {...props}>
                             Left click to select the left bound for looping. (only in LOOP mode)
@@ -146,7 +146,7 @@ class Beat extends React.Component {
                     <p></p>
                 }
                 {((this.state.bar === 1) && (this.state.beat === 3)) ?
-                    <Overlay target={this.beatHeader.current} show={this.props.show} placement="bottom">
+                    <Overlay target={this.beatHeader.current} show={this.props.loopingPrompt} placement="bottom">
                         {props => (
                         <Tooltip id="overlay-example" {...props}>
                             Right click to select the right bound for looping. (only in LOOP mode)
