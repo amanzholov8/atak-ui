@@ -24,6 +24,8 @@ class MainBox extends React.Component {
             expNadpis: "gogoDauiiDauii"
         };
         this.trackPlayer = React.createRef();
+        this.url = "http://streaming.tdiradio.com:8000/house.mp3";
+        this.audio = new Audio(this.url);
     }
 
     componentDidMount() {
@@ -62,9 +64,11 @@ class MainBox extends React.Component {
             active: !this.state.active
         }, () => {
             if(this.state.active){
+                this.audio.play();
                 this.trackPlayer.current.playTrack();
             }
             else {
+                this.audio.pause();
                 this.trackPlayer.current.pauseTrack();
             }
         });
