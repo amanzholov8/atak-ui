@@ -24,7 +24,8 @@ class MyNavBar extends React.Component {
             show: props.show,
             toggleShow: props.toggleShow,
             active: false,
-            looping: false
+            looping: false,
+            atTrackTimeline: props.trackTimeline
         }
         this.playBtn = React.createRef();
         this.pauseBtn = React.createRef();
@@ -37,25 +38,26 @@ class MyNavBar extends React.Component {
     }
 
     commonUndo(){
-        //UNDO FOR AUDIOTRACK
-        /*const newKey = firebase.database().ref(`/audio/`);
-        newKey.remove();
-        window.location.reload();*/
-
-        //UNDO FOR TRACKTIMELINE
-        const beatsRef = firebase.database().ref('/beats/');
-        const historyItemRef = firebase.database().ref("/history/").limitToLast(1);
-        historyItemRef.once('value', function(childSnapshot) {
-            const obj = childSnapshot.val();
-            if (obj) {
-                const key = Object.keys(obj)[0];
-                beatsRef.set(obj[key], () => {
-                    const removeRef = firebase.database().ref(`/history/${key}/`);
-                    removeRef.remove();
-                    window.location.reload();
-                });
-            };
-        });
+        const atTrackTimeline = this.state.atTrackTimeline;
+        if (atTrackTimeline) {
+            const beatsRef = firebase.database().ref('/beats/');
+            const historyItemRef = firebase.database().ref("/history/").limitToLast(1);
+            historyItemRef.once('value', function(childSnapshot) {
+                const obj = childSnapshot.val();
+                if (obj) {
+                    const key = Object.keys(obj)[0];
+                    beatsRef.set(obj[key], () => {
+                        const removeRef = firebase.database().ref(`/history/${key}/`);
+                        removeRef.remove();
+                        window.location.reload();
+                    });
+                };
+            });            
+        } else {
+            const newKey = firebase.database().ref(`/audio/`);
+            newKey.remove();
+            window.location.reload();
+        }
     }
 
     render(){

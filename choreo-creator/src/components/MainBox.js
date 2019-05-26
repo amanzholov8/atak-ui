@@ -107,6 +107,7 @@ class MainBox extends React.Component {
                 loopRegionControl={this.loopRegionControl}
                 goForward={this.goForward}
                 goBackward={this.goBackward}
+                trackTimeline={true}
             />
               <TrackTimeline
                 className="TrackTimelineFlex"
