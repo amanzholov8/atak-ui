@@ -19,14 +19,14 @@ class MediaModal extends React.Component {
         }
         this.openGalleryOnClick = this.openGalleryOnClick.bind(this);
     }
-    
+
     openGalleryOnClick = () => {
       this.setState({
         galleryModal: true
       });
       this.props.onHide();
     }
-    
+
     onClose = () => {
       this.setState({
         galleryModal: false
@@ -35,22 +35,22 @@ class MediaModal extends React.Component {
 
     sendimage = (index) => {
       this.onClose();
-      const newKey = firebase.database().ref(`/beats/${this.props.beatselected.bar}-${this.props.beatselected.beat}/`).push();
       const beatsRef = firebase.database().ref('/beats/');
       beatsRef.once('value', snapshot => {
           firebase.database().ref('/history/').push(snapshot.val(), () => {
+            const newKey = firebase.database().ref(`/beats/${this.props.beatselected.bar}-${this.props.beatselected.beat}/`).push();
             newKey.set({
               type: 'image',
               src: this.state.images[index]
             });
           });
-      });      
+      });
     }
 
     render() {
         return (
           <div>
-            <Modal 
+            <Modal
                 {...this.props}
                 className="MediaModal"
                 size="sm"
@@ -58,7 +58,7 @@ class MediaModal extends React.Component {
                 centered
             >
                 <Modal.Body>
-                  Selected Bar-Beat: 
+                  Selected Bar-Beat:
                   <span className="BeatIndicator">{`${this.props.beatselected.bar}-${this.props.beatselected.beat}`}</span>
                 </Modal.Body>
 
@@ -73,8 +73,8 @@ class MediaModal extends React.Component {
                     <FontAwesomeIcon icon='video' size='2x'/> Video
                   </Modal.Body>
                 </Button>
-                
-                <Button variant='outline-primary' className="MediaModal-line">  
+
+                <Button variant='outline-primary' className="MediaModal-line">
                   <Modal.Body>
                     <FontAwesomeIcon icon='paint-brush' size='2x'/> Sketch
                   </Modal.Body>
@@ -83,14 +83,14 @@ class MediaModal extends React.Component {
                 <Button variant='outline-primary' className="MediaModal-line">
                   <Modal.Body>
                     <FontAwesomeIcon icon='comment' size='2x'/> Comment
-                  </Modal.Body>          
+                  </Modal.Body>
                 </Button>
-                                        
+
                 <Modal.Footer className="MediaModal-line Footer">
                   <Button onClick={this.props.onHide}>Close</Button>
-                </Modal.Footer>             
+                </Modal.Footer>
             </Modal>
-            <Modal show={this.state.galleryModal} onHide={this.onClose}> 
+            <Modal show={this.state.galleryModal} onHide={this.onClose}>
               <Modal.Body>
 
                 <Button variant="primary" onClick={() => {this.sendimage(0)}}>
@@ -98,13 +98,13 @@ class MediaModal extends React.Component {
                 </Button>
                 <Button variant="primary" onClick={() => {this.sendimage(1)}}>
                   <img src="https://i.ibb.co/vYJdvBg/img2.jpg" width="180rem" height="180rem"/>
-                </Button>  
+                </Button>
                 <Button variant="primary" onClick={() => {this.sendimage(2)}}>
                   <img src="https://i.ibb.co/qdtwMXh/img3.jpg" width="180rem" height="180rem"/>
                 </Button>
                 <Button variant="primary" onClick={() => {this.sendimage(3)}}>
                   <img src="https://i.ibb.co/qkfr06Q/img4.jpg" width="180rem" height="180rem"/>
-                </Button>                                                  
+                </Button>
               </Modal.Body>
             </Modal>
           </div>
