@@ -66,7 +66,7 @@ class MyNavBar extends React.Component {
                 <Overlay target={this.editBtn.current} show={this.props.show} placement="bottom">
                     {props => (
                     <Tooltip id="overlay-example" {...props}>
-                     Edit music for choreo, after finishing edit, press Done to return to this page.
+                     Edit music for choreo.
                     </Tooltip>
                 )}
                 </Overlay>
