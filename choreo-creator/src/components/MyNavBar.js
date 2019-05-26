@@ -1,18 +1,16 @@
 import React from 'react';
 
-import './MyNavBar.css'
+import './MyNavBar.css';
 
-import Navbar from 'react-bootstrap/Navbar';
-
-import Button from 'react-bootstrap/Button'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import { Link } from 'react-router-dom'
-
+import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
-import Overlay from 'react-bootstrap/Overlay'
-import Tooltip from 'react-bootstrap/Tooltip'
+import Navbar from 'react-bootstrap/Navbar';
+import Overlay from 'react-bootstrap/Overlay';
+import Tooltip from 'react-bootstrap/Tooltip';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { Link } from 'react-router-dom';
 
 import * as firebase from 'firebase';
 
@@ -25,7 +23,8 @@ class MyNavBar extends React.Component {
             back_label: props.back_label || 'BACK',
             show: props.show,
             toggleShow: props.toggleShow,
-            active: false
+            active: false,
+            looping: false
         }
         this.playBtn = React.createRef();
         this.pauseBtn = React.createRef();
@@ -100,7 +99,12 @@ class MyNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item>
-                    <Button variant='outline-primary' ref ={this.loopBtn} onClick={this.props.loopRegionControl}>
+                    <Button variant='outline-primary' ref ={this.loopBtn} className={this.state.looping ? 'activeLoop' : 'inactiveLoop'} onClick={() => {
+                        this.setState({
+                            looping: !this.state.looping
+                        });
+                        this.props.loopRegionControl();
+                    }}>
                         <span className="NavBarButton">LOOP</span>
                     </Button>
                 </Nav.Item>

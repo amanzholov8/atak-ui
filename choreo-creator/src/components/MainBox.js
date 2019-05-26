@@ -62,25 +62,22 @@ class MainBox extends React.Component {
             active: !this.state.active
         }, () => {
             if(this.state.active){
-                console.log('1');
                 this.trackPlayer.current.playTrack();
-                console.log('2');
             }
             else {
-                console.log('3');
                 this.trackPlayer.current.pauseTrack();
             }
         });
-        
     }
 
     loopRegionControl = () => {
-        if(this.trackPlayer.current.leftBound && this.trackPlayer.current.rightBound){
-            let l = ReactDOM.findDOMNode(this.trackPlayer.current.leftBound.current);
-            let r = ReactDOM.findDOMNode(this.trackPlayer.current.rightBound.current);
-            let tmp = ReactDOM.findDOMNode(this.trackPlayer.current.playHead.current);
-            this.trackPlayer.current.loopRegion(l.offsetLeft, r.getBoundingClientRect().right, tmp.offsetLeft);
-        }
+        /*
+        let l = ReactDOM.findDOMNode(this.trackPlayer.current.leftBound.current);
+        let r = ReactDOM.findDOMNode(this.trackPlayer.current.rightBound.current);
+        let tmp = ReactDOM.findDOMNode(this.trackPlayer.current.playHead.current);
+        */
+        //this.trackPlayer.current.loopRegion(l.offsetLeft, r.getBoundingClientRect().right, tmp.offsetLeft);
+        this.trackPlayer.current.loopRegion();
     }
 
     render() {

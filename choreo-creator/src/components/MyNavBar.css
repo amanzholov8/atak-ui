@@ -30,3 +30,13 @@ button {
 	position: absolute;
 	left: 93%;
 }
+
+.inactiveLoop:hover {
+	background-color: #fff;
+	color: #007bff;
+}
+
+.activeLoop {
+	background-color: #007bff;
+	color: #fff;
+}
