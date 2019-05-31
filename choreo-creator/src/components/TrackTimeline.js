@@ -12,7 +12,8 @@ class TrackTimeline extends React.Component {
             addedImage: props.addedImage,
             show: props.show,
             loopingPrompt: props.loopingPrompt,
-            active: props.active
+            active: props.active,
+            speed: props.speed
         };
         this.scrollBar = React.createRef();
         this.playTrack = this.playTrack.bind(this);
@@ -20,7 +21,7 @@ class TrackTimeline extends React.Component {
         this.moveForward = this.moveForward.bind(this);
 
         this.player = null;
-        this.scrollSpeed = 10;
+        //this.scrollSpeed = 10;
         this.playHead = React.createRef();
         this.isLooping = false;
         //
@@ -61,7 +62,7 @@ class TrackTimeline extends React.Component {
             this.pauseTrack();
         }
         else {
-            this.scrollBar.current.scrollBy(this.scrollSpeed, 0);
+            this.scrollBar.current.scrollBy(this.props.speed, 0);
         }
     }
 
@@ -143,11 +144,11 @@ class TrackTimeline extends React.Component {
     }
 
     goForward() {
-        this.scrollBar.current.scrollBy(50 * this.scrollSpeed, 0);
+        this.scrollBar.current.scrollBy(50 * this.speed, 0);
     }
 
     goBackward() {
-        this.scrollBar.current.scrollBy(-50 * this.scrollSpeed, 0);
+        this.scrollBar.current.scrollBy(-50 * this.speed, 0);
     }
 
     render(){

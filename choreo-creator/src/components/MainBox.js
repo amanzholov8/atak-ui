@@ -22,7 +22,8 @@ class MainBox extends React.Component {
             show: false,
             loopingPrompt: false,
             active: false,
-            expNadpis: "gogoDauiiDauii"
+            expNadpis: "gogoDauiiDauii",
+            speed: 10
         };
         this.trackPlayer = React.createRef();
         this.url = "http://streaming.tdiradio.com:8000/house.mp3";
@@ -80,7 +81,15 @@ class MainBox extends React.Component {
             }
         });
     }
-
+    setSpeed = skorost => {
+        //this.trackPlayer.current.speed = this.myNavBar.current.speed
+        this.setState({
+            speed : skorost
+        }, () => {
+            console.log(`this.state.speed: ${this.state.speed} skorost: ${skorost}`);
+        })
+        //this.trackPlayer.current.
+    }
     loopRegionControl = () => {
         /*
         let l = ReactDOM.findDOMNode(this.trackPlayer.current.leftBound.current);
@@ -116,6 +125,9 @@ class MainBox extends React.Component {
                 goForward={this.goForward}
                 goBackward={this.goBackward}
                 trackTimeline={true}
+                ref={this.myNavBar}
+                speed={this.state.speed}
+                setSpeed={this.setSpeed}
             />
               <TrackTimeline
                 className="TrackTimelineFlex"
@@ -126,6 +138,7 @@ class MainBox extends React.Component {
                 show={this.state.show}
                 loopingPrompt={this.state.loopingPrompt}
                 ref={this.trackPlayer}
+                speed={this.state.speed}
             />
               <MediaModal
                 show={this.state.modalShow}
