@@ -31,6 +31,7 @@ class TrackTimeline extends React.Component {
         this.leftBound = null;
         this.righBound = null;
         this.beatRefs = [];
+
         for(let i = 0; i < this.numBeats; i++){
             this.beatRefs.push(React.createRef());
         }
@@ -44,7 +45,6 @@ class TrackTimeline extends React.Component {
 
     playTrack(){
         let playFunc = this.isLooping ? this.loopForward : this.moveForward;
-
         this.player = setInterval(playFunc, 1000 / this.scrollSpeed);
     }
 
@@ -55,9 +55,9 @@ class TrackTimeline extends React.Component {
 
     moveForward(){
         let pos = ReactDOM.findDOMNode(this.scrollBar.current).scrollLeft;
-        let final = ReactDOM.findDOMNode(this.beatRefs[this.numBeats - 1].current).getBoundingClientRect().right;
         let offset = ReactDOM.findDOMNode(this.playHead.current).offsetLeft;
-        if(pos > final - offset) {
+        debugger;
+        if(pos > this.rightOffset - offset) {
             // If it passes the last beat stop
             this.pauseTrack();
         }
@@ -72,7 +72,7 @@ class TrackTimeline extends React.Component {
         let rightBound = tmp.offsetLeft + tmp.offsetWidth;
         let offset = ReactDOM.findDOMNode(this.playHead.current).offsetLeft;
         let pos = ReactDOM.findDOMNode(this.scrollBar.current).scrollLeft;
-        if(pos > rightBound - offset){
+        if(pos > rightBound - offset || pos < leftBound - offset){
             this.scrollBar.current.scrollTo({left: (leftBound - offset)})
         }
         else {
@@ -113,7 +113,7 @@ class TrackTimeline extends React.Component {
 
     selectLeftBound(bar, beat) {
         let idx = (bar - 1) * 4 + beat - 1;
-        if(idx > this.rightBoundNum || this.leftBound === this.beatRefs[idx]){
+        if(idx > this.rightBoundNum || this.leftBound === this.beatRefs[idx] || !this.isLooping){
             return;
         }
         if(this.leftBound){
@@ -129,7 +129,7 @@ class TrackTimeline extends React.Component {
 
     selectRightBound(bar, beat) {
         let idx = (bar - 1) * 4 + beat - 1;
-        if(idx < this.leftBoundNum || this.rightBound === this.beatRefs[idx]){
+        if(idx < this.leftBoundNum || this.rightBound === this.beatRefs[idx] || !this.isLooping){
             return;
         }
         if(this.rightBound){
@@ -149,6 +149,10 @@ class TrackTimeline extends React.Component {
 
     goBackward() {
         this.scrollBar.current.scrollBy(-50 * this.speed, 0);
+    }
+
+    componentDidMount() {
+        this.rightOffset = ReactDOM.findDOMNode(this.beatRefs[this.numBeats - 1].current).getBoundingClientRect().right;
     }
 
     render(){

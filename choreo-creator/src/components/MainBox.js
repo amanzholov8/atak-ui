@@ -91,12 +91,6 @@ class MainBox extends React.Component {
         //this.trackPlayer.current.
     }
     loopRegionControl = () => {
-        /*
-        let l = ReactDOM.findDOMNode(this.trackPlayer.current.leftBound.current);
-        let r = ReactDOM.findDOMNode(this.trackPlayer.current.rightBound.current);
-        let tmp = ReactDOM.findDOMNode(this.trackPlayer.current.playHead.current);
-        */
-        //this.trackPlayer.current.loopRegion(l.offsetLeft, r.getBoundingClientRect().right, tmp.offsetLeft);
         this.trackPlayer.current.loopRegion();
     }
 
