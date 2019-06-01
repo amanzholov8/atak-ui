@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Popover from 'react-bootstrap/Popover';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+//import Popover from 'react-bootstrap/Popover';
+//import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import './AudioTrack.css';
 
 import * as firebase from 'firebase';
@@ -65,7 +65,7 @@ class AudioTrack extends React.Component {
   }
 
   renderPart(i, color, darkColor, ind) {
-    const popover = (
+    /*const popover = (
       <Popover id="popover-basic">
         Press and drag to select SEVERAL parts to remove 
         <br/>
@@ -73,7 +73,7 @@ class AudioTrack extends React.Component {
         <br/>
         Double click to remove 
       </Popover>
-    );
+    );*/
     let isDeleted = false;
     let deleted = this.state.deleted;
     let j = 0;
@@ -86,7 +86,7 @@ class AudioTrack extends React.Component {
 
     }
     return (
-        <OverlayTrigger trigger="hover" placement="top" overlay={popover}>
+        //<OverlayTrigger trigger="hover" placement="top" overlay={popover}>
           <button className= {`part${i}`}
                 style = {{background: `${color}`, 
                           width: '9em', height: '7em',
@@ -96,7 +96,7 @@ class AudioTrack extends React.Component {
                 onMouseDown = {(event)=> this.selects(event, darkColor)}
                 onDoubleClick = {() => this.removes(i)}>
           </button>
-        </OverlayTrigger>
+        //</OverlayTrigger>
       );
 
   }
