@@ -12,7 +12,7 @@ class Editor extends React.Component {
             show: false
         }
         this.playAudio = this.playAudio.bind(this);
-        this.url = "http://streaming.tdiradio.com:8000/house.mp3";
+        this.url = "http://streaming.tdiradio.com:8000/top40.mp3";
         this.audio = new Audio(this.url);
         this.isPlaying = false;
         this.toggleShow = this.toggleShow.bind(this);
