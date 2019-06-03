@@ -35,6 +35,13 @@ class Editor extends React.Component {
         })
     }
 
+    //functions that do nothing
+    loopRegionControl(){}
+    toggleLoopingPrompt(){}
+    goForward(){}
+    goBackward(){}
+    setSpeed(){}
+
     render(){
         return (
             <div>
@@ -42,7 +49,12 @@ class Editor extends React.Component {
                     className="MyNavBarFlex"
                     togglePlay={this.playAudio}
                     trackTimeline={false}
-                    toggleShow={this.toggleShow}/>
+                    toggleShow={this.toggleShow}
+                    loopRegionControl={this.loopRegionControl}
+                    toggleLoopingPrompt={this.toggleLoopingPrompt}
+                    goForward={this.goForward}
+                    goBackward={this.goBackward}
+                    setSpeed={this.setSpeed}/>
                 <Modal
                     show={this.state.show}>
                     

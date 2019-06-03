@@ -116,7 +116,9 @@ class AudioTrack extends React.Component {
             {this.renderBeat(2, 4)}
             {this.renderBeat(3, 1)}
           </div>
+
           <div id='name1'>Do you wanna know.mp3</div>
+          <div id='audio1'>
 				    <span style={{marginLeft: 9+'em'}}>{this.renderPart(1, '#9370DB', '#4B0082', 0)}</span>
             {this.renderPart(1, '#9370DB', '#4B0082', 1)}
             {this.renderPart(1, '#9370DB', '#4B0082', 2)}
@@ -124,14 +126,18 @@ class AudioTrack extends React.Component {
             {this.renderPart(1, '#9370DB', '#4B0082', 4)}
             {this.renderPart(1, '#9370DB', '#4B0082', 5)}
             {this.renderPart(1, '#9370DB', '#4B0082', 6)}
+          </div>
 
           <div id='name2'>Payphone.mp3</div>
+          <div id='audio2'>
             <span style={{marginLeft: 18+'em'}}>{this.renderPart(2, '#32CD32', '#006400', 0)}</span>
             {this.renderPart(2, '#32CD32', '#006400', 1)}
             {this.renderPart(2, '#32CD32', '#006400', 2)}
             {this.renderPart(2, '#32CD32', '#006400', 3)}
+          </div>
 
           <div id='name3'>Mind in awe.mp3</div>
+          <div id='audio3'>
             <span style={{marginLeft: 0+'em'}}>{this.renderPart(3, '#FFD700', '#8B4513', 0)}</span>
             {this.renderPart(3, '#FFD700', '#8B4513', 1)}
             {this.renderPart(3, '#FFD700', '#8B4513', 2)}
@@ -139,6 +145,7 @@ class AudioTrack extends React.Component {
             {this.renderPart(3, '#FFD700', '#8B4513', 4)}
             {this.renderPart(3, '#FFD700', '#8B4513', 5)}
             {this.renderPart(3, '#FFD700', '#8B4513', 6)}
+          </div>
 			</div>);
 	}
 }

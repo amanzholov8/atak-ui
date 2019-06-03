@@ -8,47 +8,30 @@
 	text-align: center;
 }
 
-/*#beatBar {
-	position: absolute;
-	left: 2em;
-	top: 5em;
-}
-
-#AudioTrack1 {
-	position: absolute;
-	top: 12em;
-	left: 10.5em;
-}
-
-#AudioTrack2 {
-	position: absolute;
-	left: 36em;
-	top: 22em;
-}
-
-#AudioTrack3 {
-	position: absolute;
-	left: 2em;
-	top: 32em;
+#beatBar {
+	margin-left: 0.5em;
 }
 
 #name1 {
-	position: absolute;
-	left: 2em;
-	top: 7.6em;
-	font-size: 1.3em;
+	margin-left: 0.5em;
 }
 
 #name2 {
-	position: absolute;
-	left: 2em;
-	top: 15.4em;
-	font-size: 1.3em;
+	margin-left: 0.5em;
 }
 
 #name3 {
-	position: absolute;
-	left: 2em;
-	top: 22.9em;
-	font-size: 1.3em;
-}*/
+	margin-left: 0.5em;
+}
+
+#audio1 {
+	margin-left: 0.5em;
+}
+
+#audio2 {
+	margin-left: 0.5em;
+}
+
+#audio3 {
+	margin-left: 0.5em;
+}
