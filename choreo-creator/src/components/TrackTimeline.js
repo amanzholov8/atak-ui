@@ -45,7 +45,7 @@ class TrackTimeline extends React.Component {
 
     playTrack(){
         let playFunc = this.isLooping ? this.loopForward : this.moveForward;
-        this.player = setInterval(playFunc, 1000 / this.scrollSpeed);
+        this.player = setInterval(playFunc, 10);//this.props.speed
     }
 
     pauseTrack(){
@@ -76,7 +76,7 @@ class TrackTimeline extends React.Component {
             this.scrollBar.current.scrollTo({left: (leftBound - offset)})
         }
         else {
-            this.scrollBar.current.scrollBy(this.scrollSpeed, 0);
+            this.scrollBar.current.scrollBy(this.props.speed, 0);
         }
     }
 
@@ -144,11 +144,11 @@ class TrackTimeline extends React.Component {
     }
 
     goForward() {
-        this.scrollBar.current.scrollBy(50 * this.speed, 0);
+        this.scrollBar.current.scrollBy(50 * this.props.speed, 0);
     }
 
     goBackward() {
-        this.scrollBar.current.scrollBy(-50 * this.speed, 0);
+        this.scrollBar.current.scrollBy(-50 * this.props.speed, 0);
     }
 
     componentDidMount() {
