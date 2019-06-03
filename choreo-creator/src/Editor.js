@@ -60,13 +60,13 @@ class Editor extends React.Component {
                     
                     <Modal.Body>
                     <h4>
-                        To remove some part of the song
+                        Guide to Audio Editing
                     </h4>
                     <br/>
-                    <p>
-                        Press on square and drag the mouse to select several parts.
-                        Then double click on one of the selected squares.
-                    </p>
+                    <ul>
+                        <li>Hold and drag on squares to select desired part.</li>
+                        <li>Then double click to delete.</li>
+                    </ul>
                     </Modal.Body>
                     <Modal.Footer>
                     <Button onClick={this.toggleShow}>Close</Button>

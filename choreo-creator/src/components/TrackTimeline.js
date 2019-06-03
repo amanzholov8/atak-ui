@@ -25,7 +25,7 @@ class TrackTimeline extends React.Component {
         this.playHead = React.createRef();
         this.isLooping = false;
         //
-        this.numBeats = 9;
+        this.numBeats = 20;
         this.leftBoundNum = 0;
         this.rightBoundNum = this.numBeats - 1;
         this.leftBound = null;
