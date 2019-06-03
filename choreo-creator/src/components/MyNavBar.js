@@ -147,7 +147,7 @@ class MyNavBar extends React.Component {
                         <Dropdown.Item href="#/action-1" eventKey="1" onClick={this.changeSpeed} value={2}>0.25x</Dropdown.Item>
                         <Dropdown.Item href="#/action-2" eventKey="2" onClick={this.changeSpeed} value={4}>0.5x</Dropdown.Item>
                         <Dropdown.Item href="#/action-3" eventKey="3" onClick={this.changeSpeed} value={6}>0.75x</Dropdown.Item>
-                        <Dropdown.Item href="#/action-1" eventKey="4" onClick={this.changeSpeed} value={8} active>1x</Dropdown.Item>
+                        <Dropdown.Item href="#/action-1" eventKey="4" onClick={this.changeSpeed} value={8}>1x</Dropdown.Item>
                         <Dropdown.Item href="#/action-2" eventKey="5" onClick={this.changeSpeed} value={10}>1.25x</Dropdown.Item>
                         <Dropdown.Item href="#/action-2" eventKey="6" onClick={this.changeSpeed} value={12}>1.5x</Dropdown.Item>
                         <Dropdown.Item href="#/action-3" eventKey="7" onClick={this.changeSpeed} value={14}>1.75x</Dropdown.Item>

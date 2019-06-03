@@ -23,7 +23,7 @@ class MainBox extends React.Component {
             loopingPrompt: false,
             active: false,
             expNadpis: "gogoDauiiDauii",
-            speed: 10
+            speed: 8
         };
         this.trackPlayer = React.createRef();
         this.url = "http://streaming.tdiradio.com:8000/house.mp3";
