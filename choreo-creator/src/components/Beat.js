@@ -15,7 +15,6 @@ class Beat extends React.Component {
             beat: props.beat,
             openModal: props.openModal,
             media: props.addedImages,
-            median: ["https://i.ibb.co/SXW4htY/img1.jpg", "https://i.ibb.co/vYJdvBg/img2.jpg"],
             show: props.show,
             left: false,
             right: false
@@ -31,7 +30,6 @@ class Beat extends React.Component {
             let allMedia = snapshot.val();
             if (allMedia) {
                 this.setState({
-                    //media: Object.values(allMedia)
                     media: allMedia
                 });
             };
@@ -55,13 +53,11 @@ class Beat extends React.Component {
     }
 
     deleteImage = imageId => {
-        //const historyKey = firebase.database().ref('/history/').push();
         const removeRef = firebase.database().ref(`/beats/${this.props.bar}-${this.props.beat}/${imageId}`);
         const beatsRef = firebase.database().ref('/beats/');
 
         beatsRef.once('value', snapshot => {
             firebase.database().ref('/history/').push(snapshot.val(), () => {
-                //removeRef.remove();
                 if (Object.keys(this.state.media).length === 1) {
                     removeRef.remove();
                     this.setState({
@@ -85,13 +81,16 @@ class Beat extends React.Component {
         }
         return (
             <Card className='Beat'>
+                {/*BEAT HEADER*/}
                 <Card.Header ref={this.beatHeader}
                              className='Beat-header'
                              onClick={() => {this.props.selectLeftBound(this.state.bar, this.state.beat)}}
                              onContextMenu={(e) => {e.preventDefault(); this.props.selectRightBound(this.state.bar, this.state.beat)}}>
                                 {beatLabel}
                 </Card.Header>
+                {/*BEAT BODY*/}
                 <Card.Body ref={this.beatBody} className='Beat-body'>
+                    {/*INSERT MEDIA, PICTURES*/}
                     {
                         Object.keys(this.state.media).map((key) => {
                             let obj = this.state.media[key]
@@ -106,10 +105,12 @@ class Beat extends React.Component {
                             }
                         })
                     }
+                    {/*PLUS BUTTON*/}
                     <Button className="BeatPlus" variant='outline-primary' onClick={this.onPlusClick} ref={this.plusBtn}>
-                        <FontAwesomeIcon icon='plus' size='7x'/>
+                        <FontAwesomeIcon icon='plus' size='6x'/>
                     </Button>
                 </Card.Body>
+
                 {((this.state.bar === 1) && (this.state.beat === 3)) ?
                     <Overlay target={this.plusBtn.current} show={this.props.show} placement="bottom">
                         {props => (
@@ -165,5 +166,4 @@ class Beat extends React.Component {
     }
 }
 
-//export default connect()(Beat);
 export default Beat;
