@@ -114,7 +114,6 @@ class AudioTrack extends React.Component {
             {this.renderBeat(2, 2)}
             {this.renderBeat(2, 3)}
             {this.renderBeat(2, 4)}
-            {this.renderBeat(3, 1)}
           </div>
 
           <div id='name1'>Do you wanna know.mp3</div>
