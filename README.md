@@ -1,5 +1,4 @@
 # atak-ui
-A-TAK UI
 
 Project for Introduction to HCI course (CS374) at KAIST.
 
