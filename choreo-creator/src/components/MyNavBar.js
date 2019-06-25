@@ -84,10 +84,10 @@ class MyNavBar extends React.Component {
                     beatsRef.set(obj[key], () => {
                         const removeRef = firebase.database().ref(`/history/${key}/`);
                         removeRef.remove();
-                        window.location.reload();
+                        //window.location.reload();
                     });
                 };
-            });            
+            }).then(this.forceUpdate());            
         } else {
             const newKey = firebase.database().ref(`/audio/`);
             newKey.remove();
