@@ -3,7 +3,7 @@ A-TAK UI
 
 Project for Introduction to HCI course (CS374) at KAIST.
 
-Application for keeping track about choreography creation designed for professional dancers
+Application for keeping track of the information about choreography creation designed for professional dancers
 
 Link to the website: https://polar-caverns-74768.herokuapp.com/
 
