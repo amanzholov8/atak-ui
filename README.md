@@ -1,7 +1,7 @@
 # Choreo-Creator
 
 ## Demo
-![DemoGIF](./choreo_creator_demo.gif)
+![DemoGIF](./demo_choreo_creator.gif)
 
 ## Description
 
@@ -9,7 +9,7 @@ _Choreo-Creator_ is a course project for CS374: Human-Computer Interaction @ KAI
 
 It is an app for keeping track of the information about choreography creation designed for professional dancers.
 
-- [VISIT THE WEBSITE](https://choreo-creator.herokuapp.com/)
+- [VISIT THE WEBSITE](https://choreo-creator.herokuapp.com/) (You may need to update the page several times to get it working).
 
 - [DEMO VIDEO ON YOUTUBE](https://www.youtube.com/watch?v=f8f3Xqz3_FI&feature=youtu.be)
 
